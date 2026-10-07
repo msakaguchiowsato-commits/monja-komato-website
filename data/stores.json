@@ -97,9 +97,9 @@
     {
       "slug": "higashi-gotanda",
       "area": "東五反田",
-      "name": "もんじゃ駒と東五反田",
-      "title": "五反田のもんじゃ・鉄板焼き｜翌3時まで営業｜もんじゃ駒と東五反田",
-      "description": "五反田駅徒歩2分、もんじゃ駒と東五反田。毎日17:00〜翌3:00の夕方から深夜まで営業。",
+      "name": "もんじゃ駒と 東五反田",
+      "title": "五反田のもんじゃ・鉄板焼き｜翌3時まで営業｜もんじゃ駒と 東五反田",
+      "description": "五反田駅徒歩2分、もんじゃ駒と 東五反田。毎日17:00〜翌3:00の夕方から深夜まで営業。",
       "scenes": [
         "仕事帰りのお食事",
         "同僚との飲み会",
@@ -116,15 +116,15 @@
       "photos": [
         {
           "src": "/assets/stores/higashi-gotanda-gallery-1.jpg",
-          "alt": "もんじゃ駒と東五反田のカウンター席"
+          "alt": "もんじゃ駒と 東五反田のカウンター席"
         },
         {
           "src": "/assets/stores/higashi-gotanda-gallery-2.jpg",
-          "alt": "もんじゃ駒と東五反田の店舗外観"
+          "alt": "もんじゃ駒と 東五反田の店舗外観"
         },
         {
           "src": "/assets/stores/higashi-gotanda-gallery-3.jpg",
-          "alt": "もんじゃ駒と東五反田のテーブル席"
+          "alt": "もんじゃ駒と 東五反田のテーブル席"
         }
       ],
       "popular_menu": [],
@@ -180,8 +180,8 @@
       },
       "menu_copy": "明太もちチーズもんじゃ・駒とスペシャルもんじゃ。その他一品メニューも多数ご用意しております。詳しくはメニューをご覧ください。",
       "hero_image": "/assets/stores/higashi-gotanda-hero.jpg",
-      "hero_alt": "もんじゃ駒と東五反田の店内",
-      "hero_caption": "もんじゃ駒と東五反田の店内"
+      "hero_alt": "もんじゃ駒と 東五反田の店内",
+      "hero_caption": "テーブル席・カウンター席ご用意しております。"
     },
     {
       "slug": "nishi-gotanda",
