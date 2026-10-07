@@ -53,7 +53,7 @@ for s in data['stores']:
     map_html=f'<iframe title="{e(s["name"])}のGoogleマップ" src="{e(s["map_embed_url"])}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' if s['map_embed_url'] else f'<p>Googleマップ：{TODO}</p>'
     menus=''.join(f'<li>{e(m)}</li>' for m in s['popular_menu'])
     menu_list=f'<ul>{menus}</ul>' if menus else ''
-    menu_copy=s.get('menu_copy') or '明太もちチーズもんじゃ・駒とスペシャルもんじゃ。詳しくはメニューをご覧ください。'
+    menu_copy=s.get('menu_copy') or '明太もちチーズもんじゃ・イカスミもんじゃ・深川あさりもんじゃなどなど。お好みにあったもんじゃをご用意。牡蠣ホイル焼き、ホタテホイル焼きなども人気です。一品系ではアボカドのおひたし、塩ネギソースで召し上がっていただく蒸し鶏などもございます。その他一品メニューも多数ご用意しております。'
     html=f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(s['title'])}</title><meta name="description" content="{e(s['description'])}">
