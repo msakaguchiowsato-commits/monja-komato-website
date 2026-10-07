@@ -1,0 +1,25 @@
+/* Shared, quiet accents: shapes stay within the heading's line box. */
+.category-accent{--accent-color:#c2a68b}
+.category-accent:nth-of-type(3n+2){--accent-color:#a8b3a2}
+.category-accent:nth-of-type(3n){--accent-color:#b8a5ad}
+.category-accent :is(h2,h3).soft-heading{
+  position:relative;
+  isolation:isolate;
+}
+.soft-heading::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  pointer-events:none;
+  left:0;
+  bottom:0;
+  width:min(210px,85%);
+  height:85%;
+  max-height:62px;
+  border-radius:58% 42% 65% 35% / 70% 60% 40% 30%;
+  background:var(--accent-color,#c2a68b);
+  opacity:.20;
+}
+@media(max-width:650px){
+  .soft-heading::before{width:min(165px,78%);max-height:48px;opacity:.17}
+}
