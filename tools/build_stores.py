@@ -35,7 +35,7 @@ for s in data['stores']:
         share_image = schema['image'][0] if s['photos'] else data['site_url'].rstrip('/')+assets['logo']
         metadata+=f'<meta property="og:image" content="{e(share_image)}"><meta property="og:image:alt" content="{e(s["photos"][0]["alt"] if s["photos"] else "もんじゃ駒と ロゴ")}">'
     else: metadata+=f'<!-- og:image: {TODO}（公式ドメイン） -->'
-    breadcrumb_schema = {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'TOP','item':data['site_url'].rstrip('/')+'/monja_komato_home_final.html'},{'@type':'ListItem','position':2,'name':s['name'],'item':canonical}]} if canonical else None
+    breadcrumb_schema = {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'TOP','item':data['site_url'].rstrip('/')+'/'},{'@type':'ListItem','position':2,'name':s['name'],'item':canonical}]} if canonical else None
     breadcrumb_json = '<script type="application/ld+json">'+json.dumps(breadcrumb_schema,ensure_ascii=False).replace('<',chr(92)+'u003c')+'</script>' if breadcrumb_schema else ''
     info=''.join(f'<dt>{label}</dt><dd>{e(s.get(key)) if s.get(key) else TODO}</dd>' for label,key in [('住所','address'),('電話番号','telephone'),('営業時間','hours'),('定休日','closed_days'),('ラストオーダー','last_order'),('最寄駅・アクセス','access')])
     if s['telephone']: info+=f'<dt>電話でのお問い合わせ</dt><dd><a href="tel:{e(s["telephone"])}">電話する</a></dd>'
@@ -50,8 +50,8 @@ for s in data['stores']:
 {metadata}<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="もんじゃ駒と"><meta property="og:title" content="{e(s['title'])}"><meta property="og:description" content="{e(s['description'])}">
 <link rel="stylesheet" href="/assets/stores/stores.css">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False).replace('<',chr(92)+'u003c')}</script>{breadcrumb_json}</head>
-<body><a class="skip" href="#main">本文へ</a><header><div class="wrap nav"><a href="/monja_komato_home_final.html"><img class="logo" src="{assets['logo']}" alt="もんじゃ駒と TOP"></a><nav aria-label="メイン"><a href="/monja_komato_menu_final.html">メニュー</a><a class="button" href="#reservation">予約案内</a></nav></div></header>
-<main id="main" class="wrap"><nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="/monja_komato_home_final.html">TOP</a></li><li aria-current="page">{e(s['name'])}</li></ol></nav>
+<body><a class="skip" href="#main">本文へ</a><header><div class="wrap nav"><a href="/"><img class="logo" src="{assets['logo']}" alt="もんじゃ駒と TOP"></a><nav aria-label="メイン"><a href="/monja_komato_menu_final.html">メニュー</a><a class="button" href="#reservation">予約案内</a></nav></div></header>
+<main id="main" class="wrap"><nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="/">TOP</a></li><li aria-current="page">{e(s['name'])}</li></ol></nav>
 <section class="hero"><div><p class="kicker">MONJA KOMATO / {e(s['area'])}</p><h1>{e(s['name'])}</h1><p>{e(s['description'])}</p><a class="button" href="#reservation">ご予約・お問い合わせ</a><a class="text-link" href="#access">店舗情報・アクセス</a></div><figure><img src="{assets['food']}" alt="もんじゃ駒との料理イメージ（共通メニュー写真）"><figcaption>共通メニューの料理イメージ。店舗別の提供内容：{TODO}</figcaption></figure></section>
 <section><p class="kicker">SCENES</p><h2>{e(s['area'])}でのお食事を計画する方へ</h2><div class="cards">{''.join(f'<article><h3>{e(v)}</h3><p>{e(s["scene_descriptions"].get(v, TODO))}</p></article>' for v in s['scenes'])}</div></section>
 <section id="access"><p class="kicker">INFORMATION & ACCESS</p><h2>店舗情報・アクセス</h2><div class="panel"><dl>{info}</dl><p class="note">営業時間はご提供のTOP完成版に基づきます。祝日は上記の土日祝の時間をご確認ください。臨時休業・祝日の個別日程：{TODO}</p>{map_html}<p class="note">地図は店名・住所による検索表示です。正確な店舗ピン・Place ID：{TODO}</p>{link(s['map_url'],'Googleマップで確認')}{link(s['instagram'],'公式Instagram')}</div></section>

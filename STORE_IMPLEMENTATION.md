@@ -225,3 +225,6 @@ TOP・メニューから3店舗へ直接リンク。店舗ページからTOP・�
 Python 3標準ライブラリのみ使用。追加依存・資格情報は不要。
 `cd /workspace/monja-komato-website` で `python3 -m http.server 8000 --bind 0.0.0.0` を実行。
 起動手順は環境設定のstart_skillに保存。設定保存は公開操作ではありません。
+
+## ルートTOP対応
+ルートに `index.html` を追加。互換用 `monja_komato_home_final.html` とバイト単位で同一の内容です。店舗ページのヘッダーロゴとパンくずのTOPリンクは `/` に統一し、共通生成処理とドメイン設定後のパンくず構造化データも対応済み。
