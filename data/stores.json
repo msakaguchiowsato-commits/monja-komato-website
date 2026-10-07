@@ -97,9 +97,9 @@
     {
       "slug": "higashi-gotanda",
       "area": "東五反田",
-      "name": "もんじゃ駒と 東五反田店",
-      "title": "五反田のもんじゃ・鉄板焼き｜翌3時まで営業｜もんじゃ駒と 東五反田店",
-      "description": "五反田駅徒歩2分、もんじゃ駒と 東五反田店。毎日17:00〜翌3:00の深夜営業。五反田でもんじゃ・鉄板焼きや居酒屋を探す方へ、仕事帰りの飲み会・二軒目のお店選びに。住所・電話予約・Googleマップ・メニューをご案内。",
+      "name": "もんじゃ駒と東五反田",
+      "title": "五反田のもんじゃ・鉄板焼き｜翌3時まで営業｜もんじゃ駒と東五反田",
+      "description": "五反田駅徒歩2分、もんじゃ駒と東五反田。毎日17:00〜翌3:00の夕方から深夜まで営業。",
       "scenes": [
         "仕事帰りのお食事",
         "同僚との飲み会",
@@ -113,7 +113,20 @@
       "map_embed_url": "https://maps.google.com/maps?q=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B01-16-3%20EAST-1%E3%83%93%E3%83%AB%201F&output=embed",
       "instagram": "https://www.instagram.com/monja_komato_gotanda/",
       "reservation": null,
-      "photos": [],
+      "photos": [
+        {
+          "src": "/assets/stores/higashi-gotanda-gallery-1.jpg",
+          "alt": "もんじゃ駒と東五反田のカウンター席"
+        },
+        {
+          "src": "/assets/stores/higashi-gotanda-gallery-2.jpg",
+          "alt": "もんじゃ駒と東五反田の店舗外観"
+        },
+        {
+          "src": "/assets/stores/higashi-gotanda-gallery-3.jpg",
+          "alt": "もんじゃ駒と東五反田のテーブル席"
+        }
+      ],
       "popular_menu": [],
       "closed_days": null,
       "last_order": null,
@@ -134,12 +147,16 @@
         {
           "question": "駅からどのくらいですか？",
           "answer": "五反田駅 徒歩2分。住所は東京都品川区東五反田1-16-3 EAST-1ビル 1Fです。"
+        },
+        {
+          "question": "おタバコは吸えますか？",
+          "answer": "店外に喫煙スペースをご用意しております。"
         }
       ],
       "scene_descriptions": {
-        "仕事帰りのお食事": "五反田駅から徒歩2分。17:00から営業しているので、仕事帰りのお店選びに店舗情報をご覧ください。",
-        "同僚との飲み会": "もんじゃ・鉄板焼きとドリンクを共通メニューでご紹介。グループの席や予約条件はお問い合わせください。",
-        "二軒目をご検討の方": "毎日翌3:00まで営業。遅い時間の入店可否やラストオーダーはお電話でご確認ください。"
+        "仕事帰りのお食事": "五反田駅から徒歩2分。17:00から営業しております。仕事帰りにもんじゃとお酒をぜひご賞味ください。",
+        "同僚との飲み会": "テーブル席も多数ございますのでお人数でのご利用にもご対応させていただきます。",
+        "二軒目をご検討の方": "毎日翌3:00まで営業しております。遅い時間でのご利用もお待ちしております。"
       },
       "opening_hours": [
         {
@@ -160,7 +177,11 @@
         "addressRegion": "東京都",
         "addressLocality": "品川区",
         "streetAddress": "東五反田1-16-3 EAST-1ビル 1F"
-      }
+      },
+      "menu_copy": "明太もちチーズもんじゃ・駒とスペシャルもんじゃ。その他一品メニューも多数ご用意しております。詳しくはメニューをご覧ください。",
+      "hero_image": "/assets/stores/higashi-gotanda-hero.jpg",
+      "hero_alt": "もんじゃ駒と東五反田の店内",
+      "hero_caption": "もんじゃ駒と東五反田の店内"
     },
     {
       "slug": "nishi-gotanda",
