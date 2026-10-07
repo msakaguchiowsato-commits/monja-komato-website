@@ -15,7 +15,7 @@
       ],
       "address": "東京都目黒区上目黒2-6-3 K&F中目黒 1F",
       "telephone": "03-6452-2345",
-      "hours": "平日 17:00–23:00 / 土日祝 12:00–23:00",
+      "hours": "平日 17:00–23:00（LO 22:00） / 土日祝 12:00–23:00（LO 22:00）",
       "access": "中目黒駅 徒歩2分",
       "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E4%B8%AD%E7%9B%AE%E9%BB%92%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8A%E7%9B%AE%E9%BB%922-6-3%20K%26F%E4%B8%AD%E7%9B%AE%E9%BB%92%201F",
       "map_embed_url": "https://maps.google.com/maps?q=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E4%B8%AD%E7%9B%AE%E9%BB%92%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8A%E7%9B%AE%E9%BB%922-6-3%20K%26F%E4%B8%AD%E7%9B%AE%E9%BB%92%201F&output=embed",
@@ -37,7 +37,7 @@
       ],
       "popular_menu": [],
       "closed_days": "なし",
-      "last_order": "22:00",
+      "last_order": null,
       "source": "アップロードZIP内 monja_komato_home_final.html / #shop-information",
       "faq": [
         {
@@ -108,7 +108,7 @@
       ],
       "address": "東京都品川区東五反田1-16-3 EAST-1ビル 1F",
       "telephone": "03-6277-3390",
-      "hours": "毎日 17:00–翌3:00",
+      "hours": "毎日 17:00–翌3:00（LO 翌2:00）",
       "access": "五反田駅 徒歩2分",
       "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B01-16-3%20EAST-1%E3%83%93%E3%83%AB%201F",
       "map_embed_url": "https://maps.google.com/maps?q=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B01-16-3%20EAST-1%E3%83%93%E3%83%AB%201F&output=embed",
@@ -135,7 +135,7 @@
       "faq": [
         {
           "question": "深夜は何時まで営業していますか？",
-          "answer": "毎日17:00〜翌3:00の営業です。フードのラストオーダーは翌2:00、ドリンクのラストオーダーは翌2:30です。"
+          "answer": "毎日17:00〜翌3:00の営業です。ラストオーダーは翌2:00です。"
         },
         {
           "question": "飲み会の予約はできますか？",
@@ -198,7 +198,7 @@
       ],
       "address": "東京都品川区西五反田2-12-15 リーラハイタウン 1F",
       "telephone": "03-6417-3302",
-      "hours": "平日 11:00–14:00 / 17:00–23:00 / 土日祝 12:00–23:00",
+      "hours": "平日 11:00–14:00（LO 13:00） / 17:00–23:00（LO 22:00） / 土日祝 12:00–23:00（LO 22:00）",
       "access": "五反田駅 徒歩5分",
       "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B02-12-15%20%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%8F%E3%82%A4%E3%82%BF%E3%82%A6%E3%83%B3%201F",
       "map_embed_url": "https://maps.google.com/maps?q=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B02-12-15%20%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%8F%E3%82%A4%E3%82%BF%E3%82%A6%E3%83%B3%201F&output=embed",
