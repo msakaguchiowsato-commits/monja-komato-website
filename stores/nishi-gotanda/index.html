@@ -15,4 +15,20 @@
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2><details><summary>ランチの営業日と時間を教えてください。</summary><p>平日は11:00〜14:00と17:00〜23:00、土日祝は12:00〜23:00の営業です。</p></details><details><summary>駅からどのくらいですか？</summary><p>五反田駅 徒歩5分。住所は東京都品川区西五反田2-12-15 リーラハイタウン 1Fです。</p></details><details><summary>平日の昼間でももんじゃ焼きを食べることはできますか？</summary><p>はい。召し上がっていただけます。平日の昼間は定食メニューもご準備しております。</p></details></section>
 <section id="reservation" class="reservation"><h2>もんじゃ駒と 西五反田のご予約・お問い合わせ</h2><a class="button" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13318684" target="_blank" rel="noopener">ネットで予約</a><a class="button" href="tel:03-6417-3302">電話で予約・問い合わせ</a></section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗"><a href="../nakameguro/">もんじゃ駒と 中目黒</a><a href="../higashi-gotanda/">もんじゃ駒と 東五反田</a></nav></section></main>
-<footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer><script>(()=>{const sticky=document.querySelector('.store-name-sticky'),title=document.querySelector('.hero h1');if(!sticky||!title)return;const update=()=>{if(innerWidth>700){sticky.classList.remove('is-visible');return}const h=document.querySelector('header'),b=h?h.getBoundingClientRect().bottom:72;sticky.style.top=Math.round(b)+'px';sticky.classList.toggle('is-visible',title.getBoundingClientRect().bottom<=b+8)};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);addEventListener('load',update);update()})();</script></body></html>
+<footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer><script>(()=>{const sticky=document.querySelector('.store-name-sticky'),title=document.querySelector('.hero h1');if(!sticky||!title)return;const update=()=>{if(innerWidth>700){sticky.classList.remove('is-visible');return}const h=document.querySelector('header'),b=h?h.getBoundingClientRect().bottom:72;sticky.style.top=Math.round(b)+'px';sticky.classList.toggle('is-visible',title.getBoundingClientRect().bottom<=b+8)};addEventListener('scroll',update,{passive:true});addEventListener('resize',update);addEventListener('load',update);update()})();</script><script>
+/* close-mobile-menu-on-scroll */
+(() => {
+  let lastY = window.scrollY;
+  const closeMobileMenu = () => {
+    const nav = document.querySelector('.mobile-nav');
+    if (!nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    const btn = document.querySelector('.menu-btn');
+    if (btn) btn.setAttribute('aria-expanded','false');
+  };
+  window.addEventListener('scroll', () => {
+    if (Math.abs(window.scrollY - lastY) > 2) closeMobileMenu();
+    lastY = window.scrollY;
+  }, { passive: true });
+})();
+</script></body></html>
