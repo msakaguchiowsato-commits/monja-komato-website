@@ -43,4 +43,20 @@ footer{padding:30px 0 46px;border-top:1px solid rgba(182,151,91,.18);color:#776d
 <dt>運営店舗</dt><dd><div class="stores"><span class="tag">中目黒</span><span class="tag">東五反田</span><span class="tag">西五反田</span></div></dd>
 </dl></div>
 <div class="card"><h2>店舗情報</h2><p>各店舗の住所・営業時間・ご予約については、TOPページの店舗情報をご確認ください。</p><p><a href="./#shop-information">店舗情報を見る →</a></p></div>
-</section></main><footer><div class="wrap">© MONJA KOMATO / SUMIKOMA Inc.</div></footer></body></html>
+</section></main><footer><div class="wrap">© MONJA KOMATO / SUMIKOMA Inc.</div></footer><script>
+/* close-mobile-menu-on-scroll */
+(() => {
+  let lastY = window.scrollY;
+  const closeMobileMenu = () => {
+    const nav = document.querySelector('.mobile-nav');
+    if (!nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    const btn = document.querySelector('.menu-btn');
+    if (btn) btn.setAttribute('aria-expanded','false');
+  };
+  window.addEventListener('scroll', () => {
+    if (Math.abs(window.scrollY - lastY) > 2) closeMobileMenu();
+    lastY = window.scrollY;
+  }, { passive: true });
+})();
+</script></body></html>
