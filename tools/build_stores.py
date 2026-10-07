@@ -72,9 +72,10 @@ for s in data['stores']:
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(s['title'])}</title><meta name="description" content="{e(s['description'])}">
 {metadata}<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="もんじゃ駒と"><meta property="og:title" content="{e(s['title'])}"><meta property="og:description" content="{e(s['description'])}">
-<link rel="stylesheet" href="../../assets/stores/stores.css?v=20261008-mobile2">
+<link rel="stylesheet" href="../../assets/stores/stores.css?v=20261008-mobile3">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False).replace('<',chr(92)+'u003c')}</script>{breadcrumb_json}</head>
 <body><a class="skip" href="#main">本文へ</a><header><div class="wrap nav"><a href="../../"><img class="logo" src="{e(rel_asset(assets['logo']))}" alt="もんじゃ駒と TOP"></a><nav aria-label="メイン"><a href="../../monja_komato_menu_final.html">メニュー</a><a class="button" href="#reservation">予約案内</a></nav></div></header>
+<div class="store-name-sticky" aria-hidden="true"><div class="store-name-sticky-inner"><span class="store-name-sticky-kicker">MONJA KOMATO / {e(s['area'])}</span><strong class="store-name-sticky-title">{e(s['name'])}</strong></div></div>
 <main id="main" class="wrap"><nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="../../">TOP</a></li><li aria-current="page">{e(s['name'])}</li></ol></nav>
 <section class="hero"><div><p class="kicker">MONJA KOMATO / {e(s['area'])}</p><h1>{e(s['name'])}</h1><p>{e(s['description'])}</p><a class="button" href="#reservation">ご予約・お問い合わせ</a><a class="text-link" href="#access">店舗情報・アクセス</a></div><figure><img src="{e(hero_src)}" alt="{e(hero_alt)}"><figcaption>{e(hero_caption)}</figcaption></figure></section>
 <section><p class="kicker">SCENES</p><h2>{e(scenes_heading)}</h2><div class="cards">{''.join(f'<article><h3>{e(v)}</h3><p>{e(s["scene_descriptions"].get(v, TODO))}</p></article>' for v in s['scenes'])}</div></section>
@@ -84,7 +85,28 @@ for s in data['stores']:
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2>{faq}</section>
 <section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{external_button(s['reservation'],'ネットで予約')}{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}</section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗">{siblings}</nav></section></main>
-<footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer></body></html>'''
+<footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer>
+<script>
+(() => {{
+  const sticky=document.querySelector('.store-name-sticky');
+  const title=document.querySelector('.hero h1');
+  if(!sticky||!title) return;
+  let ticking=false;
+  const update=()=>{{
+    ticking=false;
+    if(window.innerWidth>700){{sticky.classList.remove('is-visible');return;}}
+    const header=document.querySelector('header');
+    const headerBottom=header ? header.getBoundingClientRect().bottom : 72;
+    sticky.style.top=Math.round(headerBottom)+'px';
+    sticky.classList.toggle('is-visible', title.getBoundingClientRect().bottom <= headerBottom + 8);
+  }};
+  const schedule=()=>{{if(ticking)return;ticking=true;requestAnimationFrame(update);}};
+  window.addEventListener('scroll',schedule,{{passive:true}});
+  window.addEventListener('resize',schedule);
+  window.addEventListener('load',update);
+  update();
+}})();
+</script></body></html>'''
     dest=ROOT/path.strip('/')/'index.html'; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_text(html)
     reports.append({'url':path,'title':s['title'],'h1':s['name'],'meta_description':s['description'],'canonical':canonical or TODO,'og_url':canonical or TODO,'og_image':share_image if canonical else TODO,'json_ld':schema,'breadcrumb_json_ld':breadcrumb_schema})
 (ROOT/'data/seo-report.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2)+'\n')
