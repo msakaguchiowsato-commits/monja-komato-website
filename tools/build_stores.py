@@ -55,16 +55,17 @@ for s in data['stores']:
     menu_list=f'<ul>{menus}</ul>' if menus else ''
     menu_copy=s.get('menu_copy') or '明太もちチーズもんじゃ・イカスミもんじゃ・深川あさりもんじゃなどなど。お好みにあったもんじゃをご用意。牡蠣ホイル焼き、ホタテホイル焼きなども人気です。一品系ではアボカドのおひたし、塩ネギソースで召し上がっていただく蒸し鶏などもございます。その他一品メニューも多数ご用意しております。'
     popular_menu_photos=[
-        ('01_avocado_green.jpg','アボカドのおひたし'),
-        ('02_cucumber_green.jpg','きゅうりの一品'),
-        ('03_steamed_chicken.jpg','塩ネギソースの蒸し鶏'),
-        ('04_kimchi.jpg','キムチの一品'),
-        ('05_scallop_foil.jpg','ホタテホイル焼き'),
-        ('06_onion_foil.jpg','玉ねぎホイル焼き'),
-        ('07_beef_teppan.jpg','牛肉の鉄板料理'),
+        ('popular-mentaimochi-cheese.jpg','明太もちチーズもんじゃ'),
+        ('popular-menu/01_avocado_green.jpg','アボカドのおひたし'),
+        ('popular-menu/02_cucumber_green.jpg','たたききゅうり'),
+        ('popular-menu/03_steamed_chicken.jpg','蒸し鶏'),
+        ('popular-menu/04_kimchi.jpg','キムチ'),
+        ('popular-menu/05_scallop_foil.jpg','ホタテホイル焼き'),
+        ('popular-menu/06_onion_foil.jpg','玉ねぎホイル焼き'),
+        ('popular-menu/07_beef_teppan.jpg','牛鉄板焼き'),
     ]
     popular_menu_gallery='<div class="popular-menu-gallery">'+''.join(
-        f'<figure><img loading="lazy" src="../../assets/stores/popular-menu/{e(filename)}?v=20261008-1" alt="{e(alt)}"></figure>'
+        f'<figure><img loading="lazy" src="../../assets/stores/{e(filename)}?v=20261008-2" alt="{e(alt)}"></figure>'
         for filename,alt in popular_menu_photos
     )+'</div>'
     html=f'''<!doctype html>
