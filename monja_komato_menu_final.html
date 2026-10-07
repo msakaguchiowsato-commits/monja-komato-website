@@ -147,6 +147,44 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
   .footer-row{display:block;text-align:center}
   .footer-row img{margin:0 auto 8px}
 }
+
+/* === mobile optimization 2026-10-08 === */
+@media(max-width:850px){
+  .wrap{width:min(100% - 28px,1160px)}
+  header{position:sticky;top:0;z-index:80}
+  .nav{min-height:72px;height:auto;padding:5px 0}
+  .logo img{height:62px;max-height:62px;width:auto}
+  .nav-right{gap:7px}
+  .nav-right .reserve{min-height:44px;display:flex;align-items:center;justify-content:center;padding:9px 13px;font-size:12px}
+  .hero{padding:30px 0 30px}
+  .hero-grid{gap:22px}
+  .hero-logo img{width:min(170px,44vw)}
+  h1{font-size:clamp(35px,9vw,44px);line-height:1.22;margin:8px 0 14px}
+  .hero p{font-size:14px;line-height:1.8}
+  .photo-strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:22px -14px 0;padding:0 14px 8px;scrollbar-width:none}
+  .photo-strip::-webkit-scrollbar{display:none}
+  .photo-strip figure{flex:0 0 72%;scroll-snap-align:start;border-radius:18px}
+  .tabs{top:72px;overflow-x:auto;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tabs-inner{min-width:max-content;gap:4px;padding:0 8px}
+  .tabs a{min-height:46px;display:flex;align-items:center;padding:11px 10px;font-size:12px}
+  .menu-section{padding:48px 0}
+  .menu-section h2{font-size:31px}
+  .menu-category{padding:18px 16px;border-radius:18px}
+  .category-title{gap:8px}
+  .category-title h3{font-size:20px}
+  .menu-row{font-size:14px;line-height:1.55;gap:9px}
+  .drink-grid{gap:14px}
+  .reserve-card{padding:22px 18px;border-radius:20px}
+  .reserve-card h2{font-size:27px}
+  .reserve-card a{min-height:48px;display:grid;place-items:center}
+  .footer-row{padding:28px 0 40px}
+}
+@media(max-width:420px){
+  .hero-logo img{width:min(145px,40vw)}
+  h1{font-size:35px}
+  .photo-strip figure{flex-basis:82%}
+}
 </style>
 </head>
 <body>
