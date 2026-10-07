@@ -205,15 +205,15 @@
       "reservation": null,
       "photos": [
         {
-          "src": "/assets/stores/nishi-gotanda-gallery-1-exterior.jpg",
+          "src": "/assets/stores/nishi-gotanda-gallery-1-exterior-v2.jpg",
           "alt": "もんじゃ駒と 西五反田の店舗外観"
         },
         {
-          "src": "/assets/stores/nishi-gotanda-gallery-2-counter.jpg",
+          "src": "/assets/stores/nishi-gotanda-gallery-2-counter-v2.jpg",
           "alt": "もんじゃ駒と 西五反田のカウンター席"
         },
         {
-          "src": "/assets/stores/nishi-gotanda-gallery-3-tables.jpg",
+          "src": "/assets/stores/nishi-gotanda-gallery-3-tables-v2.jpg",
           "alt": "もんじゃ駒と 西五反田のテーブル席"
         }
       ],
@@ -287,7 +287,7 @@
       },
       "section_heading": "五反田でゆったりもんじゃを楽しみたい方へ",
       "menu_copy": "明太もちチーズもんじゃ・駒とスペシャルもんじゃ。その他一品メニューも多数ご用意しております。詳しくはメニューをご覧ください。",
-      "hero_image": "/assets/stores/nishi-gotanda-hero.jpg",
+      "hero_image": "/assets/stores/nishi-gotanda-hero-v2.jpg",
       "hero_alt": "もんじゃ駒と 西五反田の店内",
       "hero_caption": "もんじゃ駒と 西五反田の店内"
     }
