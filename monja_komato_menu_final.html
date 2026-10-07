@@ -215,6 +215,52 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
     line-height:1.4;
   }
 }
+
+/* === muted category accents 2026-10-08 === */
+.menu-category .category-title h3{
+  position:relative;
+  display:inline-block;
+  isolation:isolate;
+}
+.menu-category .category-title h3::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:-10px;
+  top:12%;
+  width:72%;
+  height:82%;
+  border-radius:56% 44% 60% 40% / 48% 58% 42% 52%;
+  background:rgba(190,126,88,.10);
+  transform:rotate(-2deg);
+  pointer-events:none;
+}
+.menu-category:nth-child(4n+1) .category-title h3::before{
+  background:rgba(190,126,88,.11);
+  border-radius:56% 44% 60% 40% / 48% 58% 42% 52%;
+}
+.menu-category:nth-child(4n+2) .category-title h3::before{
+  background:rgba(118,129,100,.10);
+  border-radius:44% 56% 48% 52% / 56% 44% 58% 42%;
+  transform:rotate(2deg);
+}
+.menu-category:nth-child(4n+3) .category-title h3::before{
+  background:rgba(135,119,129,.09);
+  border-radius:61% 39% 46% 54% / 44% 56% 46% 54%;
+  transform:rotate(-1deg);
+}
+.menu-category:nth-child(4n) .category-title h3::before{
+  background:rgba(111,126,133,.09);
+  border-radius:47% 53% 58% 42% / 54% 46% 52% 48%;
+  transform:rotate(3deg);
+}
+@media(max-width:620px){
+  .menu-category .category-title h3::before{
+    left:-8px;
+    width:82%;
+    height:86%;
+  }
+}
 </style>
 </head>
 <body>
