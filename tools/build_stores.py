@@ -54,6 +54,19 @@ for s in data['stores']:
     menus=''.join(f'<li>{e(m)}</li>' for m in s['popular_menu'])
     menu_list=f'<ul>{menus}</ul>' if menus else ''
     menu_copy=s.get('menu_copy') or '明太もちチーズもんじゃ・イカスミもんじゃ・深川あさりもんじゃなどなど。お好みにあったもんじゃをご用意。牡蠣ホイル焼き、ホタテホイル焼きなども人気です。一品系ではアボカドのおひたし、塩ネギソースで召し上がっていただく蒸し鶏などもございます。その他一品メニューも多数ご用意しております。'
+    popular_menu_photos=[
+        ('01_avocado_green.jpg','アボカドのおひたし'),
+        ('02_cucumber_green.jpg','きゅうりの一品'),
+        ('03_steamed_chicken.jpg','塩ネギソースの蒸し鶏'),
+        ('04_kimchi.jpg','キムチの一品'),
+        ('05_scallop_foil.jpg','ホタテホイル焼き'),
+        ('06_onion_foil.jpg','玉ねぎホイル焼き'),
+        ('07_beef_teppan.jpg','牛肉の鉄板料理'),
+    ]
+    popular_menu_gallery='<div class="popular-menu-gallery">'+''.join(
+        f'<figure><img loading="lazy" src="../../assets/stores/popular-menu/{e(filename)}" alt="{e(alt)}"></figure>'
+        for filename,alt in popular_menu_photos
+    )+'</div>'
     html=f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(s['title'])}</title><meta name="description" content="{e(s['description'])}">
@@ -66,7 +79,7 @@ for s in data['stores']:
 <section><p class="kicker">SCENES</p><h2>{e(scenes_heading)}</h2><div class="cards">{''.join(f'<article><h3>{e(v)}</h3><p>{e(s["scene_descriptions"].get(v, TODO))}</p></article>' for v in s['scenes'])}</div></section>
 <section id="access"><p class="kicker">INFORMATION & ACCESS</p><h2>店舗情報・アクセス</h2><div class="panel"><dl>{info}</dl>{map_html}{link(s['map_url'],'Googleマップで確認')}{link(s['instagram'],'公式Instagram')}</div></section>
 {gallery_section}
-<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>{e(menu_copy)}</p><a class="text-link" href="../../monja_komato_menu_final.html">メニューを見る</a></div></section>
+<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>{e(menu_copy)}</p>{popular_menu_gallery}<a class="text-link" href="../../monja_komato_menu_final.html">メニューを見る</a></div></section>
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2>{faq}</section>
 <section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{external_button(s['reservation'],'ネットで予約')}{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}</section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗">{siblings}</nav></section></main>
