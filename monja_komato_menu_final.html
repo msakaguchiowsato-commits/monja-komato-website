@@ -185,6 +185,36 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
   h1{font-size:35px}
   .photo-strip figure{flex-basis:82%}
 }
+
+/* === prevent menu name / price overlap === */
+.menu-row{
+  grid-template-columns:minmax(0,1fr) max-content;
+  align-items:start;
+}
+.menu-row span{
+  min-width:0;
+  white-space:normal;
+  word-break:normal;
+  overflow-wrap:anywhere;
+  line-break:auto;
+  padding-right:2px;
+}
+.menu-row b{
+  align-self:start;
+  white-space:nowrap;
+}
+@media(max-width:540px){
+  .menu-row{
+    grid-template-columns:1fr;
+    gap:3px;
+    padding:12px 0;
+  }
+  .menu-row b{
+    justify-self:end;
+    font-size:13px;
+    line-height:1.4;
+  }
+}
 </style>
 </head>
 <body>
