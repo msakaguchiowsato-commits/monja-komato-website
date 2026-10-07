@@ -1987,6 +1987,132 @@ footer .brand{
   .hero-actions .btn{font-size:13px}
   .top-logo-hero-img{width:min(150px,42vw) !important}
 }
+
+/* === v38: reservation-focused hero with product photography === */
+@media(min-width:901px){
+  .hero{
+    min-height:0 !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) !important;
+    grid-template-areas:
+      "copy product"
+      "photo live" !important;
+    align-items:stretch;
+  }
+  .hero-copy{
+    grid-area:copy;
+    min-height:570px;
+    padding:72px clamp(40px,5vw,76px) !important;
+    display:flex;
+    align-items:center;
+  }
+  .hero-product{
+    grid-area:product;
+    position:relative;
+    min-height:570px;
+    overflow:hidden;
+    background:#2b211b;
+  }
+  .hero-product>img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:brightness(1.04) contrast(1.05) saturate(1.05);
+  }
+  .hero-photo{grid-area:photo}
+  .hero-live-copy{grid-area:live}
+}
+.hero-product{
+  position:relative;
+  overflow:hidden;
+}
+.hero-product>img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+.hero-product:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(18,12,8,.02) 45%,rgba(18,12,8,.58) 100%);
+}
+.hero-product-logo{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  top:22px;
+  width:92px;
+  padding:8px;
+  border-radius:16px;
+  background:rgba(255,253,249,.92);
+  box-shadow:0 10px 28px rgba(35,24,16,.18);
+}
+.hero-product-logo img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.hero-product-caption{
+  position:absolute;
+  z-index:2;
+  left:28px;
+  right:28px;
+  bottom:26px;
+  color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.38);
+}
+.hero-product-caption small{
+  display:block;
+  margin-bottom:5px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+  color:#f2d5a6;
+}
+.hero-product-caption strong{
+  display:block;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(24px,2.6vw,38px);
+  line-height:1.35;
+}
+@media(max-width:900px){
+  .hero-product{
+    order:0 !important;
+    margin:0 14px;
+    border-radius:22px;
+    box-shadow:0 14px 28px rgba(53,38,27,.10);
+  }
+  .hero-product>img{
+    aspect-ratio:16/10;
+    height:auto;
+  }
+  .hero-product-logo{
+    left:12px;
+    top:12px;
+    width:66px;
+    padding:6px;
+    border-radius:12px;
+  }
+  .hero-product-caption{
+    left:16px;
+    right:16px;
+    bottom:14px;
+  }
+  .hero-product-caption strong{
+    font-size:clamp(20px,6vw,27px);
+  }
+  .hero-copy{order:1 !important}
+  .hero-photo{order:2 !important}
+  .hero-live-copy{order:3 !important}
+}
+@media(max-width:420px){
+  .hero-product{margin:0 10px;border-radius:18px}
+  .hero-product>img{aspect-ratio:4/3}
+  .hero-product-caption strong{font-size:21px}
+}
 </style>
 </head>
 <body>
@@ -2002,7 +2128,7 @@ footer .brand{
 <nav class="mobile-nav"><a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a><a href="#shop-information">予約する</a></nav>
 </header>
 <main>
-<section class="hero"><div class="top-logo-hero"><div class="top-logo-hero-inner"><img alt="もんじゃ駒と ロゴ" class="top-logo-hero-img" src="assets/6d7f3ca368181aa7.png"/></div></div>
+<section class="hero"><div class="hero-product"><img alt="もんじゃ駒との人気メニュー" src="assets/c50ce797d4578aec.jpg"/><div class="hero-product-logo"><img alt="もんじゃ駒と" src="assets/6d7f3ca368181aa7.png"/></div><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>鉄板を囲んで、まずは一杯。</strong></div></div>
 <div class="hero-copy">
 <div class="hero-inner">
 <div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
