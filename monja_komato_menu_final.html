@@ -62,7 +62,7 @@ h1{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(48px,6vw
   border-top:1px solid rgba(185,154,95,.15);
   border-bottom:1px solid rgba(185,154,95,.18);
 }
-.tabs-inner{display:grid;grid-template-columns:repeat(4,1fr)}
+.tabs-inner{display:grid;grid-template-columns:repeat(5,1fr)}
 .tabs a{padding:16px 8px;text-align:center;font-size:13px;font-weight:900;border-right:1px solid rgba(185,154,95,.12)}
 .tabs a:last-child{border-right:0}
 .tabs a:hover{color:var(--terracotta)}
@@ -343,6 +343,59 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
     scroll-snap-align:start;
   }
 }
+
+/* === v41: mobile sticky current menu section === */
+.menu-section-sticky{display:none}
+@media(max-width:850px){
+  .menu-section-sticky{
+    display:block;
+    position:fixed;
+    z-index:55;
+    left:0;
+    right:0;
+    top:var(--menu-sticky-top,118px);
+    padding:7px 14px 8px;
+    background:rgba(255,253,249,.96);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-bottom:1px solid rgba(185,154,95,.20);
+    box-shadow:0 8px 22px rgba(64,46,32,.07);
+    opacity:0;
+    transform:translateY(-8px);
+    pointer-events:none;
+    transition:opacity .16s ease,transform .16s ease;
+  }
+  .menu-section-sticky.is-visible{
+    opacity:1;
+    transform:translateY(0);
+  }
+  .menu-section-sticky-inner{
+    width:min(100% - 28px,1160px);
+    margin:0 auto;
+    padding:5px 0 5px 12px;
+    border-left:3px solid var(--sticky-accent,#a85f48);
+  }
+  .menu-section-sticky-kicker{
+    display:block;
+    margin-bottom:1px;
+    color:var(--sticky-accent,#a85f48);
+    font-size:9px;
+    line-height:1.2;
+    font-weight:900;
+    letter-spacing:.15em;
+  }
+  .menu-section-sticky-title{
+    display:block;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    color:#2d2824;
+    font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+    font-size:18px;
+    line-height:1.3;
+    font-weight:700;
+  }
+}
 </style>
 </head>
 <body>
@@ -378,6 +431,12 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
 <a href="#drink-menu">ドリンク</a>
 </div>
 </nav>
+<div class="menu-section-sticky" aria-hidden="true">
+  <div class="menu-section-sticky-inner">
+    <span class="menu-section-sticky-kicker">MONJA MENU</span>
+    <strong class="menu-section-sticky-title">29種類のもんじゃ</strong>
+  </div>
+</div>
 <section class="menu-section" id="monja-menu">
 <div class="wrap">
 <div class="section-title">
@@ -554,5 +613,74 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
 <span>© MONJA KOMATO / SUMIKOMA Inc.</span>
 </div>
 </footer>
+
+<script>
+/* mobile-current-menu-section */
+(() => {
+  const sticky = document.querySelector('.menu-section-sticky');
+  const tabs = document.querySelector('.tabs');
+  const sections = [...document.querySelectorAll('.menu-section[id]')];
+  if (!sticky || !tabs || !sections.length) return;
+
+  const titleEl = sticky.querySelector('.menu-section-sticky-title');
+  const kickerEl = sticky.querySelector('.menu-section-sticky-kicker');
+  let ticking = false;
+
+  const update = () => {
+    ticking = false;
+    if (window.innerWidth > 850) {
+      sticky.classList.remove('is-visible');
+      return;
+    }
+
+    const tabsBottom = Math.round(tabs.getBoundingClientRect().bottom);
+    sticky.style.setProperty('--menu-sticky-top', tabsBottom + 'px');
+    const threshold = tabsBottom + 4;
+
+    let current = null;
+    for (const section of sections) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= threshold && rect.bottom > threshold + 44) current = section;
+    }
+
+    if (!current) {
+      sticky.classList.remove('is-visible');
+      return;
+    }
+
+    const sourceTitle = current.querySelector('.section-title h2');
+    const sourceKicker = current.querySelector('.section-title .kicker');
+    if (!sourceTitle) {
+      sticky.classList.remove('is-visible');
+      return;
+    }
+
+    const sourceRect = sourceTitle.getBoundingClientRect();
+    const show = sourceRect.bottom <= threshold + 8;
+
+    if (!show) {
+      sticky.classList.remove('is-visible');
+      return;
+    }
+
+    titleEl.textContent = sourceTitle.textContent.trim();
+    kickerEl.textContent = sourceKicker ? sourceKicker.textContent.trim() : '';
+    const accent = getComputedStyle(current).getPropertyValue('--section-accent').trim();
+    if (accent) sticky.style.setProperty('--sticky-accent', accent);
+    sticky.classList.add('is-visible');
+  };
+
+  const schedule = () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(update);
+  };
+
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  window.addEventListener('load', update);
+  update();
+})();
+</script>
 </body>
 </html>
