@@ -25,3 +25,43 @@
     gap:8px;
   }
 }
+/* === mobile optimization 2026-10-08 === */
+@media(max-width:700px){
+  html{scroll-padding-top:76px}
+  .wrap{width:min(100% - 28px,1160px)}
+  .nav{min-height:72px;padding:5px 0}
+  .logo{height:62px;max-height:62px}
+  .nav nav{display:flex;align-items:center;gap:8px}
+  .nav nav>a:not(.button){display:none}
+  nav .button{margin-left:0;padding:10px 12px;min-height:44px;font-size:12px}
+  .breadcrumb{padding-top:8px}
+  .breadcrumb ol{gap:8px;font-size:11px}
+  .breadcrumb li+li:before{margin-right:8px}
+  .hero{padding:22px 0 32px;gap:20px}
+  .hero h1{font-size:clamp(32px,9vw,40px);margin:8px 0 14px}
+  .hero p{font-size:14px;line-height:1.8}
+  .hero .button{display:block;width:100%;text-align:center;min-height:48px;padding:12px 14px}
+  .hero .text-link{display:block;margin:12px 0 0;text-align:center}
+  .hero figure{margin:0}
+  .hero img{border-radius:20px}
+  section{padding:26px 0}
+  h2{font-size:clamp(26px,7.5vw,32px);line-height:1.4}
+  h3{font-size:20px}
+  .cards{gap:12px}
+  .cards article,.panel,details,.placeholder{padding:18px;border-radius:18px}
+  .cards article p,.panel p{font-size:14px;line-height:1.8}
+  dl{font-size:14px}
+  dt{margin-top:14px}
+  dd{margin:4px 0 14px}
+  iframe{height:250px;border-radius:12px}
+  .popular-menu-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:16px}
+  .popular-menu-gallery img{border-radius:12px}
+  details{margin-bottom:10px}
+  summary{min-height:48px;display:flex;align-items:center}
+  .reservation{margin:26px 0;padding:20px 16px;border-width:4px;border-radius:20px}
+  .reservation h2{margin-top:0;font-size:27px}
+  .reservation .button{display:block;width:100%;min-height:50px;margin:8px 0 0;padding:13px 14px;text-align:center}
+  .store-links{display:grid;grid-template-columns:1fr;gap:10px}
+  .store-links a{min-height:48px;display:flex;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--paper)}
+  footer{padding:20px 0 34px}
+}
