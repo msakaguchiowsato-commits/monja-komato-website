@@ -215,6 +215,134 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
     line-height:1.4;
   }
 }
+
+/* === v40: calm, scannable menu category system === */
+/* Major menu groups each use one muted accent. */
+#monja-menu{--section-accent:#a85f48;--section-soft:#f4e7df;--section-deep:#754638}
+#food-menu{--section-accent:#7e8669;--section-soft:#edf0e8;--section-deep:#535a45}
+#finish-menu{--section-accent:#9a7b82;--section-soft:#f1e8eb;--section-deep:#685159}
+#drink-menu{--section-accent:#71818a;--section-soft:#e9eef0;--section-deep:#4b5a62}
+
+.menu-section .section-title{
+  position:relative;
+  padding-left:16px;
+  border-left:4px solid var(--section-accent);
+}
+.menu-section .section-title h2{color:#2d2824}
+.menu-section .section-title .kicker{color:var(--section-accent)}
+.menu-section .section-title p{max-width:760px}
+
+/* Category cards: clearer headers without making the whole page noisy. */
+.menu-category{
+  border-color:color-mix(in srgb,var(--section-accent) 24%, #e8ded1) !important;
+  box-shadow:0 10px 28px rgba(64,46,32,.055) !important;
+}
+.menu-category:before{display:none !important}
+.menu-category:after{opacity:.5}
+.category-title{
+  margin:-25px -26px 0;
+  padding:18px 20px 15px;
+  border-bottom:1px solid color-mix(in srgb,var(--section-accent) 22%, #eadfd3) !important;
+  background:linear-gradient(90deg,var(--section-soft),rgba(255,253,249,.45));
+  align-items:center;
+}
+.category-title h3{
+  color:var(--section-deep);
+  font-weight:700;
+  line-height:1.35;
+}
+.category-title h3::before{display:none !important}
+.category-title span{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:28px;
+  padding:5px 9px;
+  border-radius:999px;
+  background:rgba(255,255,255,.72);
+  border:1px solid color-mix(in srgb,var(--section-accent) 28%, transparent);
+  color:var(--section-deep);
+  letter-spacing:.10em;
+}
+.menu-rows{padding-top:7px}
+.menu-row{padding:13px 0}
+.menu-row span{color:#322d29}
+.menu-row b{color:var(--section-deep)}
+
+/* Monja subcategories get individual muted cues so the six styles are easy to scan. */
+#classic{--section-accent:#aa654f;--section-soft:#f5e8e1;--section-deep:#744638}
+#korean{--section-accent:#a36b70;--section-soft:#f3e7e9;--section-deep:#70484d}
+#chinese{--section-accent:#a47c51;--section-soft:#f3ece2;--section-deep:#6f5539}
+#italian{--section-accent:#7f8a70;--section-soft:#ebefe7;--section-deep:#56604a}
+#mexican{--section-accent:#b27659;--section-soft:#f4e9e3;--section-deep:#7a4f3d}
+#regional{--section-accent:#72848a;--section-soft:#e9eef0;--section-deep:#4d5c62}
+
+/* The six jump chips match the same muted palette. */
+.quick-chips{gap:9px}
+.quick-chips a{
+  border-width:1px;
+  transition:transform .16s ease,box-shadow .16s ease,background .16s ease;
+}
+.quick-chips a[href="#classic"]{background:#f5e8e1;border-color:#dfbeb1;color:#744638}
+.quick-chips a[href="#korean"]{background:#f3e7e9;border-color:#ddbec2;color:#70484d}
+.quick-chips a[href="#chinese"]{background:#f3ece2;border-color:#ddc9ad;color:#6f5539}
+.quick-chips a[href="#italian"]{background:#ebefe7;border-color:#c8d0bf;color:#56604a}
+.quick-chips a[href="#mexican"]{background:#f4e9e3;border-color:#dec4b6;color:#7a4f3d}
+.quick-chips a[href="#regional"]{background:#e9eef0;border-color:#c6d1d5;color:#4d5c62}
+@media(hover:hover){
+  .quick-chips a:hover{transform:translateY(-1px);box-shadow:0 5px 14px rgba(64,46,32,.08)}
+}
+
+/* Top-level navigation also becomes easier to parse at a glance. */
+.tabs a[href="#monja-menu"]{--tab:#a85f48}
+.tabs a[href="#food-menu"]{--tab:#7e8669}
+.tabs a[href="#finish-menu"]{--tab:#9a7b82}
+.tabs a[href="#drink-menu"]{--tab:#71818a}
+.tabs a{
+  border-bottom:3px solid transparent;
+}
+.tabs a:hover,.tabs a:focus-visible{
+  color:var(--tab);
+  border-bottom-color:var(--tab);
+}
+
+@media(max-width:850px){
+  .menu-section .section-title{
+    padding-left:12px;
+    border-left-width:3px;
+  }
+  .menu-category{padding:16px !important}
+  .category-title{
+    margin:-16px -16px 0;
+    padding:15px 14px 13px;
+    gap:10px;
+  }
+  .category-title h3{font-size:21px !important}
+  .category-title span{
+    min-height:26px;
+    padding:4px 8px;
+    font-size:9px;
+  }
+  .menu-rows{padding-top:5px}
+  .menu-row{padding:12px 0}
+  .quick-chips{
+    display:flex;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    margin-right:-14px;
+    padding:0 14px 7px 0;
+    scroll-snap-type:x proximity;
+    scrollbar-width:none;
+  }
+  .quick-chips::-webkit-scrollbar{display:none}
+  .quick-chips a{
+    flex:0 0 auto;
+    min-height:42px;
+    display:flex;
+    align-items:center;
+    scroll-snap-align:start;
+  }
+}
 </style>
 </head>
 <body>
