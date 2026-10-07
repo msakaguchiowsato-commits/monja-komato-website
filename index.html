@@ -2191,6 +2191,30 @@ footer .brand{
   }
 }
 .category .chip:active{transform:translateY(0)}
+
+/* === always-accessible mobile header + compact reserve === */
+@media(max-width:900px){
+  header{
+    position:fixed !important;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    z-index:180;
+  }
+  body{padding-top:72px !important}
+  .mobile-nav .mobile-reserve-btn{
+    width:max-content;
+    min-width:0;
+    min-height:48px;
+    margin:0;
+    padding:11px 18px;
+    justify-self:start;
+    border-radius:14px;
+    font-size:14px;
+    box-shadow:0 7px 16px rgba(145,65,43,.16);
+  }
+}
 </style>
 </head>
 <body>
