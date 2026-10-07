@@ -39,14 +39,15 @@ for s in data['stores']:
     breadcrumb_json = '<script type="application/ld+json">'+json.dumps(breadcrumb_schema,ensure_ascii=False).replace('<',chr(92)+'u003c')+'</script>' if breadcrumb_schema else ''
     info=''.join(f'<dt>{label}</dt><dd>{e(s.get(key))}</dd>' for label,key in [('住所','address'),('電話番号','telephone'),('営業時間','hours'),('定休日','closed_days'),('ラストオーダー','last_order'),('最寄駅・アクセス','access')] if s.get(key))
     if s['telephone']: info+=f'<dt>電話でのお問い合わせ</dt><dd><a href="tel:{e(s["telephone"])}">電話する</a></dd>'
-    photos=''.join(f'<figure><img loading="lazy" src="{e(p["src"])}" alt="{e(p["alt"])}"></figure>' for p in s['photos'])
+    def rel_asset(v): return '../../'+v.lstrip('/') if isinstance(v,str) and v.startswith('/') else v
+    photos=''.join(f'<figure><img loading="lazy" src="{e(rel_asset(p["src"]))}" alt="{e(p["alt"])}"></figure>' for p in s['photos'])
     gallery_section=f'<section><p class="kicker">GALLERY</p><h2>店舗写真</h2><div class="cards">{photos}</div></section>' if photos else ''
-    hero_src=s.get('hero_image') or assets['food']
+    hero_src=rel_asset(s.get('hero_image') or assets['food'])
     hero_alt=s.get('hero_alt') or 'もんじゃ駒との料理イメージ'
     hero_caption=s.get('hero_caption') or 'もんじゃ駒との料理イメージ'
     scenes_heading=s.get('section_heading') or f"{s['area']}でのお食事を計画する方へ"
     faq=''.join(f'<details><summary>{e(f["question"])}</summary><p>{e(f["answer"])}</p></details>' for f in s['faq'] if f.get('answer'))
-    siblings=''.join(f'<a href="/stores/{v["slug"]}/">{e(v["name"])}</a>' for v in data['stores'] if v['slug']!=s['slug'])
+    siblings=''.join(f'<a href="../{v["slug"]}/">{e(v["name"])}</a>' for v in data['stores'] if v['slug']!=s['slug'])
     map_html=f'<iframe title="{e(s["name"])}のGoogleマップ" src="{e(s["map_embed_url"])}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' if s['map_embed_url'] else f'<p>Googleマップ：{TODO}</p>'
     menus=''.join(f'<li>{e(m)}</li>' for m in s['popular_menu'])
     menu_list=f'<ul>{menus}</ul>' if menus else ''
@@ -55,15 +56,15 @@ for s in data['stores']:
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(s['title'])}</title><meta name="description" content="{e(s['description'])}">
 {metadata}<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="もんじゃ駒と"><meta property="og:title" content="{e(s['title'])}"><meta property="og:description" content="{e(s['description'])}">
-<link rel="stylesheet" href="/assets/stores/stores.css">
+<link rel="stylesheet" href="../../assets/stores/stores.css">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False).replace('<',chr(92)+'u003c')}</script>{breadcrumb_json}</head>
-<body><a class="skip" href="#main">本文へ</a><header><div class="wrap nav"><a href="/"><img class="logo" src="{assets['logo']}" alt="もんじゃ駒と TOP"></a><nav aria-label="メイン"><a href="/monja_komato_menu_final.html">メニュー</a><a class="button" href="#reservation">予約案内</a></nav></div></header>
-<main id="main" class="wrap"><nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="/">TOP</a></li><li aria-current="page">{e(s['name'])}</li></ol></nav>
+<body><a class="skip" href="#main">本文へ</a><header><div class="wrap nav"><a href="../../"><img class="logo" src="{e(rel_asset(assets['logo']))}" alt="もんじゃ駒と TOP"></a><nav aria-label="メイン"><a href="../../monja_komato_menu_final.html">メニュー</a><a class="button" href="#reservation">予約案内</a></nav></div></header>
+<main id="main" class="wrap"><nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="../../">TOP</a></li><li aria-current="page">{e(s['name'])}</li></ol></nav>
 <section class="hero"><div><p class="kicker">MONJA KOMATO / {e(s['area'])}</p><h1>{e(s['name'])}</h1><p>{e(s['description'])}</p><a class="button" href="#reservation">ご予約・お問い合わせ</a><a class="text-link" href="#access">店舗情報・アクセス</a></div><figure><img src="{e(hero_src)}" alt="{e(hero_alt)}"><figcaption>{e(hero_caption)}</figcaption></figure></section>
 <section><p class="kicker">SCENES</p><h2>{e(scenes_heading)}</h2><div class="cards">{''.join(f'<article><h3>{e(v)}</h3><p>{e(s["scene_descriptions"].get(v, TODO))}</p></article>' for v in s['scenes'])}</div></section>
 <section id="access"><p class="kicker">INFORMATION & ACCESS</p><h2>店舗情報・アクセス</h2><div class="panel"><dl>{info}</dl>{map_html}{link(s['map_url'],'Googleマップで確認')}{link(s['instagram'],'公式Instagram')}</div></section>
 {gallery_section}
-<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>{e(menu_copy)}</p><a class="text-link" href="/monja_komato_menu_final.html">メニューを見る</a></div></section>
+<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>{e(menu_copy)}</p><a class="text-link" href="../../monja_komato_menu_final.html">メニューを見る</a></div></section>
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2>{faq}</section>
 <section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}{link(s['reservation'],'オンライン予約')}</section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗">{siblings}</nav></section></main>
