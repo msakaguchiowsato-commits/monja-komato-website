@@ -106,7 +106,7 @@ for s in data['stores']:
   window.addEventListener('load',update);
   update();
 }})();
-</script></body></html>'''
+</script><script>/* close-mobile-menu-on-scroll */(()=>{let y=scrollY;const close=()=>{const n=document.querySelector('.mobile-nav');if(n&&n.classList.contains('open')){n.classList.remove('open');const b=document.querySelector('.menu-btn');if(b)b.setAttribute('aria-expanded','false')}};addEventListener('scroll',()=>{if(Math.abs(scrollY-y)>2)close();y=scrollY},{passive:true})})();</script></body></html>'''
     dest=ROOT/path.strip('/')/'index.html'; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_text(html)
     reports.append({'url':path,'title':s['title'],'h1':s['name'],'meta_description':s['description'],'canonical':canonical or TODO,'og_url':canonical or TODO,'og_image':share_image if canonical else TODO,'json_ld':schema,'breadcrumb_json_ld':breadcrumb_schema})
 (ROOT/'data/seo-report.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2)+'\n')
