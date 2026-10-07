@@ -64,14 +64,14 @@ for s in data['stores']:
         ('07_beef_teppan.jpg','牛肉の鉄板料理'),
     ]
     popular_menu_gallery='<div class="popular-menu-gallery">'+''.join(
-        f'<figure><img loading="lazy" src="../../assets/stores/popular-menu/{e(filename)}" alt="{e(alt)}"></figure>'
+        f'<figure><img loading="lazy" src="../../assets/stores/popular-menu/{e(filename)}?v=20261008-1" alt="{e(alt)}"></figure>'
         for filename,alt in popular_menu_photos
     )+'</div>'
     html=f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(s['title'])}</title><meta name="description" content="{e(s['description'])}">
 {metadata}<meta property="og:type" content="website"><meta property="og:locale" content="ja_JP"><meta property="og:site_name" content="もんじゃ駒と"><meta property="og:title" content="{e(s['title'])}"><meta property="og:description" content="{e(s['description'])}">
-<link rel="stylesheet" href="../../assets/stores/stores.css">
+<link rel="stylesheet" href="../../assets/stores/stores.css?v=20261008-1">
 <script type="application/ld+json">{json.dumps(schema,ensure_ascii=False).replace('<',chr(92)+'u003c')}</script>{breadcrumb_json}</head>
 <body><a class="skip" href="#main">本文へ</a><header><div class="wrap nav"><a href="../../"><img class="logo" src="{e(rel_asset(assets['logo']))}" alt="もんじゃ駒と TOP"></a><nav aria-label="メイン"><a href="../../monja_komato_menu_final.html">メニュー</a><a class="button" href="#reservation">予約案内</a></nav></div></header>
 <main id="main" class="wrap"><nav class="breadcrumb" aria-label="パンくず"><ol><li><a href="../../">TOP</a></li><li aria-current="page">{e(s['name'])}</li></ol></nav>
