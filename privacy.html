@@ -42,4 +42,20 @@ footer{padding:30px 0 46px;border-top:1px solid rgba(182,151,91,.18);color:#776d
 <h3>7. ポリシーの変更</h3><p>法令改正やサービス内容の変更等に応じて、本ポリシーを変更することがあります。</p>
 <h3>8. お問い合わせ</h3><p>本ポリシーに関するお問い合わせは、株式会社澄み駒までお願いいたします。各店舗の連絡先はTOPページの店舗情報からご確認いただけます。</p>
 <p class="note">制定日：2026年10月8日</p>
-</div></section></main><footer><div class="wrap">© MONJA KOMATO / SUMIKOMA Inc.</div></footer></body></html>
+</div></section></main><footer><div class="wrap">© MONJA KOMATO / SUMIKOMA Inc.</div></footer><script>
+/* close-mobile-menu-on-scroll */
+(() => {
+  let lastY = window.scrollY;
+  const closeMobileMenu = () => {
+    const nav = document.querySelector('.mobile-nav');
+    if (!nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    const btn = document.querySelector('.menu-btn');
+    if (btn) btn.setAttribute('aria-expanded','false');
+  };
+  window.addEventListener('scroll', () => {
+    if (Math.abs(window.scrollY - lastY) > 2) closeMobileMenu();
+    lastY = window.scrollY;
+  }, { passive: true });
+})();
+</script></body></html>
