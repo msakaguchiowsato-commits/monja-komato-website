@@ -2113,6 +2113,21 @@ footer .brand{
   .hero-product>img{aspect-ratio:4/3}
   .hero-product-caption strong{font-size:21px}
 }
+/* Subtle atmosphere behind the top menu introduction. */
+.hero-copy{overflow:hidden;isolation:isolate}
+.hero-menu-background{position:absolute;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:#fffdf9}
+.hero-menu-background span{position:absolute;display:block;background-size:cover;background-position:center;filter:blur(1px)}
+.hero-menu-background .menu-bg-exterior{inset:-3%;background-image:url("assets/stores/nakameguro-gallery-1.jpg");opacity:.12}
+.hero-menu-background .menu-bg-staff{left:-12%;top:18%;width:85%;height:76%;background-image:url("assets/cc373d29bd159e4a.png");opacity:.10}
+.hero-menu-background .menu-bg-monja{right:-12%;bottom:-8%;width:85%;height:58%;background-image:url("assets/cc373d29bd159e4a.png");background-size:210%;background-position:48% 92%;opacity:.12}
+.hero-menu-background:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,253,249,.68),rgba(248,242,232,.35))}
+.hero-copy>.hero-inner{position:relative;z-index:1}
+@media(max-width:900px){
+  .hero-menu-background .menu-bg-exterior{inset:-4%;opacity:.10;background-position:35% center}
+  .hero-menu-background .menu-bg-staff{left:-20%;top:35%;width:95%;height:65%;opacity:.08}
+  .hero-menu-background .menu-bg-monja{right:-22%;bottom:-12%;width:90%;height:48%;opacity:.08}
+  .hero-menu-background:after{background:linear-gradient(180deg,rgba(255,253,249,.78),rgba(255,253,249,.58) 65%,rgba(248,242,232,.40))}
+}
 </style>
 </head>
 <body>
@@ -2130,6 +2145,7 @@ footer .brand{
 <main>
 <section class="hero"><div class="hero-product"><img alt="もんじゃ駒との人気メニュー" src="assets/c50ce797d4578aec.jpg"/><div class="hero-product-logo"><img alt="もんじゃ駒と" src="assets/6d7f3ca368181aa7.png"/></div><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>鉄板を囲んで、まずは一杯。</strong></div></div>
 <div class="hero-copy">
+<div class="hero-menu-background" aria-hidden="true"><span class="menu-bg-exterior"></span><span class="menu-bg-staff"></span><span class="menu-bg-monja"></span></div>
 <div class="hero-inner">
 <div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
 <h1 class="hero-menu-title"><span class="hero-menu-title-main">豊富な<br/>もんじゃメニュー。</span><span class="hero-menu-title-sub">鉄板焼き、ホイル焼き、<br/>一品まで多数ご用意。</span></h1>
