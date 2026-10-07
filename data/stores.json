@@ -115,12 +115,12 @@
       "reservation": null,
       "photos": [
         {
-          "src": "/assets/stores/higashi-gotanda-gallery-1.jpg",
-          "alt": "もんじゃ駒と 東五反田のカウンター席"
-        },
-        {
           "src": "/assets/stores/higashi-gotanda-gallery-2.jpg",
           "alt": "もんじゃ駒と 東五反田の店舗外観"
+        },
+        {
+          "src": "/assets/stores/higashi-gotanda-gallery-1.jpg",
+          "alt": "もんじゃ駒と 東五反田のカウンター席"
         },
         {
           "src": "/assets/stores/higashi-gotanda-gallery-3.jpg",
@@ -181,7 +181,8 @@
       "menu_copy": "明太もちチーズもんじゃ・駒とスペシャルもんじゃ。その他一品メニューも多数ご用意しております。詳しくはメニューをご覧ください。",
       "hero_image": "/assets/stores/higashi-gotanda-hero.jpg",
       "hero_alt": "もんじゃ駒と 東五反田の店内",
-      "hero_caption": "テーブル席・カウンター席ご用意しております。"
+      "hero_caption": "テーブル席・カウンター席ご用意しております。",
+      "section_heading": "五反田でもんじゃなら当店をぜひご利用ください！"
     },
     {
       "slug": "nishi-gotanda",
