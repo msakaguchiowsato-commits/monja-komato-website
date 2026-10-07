@@ -2151,6 +2151,30 @@ footer .brand{
   .shop-info-card h3{font-size:clamp(16px,4.6vw,18px)}
   .shop-info-card h3 a{white-space:nowrap;letter-spacing:-.02em}
 }
+
+/* === mobile navigation reservation CTA === */
+@media(max-width:900px){
+  .mobile-nav .mobile-reserve-btn{
+    margin-top:10px;
+    min-height:54px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:0;
+    border-radius:16px;
+    background:linear-gradient(135deg,#bd6245,#a84b34) !important;
+    color:#fff !important;
+    font-size:16px;
+    font-weight:900;
+    letter-spacing:.02em;
+    box-shadow:0 10px 24px rgba(145,65,43,.20);
+  }
+  .mobile-nav .mobile-reserve-btn:active{
+    transform:translateY(1px);
+    box-shadow:0 6px 16px rgba(145,65,43,.18);
+  }
+}
 </style>
 </head>
 <body>
@@ -2163,7 +2187,7 @@ footer .brand{
 </nav>
 <button class="menu-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">☰</button>
 </div>
-<nav class="mobile-nav"><a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a><a href="#shop-information">予約する</a></nav>
+<nav class="mobile-nav"><a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a><a class="mobile-reserve-btn" href="#shop-information">予約する</a></nav>
 </header>
 <main>
 <section class="hero"><div class="hero-product"><img alt="もんじゃ駒との人気メニュー" src="assets/c50ce797d4578aec.jpg"/><div class="hero-product-logo"><img alt="もんじゃ駒と" src="assets/6d7f3ca368181aa7.png"/></div><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>鉄板を囲んで、<br/>もんじゃを食べる。</strong></div></div>
