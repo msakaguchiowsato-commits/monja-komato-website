@@ -1,0 +1,169 @@
+[
+  {
+    "url": "/stores/nakameguro/",
+    "title": "中目黒のもんじゃ焼き・鉄板焼き・土日祝ランチ｜もんじゃ駒と 中目黒店",
+    "h1": "もんじゃ駒と 中目黒店",
+    "meta_description": "中目黒駅徒歩2分、もんじゃ駒と 中目黒店。中目黒でもんじゃ焼き・鉄板焼きを楽しむなら。平日17:00〜23:00、土日祝12:00〜23:00。住所・電話予約・アクセス・メニューをご案内。カップルや家族でのお食事、初めてのもんじゃにも。",
+    "canonical": "TODO: 正式情報確認",
+    "og_url": "TODO: 正式情報確認",
+    "og_image": "TODO: 正式情報確認",
+    "json_ld": {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "もんじゃ駒と 中目黒店",
+      "servesCuisine": [
+        "もんじゃ焼き",
+        "鉄板焼き"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "東京都",
+        "addressLocality": "目黒区",
+        "streetAddress": "上目黒2-6-3 K&F中目黒 1F",
+        "addressCountry": "JP"
+      },
+      "telephone": "03-6452-2345",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "17:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Saturday",
+            "https://schema.org/Sunday"
+          ],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E4%B8%AD%E7%9B%AE%E9%BB%92%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8A%E7%9B%AE%E9%BB%922-6-3%20K%26F%E4%B8%AD%E7%9B%AE%E9%BB%92%201F",
+      "sameAs": [
+        "https://www.instagram.com/monja_komato/"
+      ]
+    },
+    "breadcrumb_json_ld": null
+  },
+  {
+    "url": "/stores/higashi-gotanda/",
+    "title": "五反田のもんじゃ・鉄板焼き｜翌3時まで営業｜もんじゃ駒と 東五反田店",
+    "h1": "もんじゃ駒と 東五反田店",
+    "meta_description": "五反田駅徒歩2分、もんじゃ駒と 東五反田店。毎日17:00〜翌3:00の深夜営業。五反田でもんじゃ・鉄板焼きや居酒屋を探す方へ、仕事帰りの飲み会・二軒目のお店選びに。住所・電話予約・Googleマップ・メニューをご案内。",
+    "canonical": "TODO: 正式情報確認",
+    "og_url": "TODO: 正式情報確認",
+    "og_image": "TODO: 正式情報確認",
+    "json_ld": {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "もんじゃ駒と 東五反田店",
+      "servesCuisine": [
+        "もんじゃ焼き",
+        "鉄板焼き"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "東京都",
+        "addressLocality": "品川区",
+        "streetAddress": "東五反田1-16-3 EAST-1ビル 1F",
+        "addressCountry": "JP"
+      },
+      "telephone": "03-6277-3390",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday",
+            "https://schema.org/Saturday",
+            "https://schema.org/Sunday"
+          ],
+          "opens": "17:00",
+          "closes": "03:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B01-16-3%20EAST-1%E3%83%93%E3%83%AB%201F",
+      "sameAs": [
+        "https://www.instagram.com/monja_komato_gotanda/"
+      ]
+    },
+    "breadcrumb_json_ld": null
+  },
+  {
+    "url": "/stores/nishi-gotanda/",
+    "title": "西五反田・五反田のもんじゃ・ランチ｜もんじゃ駒と 西五反田店",
+    "h1": "もんじゃ駒と 西五反田店",
+    "meta_description": "JR五反田駅徒歩5分、もんじゃ駒と 西五反田店。平日11:00〜14:00のランチと17:00〜23:00、土日祝12:00〜23:00に営業。西五反田・五反田でもんじゃや家族・グループのお食事を探す方へ、住所・電話予約・アクセスをご案内。",
+    "canonical": "TODO: 正式情報確認",
+    "og_url": "TODO: 正式情報確認",
+    "og_image": "TODO: 正式情報確認",
+    "json_ld": {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "もんじゃ駒と 西五反田店",
+      "servesCuisine": [
+        "もんじゃ焼き",
+        "鉄板焼き"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "東京都",
+        "addressLocality": "品川区",
+        "streetAddress": "西五反田2-12-15 リーラハイタウン 1F",
+        "addressCountry": "JP"
+      },
+      "telephone": "03-6417-3302",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "11:00",
+          "closes": "14:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Monday",
+            "https://schema.org/Tuesday",
+            "https://schema.org/Wednesday",
+            "https://schema.org/Thursday",
+            "https://schema.org/Friday"
+          ],
+          "opens": "17:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "https://schema.org/Saturday",
+            "https://schema.org/Sunday"
+          ],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "hasMap": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B02-12-15%20%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%8F%E3%82%A4%E3%82%BF%E3%82%A6%E3%83%B3%201F",
+      "sameAs": [
+        "https://www.instagram.com/monja_komato_nishigotanda/"
+      ]
+    },
+    "breadcrumb_json_ld": null
+  }
+]
