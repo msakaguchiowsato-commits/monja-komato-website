@@ -129,7 +129,7 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
 }
 @media(max-width:650px){
   .nav{min-height:68px;padding:10px 0}
-  .nav-right a:not(.reserve){display:none}
+  .nav-right .top-link{display:flex;align-items:center;justify-content:center;min-height:42px;padding:8px 12px;border:1px solid rgba(185,154,95,.34);background:#fffaf3;color:#2f2924;font-size:12px;font-weight:900;white-space:nowrap}
   .tabs{top:68px;overflow-x:auto}
   .tabs-inner{min-width:520px}
   .tabs a{padding:13px 7px;font-size:12px}
@@ -396,6 +396,22 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
     font-weight:700;
   }
 }
+
+/* === mobile TOP link in menu header === */
+@media(max-width:650px){
+  .nav-right{gap:6px}
+  .nav-right .top-link{
+    display:flex;
+    min-height:42px;
+    padding:8px 10px;
+    border-radius:999px;
+    font-size:11px;
+  }
+  .nav-right .reserve{
+    padding-left:12px;
+    padding-right:12px;
+  }
+}
 </style>
 </head>
 <body>
@@ -403,7 +419,7 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
 <div class="wrap nav">
 <a class="logo" href="monja_komato_home_final.html"><img alt="もんじゃ駒と" src="assets/6d7f3ca368181aa7.png"/></a>
 <div class="nav-right">
-<a href="monja_komato_home_final.html">TOPへ戻る</a>
+<a class="top-link" href="index.html">TOPページ</a>
 <a class="reserve" href="monja_komato_home_final.html#shop-information">店舗を選んで予約</a>
 </div>
 </div>
