@@ -62,7 +62,7 @@ for s in data['stores']:
 <section><p class="kicker">SCENES</p><h2>{e(scenes_heading)}</h2><div class="cards">{''.join(f'<article><h3>{e(v)}</h3><p>{e(s["scene_descriptions"].get(v, TODO))}</p></article>' for v in s['scenes'])}</div></section>
 <section id="access"><p class="kicker">INFORMATION & ACCESS</p><h2>店舗情報・アクセス</h2><div class="panel"><dl>{info}</dl>{map_html}{link(s['map_url'],'Googleマップで確認')}{link(s['instagram'],'公式Instagram')}</div></section>
 {gallery_section}
-<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>共通メニュー：明太もちチーズもんじゃ・駒とスペシャルもんじゃ。詳しくはメニューをご覧ください。</p><a class="text-link" href="/monja_komato_menu_final.html">メニューを見る</a></div></section>
+<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>明太もちチーズもんじゃ・駒とスペシャルもんじゃ。詳しくはメニューをご覧ください。</p><a class="text-link" href="/monja_komato_menu_final.html">メニューを見る</a></div></section>
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2>{faq}</section>
 <section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}{link(s['reservation'],'オンライン予約')}</section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗">{siblings}</nav></section></main>
