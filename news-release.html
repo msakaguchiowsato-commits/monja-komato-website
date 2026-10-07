@@ -32,4 +32,20 @@ footer{padding:30px 0 46px;border-top:1px solid rgba(182,151,91,.18);color:#111;
 <body><header><div class="wrap nav"><a href="./"><img class="logo" src="assets/6d7f3ca368181aa7.png" alt="もんじゃ駒と"></a><a class="back" href="./">TOPへ戻る</a></div></header>
 <main><section class="hero wrap"><div class="kicker">NEWS RELEASE</div><h1>ニュースリリース</h1><p>もんじゃ駒とからのお知らせを掲載します。</p></section>
 <section class="content wrap"><div class="card"><h2>ニュースリリースは順次公開予定です。</h2><p>新店舗、サービス、キャンペーンなどのお知らせを今後こちらでご案内します。</p></div></section></main>
-<footer><div class="wrap">© MONJA KOMATO / SUMIKOMA Inc.</div></footer></body></html>
+<footer><div class="wrap">© MONJA KOMATO / SUMIKOMA Inc.</div></footer><script>
+/* close-mobile-menu-on-scroll */
+(() => {
+  let lastY = window.scrollY;
+  const closeMobileMenu = () => {
+    const nav = document.querySelector('.mobile-nav');
+    if (!nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    const btn = document.querySelector('.menu-btn');
+    if (btn) btn.setAttribute('aria-expanded','false');
+  };
+  window.addEventListener('scroll', () => {
+    if (Math.abs(window.scrollY - lastY) > 2) closeMobileMenu();
+    lastY = window.scrollY;
+  }, { passive: true });
+})();
+</script></body></html>
