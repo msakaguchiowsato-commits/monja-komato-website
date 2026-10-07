@@ -16,7 +16,7 @@ if len(slugs) != len(set(slugs)) or any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]
     raise ValueError('Store slugs must be unique URL-safe path components')
 def e(value): return esc(str(value), quote=True)
 def link(value, label):
-    return f'<a class="button" href="{e(value)}">{e(label)}</a>' if value else f'<p>{e(label)}：{TODO}</p>'
+    return f'<a class="button" href="{e(value)}">{e(label)}</a>' if value else ''
 reports=[]
 for s in data['stores']:
     path=f"/stores/{s['slug']}/"
@@ -37,17 +37,19 @@ for s in data['stores']:
     else: metadata+=f'<!-- og:image: {TODO}（公式ドメイン） -->'
     breadcrumb_schema = {'@context':'https://schema.org','@type':'BreadcrumbList','itemListElement':[{'@type':'ListItem','position':1,'name':'TOP','item':data['site_url'].rstrip('/')+'/'},{'@type':'ListItem','position':2,'name':s['name'],'item':canonical}]} if canonical else None
     breadcrumb_json = '<script type="application/ld+json">'+json.dumps(breadcrumb_schema,ensure_ascii=False).replace('<',chr(92)+'u003c')+'</script>' if breadcrumb_schema else ''
-    info=''.join(f'<dt>{label}</dt><dd>{e(s.get(key)) if s.get(key) else TODO}</dd>' for label,key in [('住所','address'),('電話番号','telephone'),('営業時間','hours'),('定休日','closed_days'),('ラストオーダー','last_order'),('最寄駅・アクセス','access')])
+    info=''.join(f'<dt>{label}</dt><dd>{e(s.get(key))}</dd>' for label,key in [('住所','address'),('電話番号','telephone'),('営業時間','hours'),('定休日','closed_days'),('ラストオーダー','last_order'),('最寄駅・アクセス','access')] if s.get(key))
     if s['telephone']: info+=f'<dt>電話でのお問い合わせ</dt><dd><a href="tel:{e(s["telephone"])}">電話する</a></dd>'
-    photos=''.join(f'<figure><img loading="lazy" src="{e(p["src"])}" alt="{e(p["alt"])}"></figure>' for p in s['photos']) or f'<div class="placeholder">店舗外観・店内写真<br>{TODO}</div>'
+    photos=''.join(f'<figure><img loading="lazy" src="{e(p["src"])}" alt="{e(p["alt"])}"></figure>' for p in s['photos'])
+    gallery_section=f'<section><p class="kicker">GALLERY</p><h2>店舗写真</h2><div class="cards">{photos}</div></section>' if photos else ''
     hero_src=s.get('hero_image') or assets['food']
     hero_alt=s.get('hero_alt') or 'もんじゃ駒との料理イメージ'
     hero_caption=s.get('hero_caption') or 'もんじゃ駒との料理イメージ'
     scenes_heading=s.get('section_heading') or f"{s['area']}でのお食事を計画する方へ"
-    faq=''.join(f'<details><summary>{e(f["question"])}</summary><p>{e(f["answer"]) if f.get("answer") else TODO}</p></details>' for f in s['faq'])
+    faq=''.join(f'<details><summary>{e(f["question"])}</summary><p>{e(f["answer"])}</p></details>' for f in s['faq'] if f.get('answer'))
     siblings=''.join(f'<a href="/stores/{v["slug"]}/">{e(v["name"])}</a>' for v in data['stores'] if v['slug']!=s['slug'])
     map_html=f'<iframe title="{e(s["name"])}のGoogleマップ" src="{e(s["map_embed_url"])}" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>' if s['map_embed_url'] else f'<p>Googleマップ：{TODO}</p>'
-    menus=''.join(f'<li>{e(m)}</li>' for m in s['popular_menu']) or f'<li>店舗別の人気メニュー：{TODO}</li>'
+    menus=''.join(f'<li>{e(m)}</li>' for m in s['popular_menu'])
+    menu_list=f'<ul>{menus}</ul>' if menus else ''
     html=f'''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(s['title'])}</title><meta name="description" content="{e(s['description'])}">
@@ -59,10 +61,10 @@ for s in data['stores']:
 <section class="hero"><div><p class="kicker">MONJA KOMATO / {e(s['area'])}</p><h1>{e(s['name'])}</h1><p>{e(s['description'])}</p><a class="button" href="#reservation">ご予約・お問い合わせ</a><a class="text-link" href="#access">店舗情報・アクセス</a></div><figure><img src="{e(hero_src)}" alt="{e(hero_alt)}"><figcaption>{e(hero_caption)}</figcaption></figure></section>
 <section><p class="kicker">SCENES</p><h2>{e(scenes_heading)}</h2><div class="cards">{''.join(f'<article><h3>{e(v)}</h3><p>{e(s["scene_descriptions"].get(v, TODO))}</p></article>' for v in s['scenes'])}</div></section>
 <section id="access"><p class="kicker">INFORMATION & ACCESS</p><h2>店舗情報・アクセス</h2><div class="panel"><dl>{info}</dl>{map_html}{link(s['map_url'],'Googleマップで確認')}{link(s['instagram'],'公式Instagram')}</div></section>
-<section><p class="kicker">GALLERY</p><h2>店舗写真</h2><div class="cards">{photos}</div></section>
-<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel"><ul>{menus}</ul><p>共通メニュー掲載：明太もちチーズもんじゃ・駒とスペシャルもんじゃ。店舗別の提供・価格・人気順位：{TODO}</p><a class="text-link" href="/monja_komato_menu_final.html">メニューを見る</a></div></section>
+{gallery_section}
+<section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>共通メニュー：明太もちチーズもんじゃ・駒とスペシャルもんじゃ。詳しくはメニューをご覧ください。</p><a class="text-link" href="/monja_komato_menu_final.html">メニューを見る</a></div></section>
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2>{faq}</section>
-<section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}{link(s['reservation'],'オンライン予約')}<p>電話予約の受付条件・受付時間：{TODO}</p></section>
+<section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}{link(s['reservation'],'オンライン予約')}</section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗">{siblings}</nav></section></main>
 <footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer></body></html>'''
     dest=ROOT/path.strip('/')/'index.html'; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_text(html)
