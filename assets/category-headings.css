@@ -1,25 +1,120 @@
-/* Shared, quiet accents: shapes stay within the heading's line box. */
-.category-accent{--accent-color:#c2a68b}
-.category-accent:nth-of-type(3n+2){--accent-color:#a8b3a2}
-.category-accent:nth-of-type(3n){--accent-color:#b8a5ad}
-.category-accent :is(h2,h3).soft-heading{
+/* Shared muted shapes for TOP and menu category headings. */
+/* === v39: muted decorative shapes by category === */
+.monja-sec .section-head h2,
+.story-sec .story-copy h3,
+.drink-sec .drink-copy h2,
+.shop-info-section .shop-info-head h2{
   position:relative;
+  display:inline-block;
   isolation:isolate;
 }
-.soft-heading::before{
+.monja-sec .section-head h2::before,
+.story-sec .story-copy h3::before,
+.drink-sec .drink-copy h2::before,
+.shop-info-section .shop-info-head h2::before{
   content:"";
   position:absolute;
   z-index:-1;
   pointer-events:none;
-  left:0;
-  bottom:0;
-  width:min(210px,85%);
-  height:85%;
-  max-height:62px;
-  border-radius:58% 42% 65% 35% / 70% 60% 40% 30%;
-  background:var(--accent-color,#c2a68b);
-  opacity:.20;
+  filter:blur(.2px);
 }
-@media(max-width:650px){
-  .soft-heading::before{width:min(165px,78%);max-height:48px;opacity:.17}
+/* Monja: muted apricot */
+.monja-sec .section-head h2::before{
+  width:72%;
+  height:78%;
+  left:-7%;
+  top:18%;
+  border-radius:58% 42% 55% 45% / 56% 52% 48% 44%;
+  background:rgba(190,126,88,.12);
+  transform:rotate(-3deg);
 }
+/* Teppan / scenes: muted sage */
+.story-sec .story-copy h3::before{
+  width:68%;
+  height:76%;
+  left:-6%;
+  top:20%;
+  border-radius:45% 55% 48% 52% / 58% 42% 58% 42%;
+  background:rgba(118,129,100,.11);
+  transform:rotate(2deg);
+}
+/* Drinks: muted sand, brighter for the dark panel */
+.drink-sec .drink-copy h2::before{
+  width:74%;
+  height:76%;
+  left:-7%;
+  top:19%;
+  border-radius:54% 46% 60% 40% / 44% 56% 44% 56%;
+  background:rgba(210,184,139,.16);
+  transform:rotate(-2deg);
+}
+/* Shops: muted blue-grey */
+.shop-info-section .shop-info-head h2::before{
+  width:75%;
+  height:80%;
+  left:-7%;
+  top:18%;
+  border-radius:48% 52% 43% 57% / 55% 45% 55% 45%;
+  background:rgba(111,126,133,.10);
+  transform:rotate(3deg);
+}
+@media(max-width:620px){
+  .monja-sec .section-head h2::before,
+  .story-sec .story-copy h3::before,
+  .drink-sec .drink-copy h2::before,
+  .shop-info-section .shop-info-head h2::before{
+    width:82%;
+    height:82%;
+    left:-8%;
+    top:16%;
+  }
+}
+
+/* === muted category accents 2026-10-08 === */
+.menu-category .category-title h3{
+  position:relative;
+  display:inline-block;
+  isolation:isolate;
+}
+.menu-category .category-title h3::before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  left:-10px;
+  top:12%;
+  width:72%;
+  height:82%;
+  border-radius:56% 44% 60% 40% / 48% 58% 42% 52%;
+  background:rgba(190,126,88,.10);
+  transform:rotate(-2deg);
+  pointer-events:none;
+}
+.menu-category:nth-child(4n+1) .category-title h3::before{
+  background:rgba(190,126,88,.11);
+  border-radius:56% 44% 60% 40% / 48% 58% 42% 52%;
+}
+.menu-category:nth-child(4n+2) .category-title h3::before{
+  background:rgba(118,129,100,.10);
+  border-radius:44% 56% 48% 52% / 56% 44% 58% 42%;
+  transform:rotate(2deg);
+}
+.menu-category:nth-child(4n+3) .category-title h3::before{
+  background:rgba(135,119,129,.09);
+  border-radius:61% 39% 46% 54% / 44% 56% 46% 54%;
+  transform:rotate(-1deg);
+}
+.menu-category:nth-child(4n) .category-title h3::before{
+  background:rgba(111,126,133,.09);
+  border-radius:47% 53% 58% 42% / 54% 46% 52% 48%;
+  transform:rotate(3deg);
+}
+@media(max-width:620px){
+  .menu-category .category-title h3::before{
+    left:-8px;
+    width:82%;
+    height:86%;
+  }
+}
+.category-accent .section-title h2{position:relative;isolation:isolate}
+.category-accent .section-title h2::before{content:"";position:absolute;z-index:-1;pointer-events:none;left:0;bottom:0;width:min(190px,75%);height:80%;max-height:55px;border-radius:58% 42% 65% 35%;background:rgba(190,126,88,.10)}
+@media(max-width:650px){.category-accent .section-title h2::before{width:min(155px,75%);max-height:45px}}
