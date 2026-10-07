@@ -8,7 +8,27 @@ header{background:rgba(248,244,236,.96);border-bottom:1px solid rgba(182,151,91,
 .hero{padding:78px 0 34px}.kicker{font-size:11px;letter-spacing:.18em;font-weight:900;color:#9d6e55}.hero h1{margin:6px 0 14px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(38px,6vw,64px);line-height:1.2}.hero p{margin:0;color:var(--sub)}
 .content{padding:20px 0 90px}.card{background:var(--paper);border:1px solid rgba(182,151,91,.22);border-radius:24px;padding:30px;box-shadow:0 12px 34px rgba(64,46,32,.06);margin-bottom:18px}.card h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;margin:0 0 18px;font-size:25px}.card h3{margin:24px 0 8px;font-size:17px}.company-dl{display:grid;grid-template-columns:150px 1fr;gap:12px 24px;margin:0}.company-dl dt{font-weight:900;color:#9d6e55}.company-dl dd{margin:0}.stores{display:flex;flex-wrap:wrap;gap:8px}.tag{padding:7px 11px;border-radius:999px;background:#eee4d7;font-size:13px}.note{color:var(--sub);font-size:13px}
 footer{padding:30px 0 46px;border-top:1px solid rgba(182,151,91,.18);color:#776d64;font-size:12px}
-@media(max-width:900px){.logo{width:auto;height:62px;max-height:62px}}@media(max-width:640px){.company-dl{grid-template-columns:1fr;gap:3px}.company-dl dd{margin-bottom:12px}.card{padding:22px}.nav{min-height:72px}}</style></head>
+@media(max-width:900px){.logo{width:auto;height:62px;max-height:62px}}@media(max-width:640px){.company-dl{grid-template-columns:1fr;gap:3px}.company-dl dd{margin-bottom:12px}.card{padding:22px}.nav{min-height:72px}}
+/* === mobile optimization 2026-10-08 === */
+@media(max-width:700px){
+  .wrap{width:min(100% - 28px,980px)}
+  .nav{min-height:72px;padding:5px 0}
+  .logo{height:62px;max-height:62px;width:auto}
+  .back{min-height:44px;display:flex;align-items:center;justify-content:center;padding:9px 13px;font-size:12px}
+  .hero{padding:42px 0 22px}
+  .hero h1{font-size:clamp(34px,9.5vw,44px);line-height:1.25;margin:6px 0 12px}
+  .hero p{font-size:14px;line-height:1.8}
+  .content{padding:8px 0 64px}
+  .card{padding:20px 18px;border-radius:18px;margin-bottom:14px}
+  .card h2{font-size:24px;line-height:1.45}
+  .card h3{font-size:17px;line-height:1.6;margin:20px 0 6px}
+  .card p,.company-dl{font-size:14px}
+  .company-dl{grid-template-columns:1fr;gap:3px}
+  .company-dl dt{margin-top:10px}
+  .company-dl dd{margin-bottom:8px}
+  footer{padding:24px 0 34px}
+}
+</style></head>
 <body><header><div class="wrap nav"><a href="./"><img class="logo" src="assets/6d7f3ca368181aa7.png" alt="もんじゃ駒と"></a><a class="back" href="./">TOPへ戻る</a></div></header>
 <main><section class="hero wrap"><div class="kicker">COMPANY</div><h1>会社概要</h1><p>「もんじゃ駒と」を運営する株式会社澄み駒の会社情報です。</p></section>
 <section class="content wrap"><div class="card"><dl class="company-dl">
