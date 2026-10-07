@@ -65,3 +65,23 @@
   .store-links a{min-height:48px;display:flex;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:12px;text-decoration:none;background:var(--paper)}
   footer{padding:20px 0 34px}
 }
+/* === store names never wrap across store pages === */
+.hero h1,
+.breadcrumb [aria-current="page"],
+.store-links a{
+  white-space:nowrap;
+}
+@media(max-width:700px){
+  .hero h1{
+    font-size:clamp(24px,6.5vw,32px);
+    letter-spacing:-.02em;
+  }
+  .breadcrumb [aria-current="page"]{
+    font-size:10px;
+    letter-spacing:-.03em;
+  }
+  .store-links a{
+    font-size:13px;
+    letter-spacing:-.02em;
+  }
+}
