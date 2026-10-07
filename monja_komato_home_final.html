@@ -2175,6 +2175,22 @@ footer .brand{
     box-shadow:0 6px 16px rgba(145,65,43,.18);
   }
 }
+
+/* === clickable monja category chips === */
+.category .chip{
+  text-decoration:none;
+  color:var(--ink);
+  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background .16s ease;
+}
+@media(hover:hover){
+  .category .chip:hover{
+    transform:translateY(-1px);
+    border-color:rgba(182,83,57,.32);
+    background:#fffaf5;
+    box-shadow:0 6px 14px rgba(64,46,32,.07);
+  }
+}
+.category .chip:active{transform:translateY(0)}
 </style>
 </head>
 <body>
@@ -2216,12 +2232,12 @@ footer .brand{
 <a class="more" href="monja_komato_menu_final.html#monja-menu">29種類すべて見る →</a>
 </div>
 <div class="category">
-<span class="chip">定番もんじゃ11種類</span>
-<span class="chip">韓国もんじゃ2種類</span>
-<span class="chip">中華もんじゃ5種類</span>
-<span class="chip">イタリアンもんじゃ5種類</span>
-<span class="chip">メキシカンもんじゃ2種類</span>
-<span class="chip">日本の地域もんじゃ4種類</span>
+<a class="chip" href="monja_komato_menu_final.html#classic">定番もんじゃ11種類</a>
+<a class="chip" href="monja_komato_menu_final.html#korean">韓国もんじゃ2種類</a>
+<a class="chip" href="monja_komato_menu_final.html#chinese">中華もんじゃ5種類</a>
+<a class="chip" href="monja_komato_menu_final.html#italian">イタリアンもんじゃ5種類</a>
+<a class="chip" href="monja_komato_menu_final.html#mexican">メキシカンもんじゃ2種類</a>
+<a class="chip" href="monja_komato_menu_final.html#regional">日本の地域もんじゃ4種類</a>
 </div>
 <div class="monja-grid">
 <article class="monja-card"><img alt="明太もちチーズもんじゃ" src="assets/c50ce797d4578aec.jpg"/><div class="monja-info"><small>THE CLASSIC</small><strong>明太もちチーズもんじゃ</strong></div></article>
