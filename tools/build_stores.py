@@ -17,6 +17,8 @@ if len(slugs) != len(set(slugs)) or any(not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]
 def e(value): return esc(str(value), quote=True)
 def link(value, label):
     return f'<a class="button" href="{e(value)}">{e(label)}</a>' if value else ''
+def external_button(value, label):
+    return f'<a class="button" href="{e(value)}" target="_blank" rel="noopener">{e(label)}</a>' if value else ''
 reports=[]
 for s in data['stores']:
     path=f"/stores/{s['slug']}/"
@@ -66,7 +68,7 @@ for s in data['stores']:
 {gallery_section}
 <section><p class="kicker">MENU</p><h2>人気メニュー</h2><div class="panel">{menu_list}<p>{e(menu_copy)}</p><a class="text-link" href="../../monja_komato_menu_final.html">メニューを見る</a></div></section>
 <section><p class="kicker">FAQ</p><h2>よくあるご質問</h2>{faq}</section>
-<section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}{link(s['reservation'],'オンライン予約')}</section>
+<section id="reservation" class="reservation"><h2>{e(s['name'])}のご予約・お問い合わせ</h2>{external_button(s['reservation'],'ネットで予約')}{link('tel:'+s['telephone'] if s['telephone'] else None,'電話で予約・問い合わせ')}</section>
 <section><h2>ほかの店舗を探す</h2><nav class="store-links" aria-label="ほかの店舗">{siblings}</nav></section></main>
 <footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer></body></html>'''
     dest=ROOT/path.strip('/')/'index.html'; dest.parent.mkdir(parents=True,exist_ok=True); dest.write_text(html)
