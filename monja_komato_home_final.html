@@ -2266,5 +2266,21 @@ footer .brand{
 </div>
 </footer>
 <div class="mobile-sticky"><a href="monja_komato_menu_final.html#monja-menu">もんじゃ全29種類メニュー</a><a href="#shop-information">店舗を選んで予約</a></div>
-</body>
+<script>
+/* close-mobile-menu-on-scroll */
+(() => {
+  let lastY = window.scrollY;
+  const closeMobileMenu = () => {
+    const nav = document.querySelector('.mobile-nav');
+    if (!nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    const btn = document.querySelector('.menu-btn');
+    if (btn) btn.setAttribute('aria-expanded','false');
+  };
+  window.addEventListener('scroll', () => {
+    if (Math.abs(window.scrollY - lastY) > 2) closeMobileMenu();
+    lastY = window.scrollY;
+  }, { passive: true });
+})();
+</script></body>
 </html>
