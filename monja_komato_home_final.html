@@ -2260,10 +2260,11 @@ footer .brand{
 }
 .hero .hero-caption{left:auto;right:18px;bottom:18px;max-width:calc(100% - 36px);z-index:2}
 @media(max-width:900px){
-  .hero .hero-photo{position:relative;height:auto !important}
+  .hero .hero-photo{position:relative;height:auto !important;overflow:visible;border-radius:0}
   .hero .hero-photo>img{width:100%;height:auto !important;aspect-ratio:1092 / 848;object-fit:contain;object-position:center}
   .hero .hero-live-copy{position:relative;inset:auto;transform:none;order:3 !important}
-  .hero .hero-caption{right:10px;bottom:10px;font-size:10px;padding:7px 10px}
+  .hero .hero-photo>img{border-radius:24px}
+  .hero .hero-caption{position:static;transform:none;width:fit-content;max-width:100%;margin:10px 0 0 auto;font-size:10px;padding:7px 10px}
 }
 </style>
 </head>
