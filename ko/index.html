@@ -3050,6 +3050,13 @@ header .brand-locations{
  .hero-product-caption strong{display:block!important;width:100%!important;max-width:100%!important;white-space:nowrap!important;overflow:visible!important;box-sizing:border-box!important;font-size:var(--hero-fit-size,48px)!important;line-height:1.12!important;}
  .hero-product-caption strong br{display:block!important;}
 }
+
+/* Korean mobile headline: fixed two lines and smaller menu heading */
+@media(max-width:900px){
+ .hero-product-caption strong{display:block!important;width:100%!important;max-width:100%!important;white-space:nowrap!important;font-size:var(--hero-mobile-fit,36px)!important;line-height:1.12!important;box-sizing:border-box!important;}
+ .hero-product-caption strong .hero-headline-line{display:block!important;white-space:nowrap!important;}
+ .hero-menu-title-main{font-size:clamp(16px,4.2vw,20px)!important;line-height:1.45!important;}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -3072,7 +3079,7 @@ header .brand-locations{
 </div>
 </header>
 <main>
-<section class="hero"><div class="hero-product"><img alt="몬자駒との人気메뉴" src="../assets/c50ce797d4578aec.jpg"/><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>맛있는 몬자야키,<br/>있습니다.</strong></div></div>
+<section class="hero"><div class="hero-product"><img alt="몬자駒との人気메뉴" src="../assets/c50ce797d4578aec.jpg"/><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong><span class="hero-headline-line">맛있는 몬자야키,</span><span class="hero-headline-line">있습니다.</span></strong></div></div>
 <div class="hero-copy">
 <div class="hero-inner">
 <div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
@@ -3244,6 +3251,29 @@ header .brand-locations{
  };
  window.addEventListener('resize',fitHeroHeadline,{passive:true});
  document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();if(document.fonts)document.fonts.ready.then(fitHeroHeadline)});
+})();
+</script>
+
+<script>
+(function(){
+ function fitKoreanMobile(){
+  if(window.innerWidth>900)return;
+  const el=document.querySelector('.hero-product-caption strong');if(!el)return;
+  const lines=el.querySelectorAll('.hero-headline-line');if(lines.length!==2)return;
+  const parent=el.closest('.hero-product-caption'),ps=getComputedStyle(parent);
+  const available=parent.clientWidth-parseFloat(ps.paddingLeft)-parseFloat(ps.paddingRight)-10;
+  if(available<=0)return;
+  const st=getComputedStyle(el),ctx=document.createElement('canvas').getContext('2d');if(!ctx)return;
+  let low=12,high=110;
+  for(let i=0;i<19;i++){
+   const mid=(low+high)/2;ctx.font=st.fontWeight+' '+mid+'px '+st.fontFamily;
+   const max=Math.max(...Array.from(lines,l=>ctx.measureText(l.textContent).width));
+   if(max<=available)low=mid;else high=mid;
+  }
+  el.style.setProperty('--hero-mobile-fit',Math.floor(low*.94)+'px');
+ }
+ window.addEventListener('resize',fitKoreanMobile,{passive:true});
+ document.addEventListener('DOMContentLoaded',()=>{fitKoreanMobile();if(document.fonts)document.fonts.ready.then(fitKoreanMobile)});
 })();
 </script>
 </body>
