@@ -3135,6 +3135,13 @@ header .brand-locations{
  .hero-product-caption strong .hero-headline-line{display:block!important;white-space:nowrap!important;}
  .hero-product-caption strong br{display:none!important;}
 }
+
+/* Mobile headline: two unbreakable lines, sized to available width */
+@media(max-width:900px){
+ .hero-product-caption strong{display:block!important;width:100%!important;max-width:100%!important;white-space:nowrap!important;font-size:var(--hero-mobile-fit,36px)!important;line-height:1.12!important;box-sizing:border-box!important;}
+ .hero-product-caption strong .hero-headline-line{display:block!important;white-space:nowrap!important;}
+ .hero-menu-title-main{font-size:clamp(18px,5vw,23px)!important;line-height:1.45!important;}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -3349,6 +3356,29 @@ function fitJapanese(){
 }
 window.addEventListener('resize',fitJapanese,{passive:true});
 document.addEventListener('DOMContentLoaded',()=>{fitJapanese();if(document.fonts)document.fonts.ready.then(fitJapanese)});
+})();
+</script>
+
+<script>
+(function(){
+ function fitMobileHero(){
+  if(window.innerWidth>900)return;
+  const el=document.querySelector('.hero-product-caption strong');if(!el)return;
+  const lines=el.querySelectorAll('.hero-headline-line');if(lines.length!==2)return;
+  const parent=el.closest('.hero-product-caption');const ps=getComputedStyle(parent);
+  const available=parent.clientWidth-parseFloat(ps.paddingLeft)-parseFloat(ps.paddingRight)-8;
+  if(available<=0)return;
+  const style=getComputedStyle(el),ctx=document.createElement('canvas').getContext('2d');if(!ctx)return;
+  let low=12,high=110;
+  for(let i=0;i<19;i++){
+   const mid=(low+high)/2;ctx.font=style.fontWeight+' '+mid+'px '+style.fontFamily;
+   const widest=Math.max(...Array.from(lines,l=>ctx.measureText(l.textContent).width));
+   if(widest<=available)low=mid;else high=mid;
+  }
+  el.style.setProperty('--hero-mobile-fit',Math.floor(low*.94)+'px');
+ }
+ window.addEventListener('resize',fitMobileHero,{passive:true});
+ document.addEventListener('DOMContentLoaded',()=>{fitMobileHero();if(document.fonts)document.fonts.ready.then(fitMobileHero)});
 })();
 </script>
 </body>
