@@ -3341,7 +3341,7 @@ header .brand-locations{
   headline.style.setProperty('--hero-fit-size',Math.floor(lo)+'px');
  };
  window.addEventListener('resize',fitHeroHeadline,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();if(document.fonts)document.fonts.ready.then(fitHeroHeadline)});
+ document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();/* Avoid late font-load resizing that can cause layout shifts */});
 })();
 </script>
 
@@ -3361,7 +3361,7 @@ function fitJapanese(){
  el.style.setProperty('--hero-fit-size',Math.floor(low*.96)+'px');
 }
 window.addEventListener('resize',fitJapanese,{passive:true});
-document.addEventListener('DOMContentLoaded',()=>{fitJapanese();if(document.fonts)document.fonts.ready.then(fitJapanese)});
+document.addEventListener('DOMContentLoaded',()=>{fitJapanese();/* Avoid late font-load resizing that can cause layout shifts */});
 })();
 </script>
 
@@ -3384,7 +3384,7 @@ document.addEventListener('DOMContentLoaded',()=>{fitJapanese();if(document.font
   el.style.setProperty('--hero-mobile-fit',Math.floor(low*.94)+'px');
  }
  window.addEventListener('resize',fitMobileHero,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitMobileHero();if(document.fonts)document.fonts.ready.then(fitMobileHero)});
+ document.addEventListener('DOMContentLoaded',()=>{fitMobileHero();/* Avoid late font-load resizing that can cause layout shifts */});
 })();
 </script>
 </body>
