@@ -435,6 +435,27 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
   .nav-right a{padding:8px 8px}
   .nav-right .language-switch{display:inline-flex}
 }
+
+/* === menu mobile direct controls 2026-10-21 === */
+@media(max-width:650px){
+  .nav{gap:7px}
+  .nav-right{gap:4px!important;font-size:10px!important}
+  .nav-right a{
+    min-height:40px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:7px 8px!important;
+    white-space:nowrap;
+  }
+  .nav-right .language-switch{order:1}
+  .nav-right .top-link{order:2}
+  .nav-right .reserve{order:3;font-size:10px!important}
+}
+@media(max-width:390px){
+  .logo img{height:50px!important;max-height:50px!important}
+  .nav-right a{padding:6px 6px!important;font-size:9px!important}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
