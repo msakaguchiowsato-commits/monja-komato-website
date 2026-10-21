@@ -3057,6 +3057,33 @@ header .brand-locations{
  .hero-product-caption strong .hero-headline-line{display:block!important;white-space:nowrap!important;}
  .hero-menu-title-main{font-size:clamp(16px,4.2vw,20px)!important;line-height:1.45!important;}
 }
+/* === Hero headline: consistent brush font, filled white with black outline === */
+html,body{max-width:100%;overflow-x:clip;}
+.hero-product-caption{min-width:0;box-sizing:border-box;}
+.hero-product-caption strong{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  font-family:"Nanum Brush Script","Yuji Syuku",serif!important;
+  font-weight:400!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+  -webkit-text-stroke:2.6px #111!important;
+  paint-order:stroke fill!important;
+  text-shadow:1px 1px 0 #111,-1px 1px 0 #111,1px -1px 0 #111,-1px -1px 0 #111!important;
+  line-height:1.13!important;
+  letter-spacing:0!important;
+  white-space:nowrap!important;
+}
+.hero-product-caption .hero-headline-line{display:block!important;white-space:nowrap!important;}
+@media(min-width:901px){
+  .hero-product-caption{padding:34px 20px 48px 8px!important;text-align:left!important;}
+  .hero-product-caption strong{font-size:var(--hero-fit-size,48px)!important;text-align:left!important;}
+}
+@media(max-width:900px){
+  .hero-product-caption strong{font-size:var(--hero-mobile-fit,36px)!important;line-height:1.13!important;}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -3066,6 +3093,9 @@ header .brand-locations{
   gtag('js', new Date());
   gtag('config', 'G-KZVZY5K0P8');
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet"/>
 </head>
 <body>
 <header>
@@ -3213,7 +3243,8 @@ header .brand-locations{
     const params = {
       link_url: absoluteHref,
       link_text: (a.textContent || '').trim().slice(0, 100),
-      destination_store: destinationStore(href),\n      page_language: 'ko'
+      destination_store: destinationStore(href),
+      page_language: 'ko'
     };
 
     if (href.startsWith('tel:')) {
@@ -3226,54 +3257,37 @@ header .brand-locations{
 </script>
 
 <script>
+/* Fit the actual two span lines after the web font loads, on both layouts. */
 (function(){
- const fitHeroHeadline=()=>{
-  if(window.innerWidth<=900)return;
-  const caption=document.querySelector('.hero-product-caption');
-  const headline=caption&&caption.querySelector('strong');
-  if(!headline)return;
-  const available=caption.clientWidth-parseFloat(getComputedStyle(caption).paddingLeft)-parseFloat(getComputedStyle(caption).paddingRight);
-  if(available<=0)return;
-  const lines=headline.innerHTML.split(/<br\s*\/?\s*>/i).map(t=>t.replace(/<[^>]*>/g,''));
+ function fitHeroHeadline(){
+  const el=document.querySelector('.hero-product-caption strong');
+  if(!el)return;
+  const lines=Array.from(el.querySelectorAll('.hero-headline-line'));
   if(lines.length!==2)return;
-  const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');
-  if(!ctx)return;
-  const style=getComputedStyle(headline);
-  const fontFamily=style.fontFamily;const weight=style.fontWeight;
-  const letterSpacing=parseFloat(style.letterSpacing)||0;
-  let lo=12,hi=110;
-  for(let i=0;i<18;i++){
-   const mid=(lo+hi)/2;ctx.font=weight+' '+mid+'px '+fontFamily;
-   const widest=Math.max(...lines.map(t=>ctx.measureText(t).width+Math.max(0,t.length-1)*letterSpacing));
-   if(widest<=available-4)lo=mid;else hi=mid;
-  }
-  headline.style.setProperty('--hero-fit-size',Math.floor(lo)+'px');
- };
- window.addEventListener('resize',fitHeroHeadline,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();/* Avoid late font-load resizing that can cause layout shifts */});
-})();
-</script>
-
-<script>
-(function(){
- function fitKoreanMobile(){
-  if(window.innerWidth>900)return;
-  const el=document.querySelector('.hero-product-caption strong');if(!el)return;
-  const lines=el.querySelectorAll('.hero-headline-line');if(lines.length!==2)return;
   const parent=el.closest('.hero-product-caption'),ps=getComputedStyle(parent);
-  const available=parent.clientWidth-parseFloat(ps.paddingLeft)-parseFloat(ps.paddingRight)-10;
+  const available=parent.clientWidth-parseFloat(ps.paddingLeft)-parseFloat(ps.paddingRight)-8;
   if(available<=0)return;
-  const st=getComputedStyle(el),ctx=document.createElement('canvas').getContext('2d');if(!ctx)return;
+  const st=getComputedStyle(el),ctx=document.createElement('canvas').getContext('2d');
+  if(!ctx)return;
+  const spacing=parseFloat(st.letterSpacing)||0;
   let low=12,high=110;
   for(let i=0;i<19;i++){
-   const mid=(low+high)/2;ctx.font=st.fontWeight+' '+mid+'px '+st.fontFamily;
-   const max=Math.max(...Array.from(lines,l=>ctx.measureText(l.textContent).width));
-   if(max<=available)low=mid;else high=mid;
+   const size=(low+high)/2;
+   ctx.font=st.fontWeight+' '+size+'px '+st.fontFamily;
+   const widest=Math.max(...lines.map(l=>ctx.measureText(l.textContent).width+Math.max(0,l.textContent.length-1)*spacing));
+   if(widest<=available)low=size;else high=size;
   }
-  el.style.setProperty('--hero-mobile-fit',Math.floor(low*.94)+'px');
+  const size=Math.floor(low*(innerWidth>900?.96:.94))+'px';
+  el.style.setProperty('--hero-fit-size',size);
+  el.style.setProperty('--hero-mobile-fit',size);
  }
- window.addEventListener('resize',fitKoreanMobile,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitKoreanMobile();if(document.fonts)document.fonts.ready.then(fitKoreanMobile)});
+ function start(){
+  fitHeroHeadline();
+  if(document.fonts)document.fonts.ready.then(fitHeroHeadline);
+  if(window.ResizeObserver)new ResizeObserver(fitHeroHeadline).observe(document.querySelector('.hero-product-caption'));
+ }
+ window.addEventListener('resize',fitHeroHeadline,{passive:true});
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
 </script>
 </body>

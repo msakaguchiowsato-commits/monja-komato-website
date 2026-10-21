@@ -3348,74 +3348,37 @@ html,body{max-width:100%;overflow-x:clip;}
 </script>
 
 <script>
+/* Fit the actual two span lines after the web font loads, on both layouts. */
 (function(){
- const fitHeroHeadline=()=>{
-  if(window.innerWidth<=900)return;
-  const caption=document.querySelector('.hero-product-caption');
-  const headline=caption&&caption.querySelector('strong');
-  if(!headline)return;
-  const available=caption.clientWidth-parseFloat(getComputedStyle(caption).paddingLeft)-parseFloat(getComputedStyle(caption).paddingRight);
-  if(available<=0)return;
-  const lines=headline.innerHTML.split(/<br\s*\/?\s*>/i).map(t=>t.replace(/<[^>]*>/g,''));
+ function fitHeroHeadline(){
+  const el=document.querySelector('.hero-product-caption strong');
+  if(!el)return;
+  const lines=Array.from(el.querySelectorAll('.hero-headline-line'));
   if(lines.length!==2)return;
-  const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');
-  if(!ctx)return;
-  const style=getComputedStyle(headline);
-  const fontFamily=style.fontFamily;const weight=style.fontWeight;
-  const letterSpacing=parseFloat(style.letterSpacing)||0;
-  let lo=12,hi=110;
-  for(let i=0;i<18;i++){
-   const mid=(lo+hi)/2;ctx.font=weight+' '+mid+'px '+fontFamily;
-   const widest=Math.max(...lines.map(t=>ctx.measureText(t).width+Math.max(0,t.length-1)*letterSpacing));
-   if(widest<=available-4)lo=mid;else hi=mid;
-  }
-  headline.style.setProperty('--hero-fit-size',Math.floor(lo)+'px');
- };
- window.addEventListener('resize',fitHeroHeadline,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();/* Avoid late font-load resizing that can cause layout shifts */});
-})();
-</script>
-
-<script>
-(function(){
-function fitJapanese(){
- if(innerWidth<=900)return;
- const el=document.querySelector('.hero-product-caption strong');if(!el)return;
- const lines=el.querySelectorAll('.hero-headline-line');if(lines.length!==2)return;
- const c=el.closest('.hero-product-caption');const cs=getComputedStyle(c);
- const width=c.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight)-8;
- if(width<=0)return;
- const ctx=document.createElement('canvas').getContext('2d');if(!ctx)return;
- const st=getComputedStyle(el);const family=st.fontFamily,weight=st.fontWeight;
- let low=12,high=110;
- for(let i=0;i<18;i++){const size=(low+high)/2;ctx.font=weight+' '+size+'px '+family;const max=Math.max(...Array.from(lines,l=>ctx.measureText(l.textContent).width));if(max<=width)low=size;else high=size;}
- el.style.setProperty('--hero-fit-size',Math.floor(low*.96)+'px');
-}
-window.addEventListener('resize',fitJapanese,{passive:true});
-document.addEventListener('DOMContentLoaded',()=>{fitJapanese();/* Avoid late font-load resizing that can cause layout shifts */});
-})();
-</script>
-
-<script>
-(function(){
- function fitMobileHero(){
-  if(window.innerWidth>900)return;
-  const el=document.querySelector('.hero-product-caption strong');if(!el)return;
-  const lines=el.querySelectorAll('.hero-headline-line');if(lines.length!==2)return;
-  const parent=el.closest('.hero-product-caption');const ps=getComputedStyle(parent);
+  const parent=el.closest('.hero-product-caption'),ps=getComputedStyle(parent);
   const available=parent.clientWidth-parseFloat(ps.paddingLeft)-parseFloat(ps.paddingRight)-8;
   if(available<=0)return;
-  const style=getComputedStyle(el),ctx=document.createElement('canvas').getContext('2d');if(!ctx)return;
+  const st=getComputedStyle(el),ctx=document.createElement('canvas').getContext('2d');
+  if(!ctx)return;
+  const spacing=parseFloat(st.letterSpacing)||0;
   let low=12,high=110;
   for(let i=0;i<19;i++){
-   const mid=(low+high)/2;ctx.font=style.fontWeight+' '+mid+'px '+style.fontFamily;
-   const widest=Math.max(...Array.from(lines,l=>ctx.measureText(l.textContent).width));
-   if(widest<=available)low=mid;else high=mid;
+   const size=(low+high)/2;
+   ctx.font=st.fontWeight+' '+size+'px '+st.fontFamily;
+   const widest=Math.max(...lines.map(l=>ctx.measureText(l.textContent).width+Math.max(0,l.textContent.length-1)*spacing));
+   if(widest<=available)low=size;else high=size;
   }
-  el.style.setProperty('--hero-mobile-fit',Math.floor(low*.94)+'px');
+  const size=Math.floor(low*(innerWidth>900?.96:.94))+'px';
+  el.style.setProperty('--hero-fit-size',size);
+  el.style.setProperty('--hero-mobile-fit',size);
  }
- window.addEventListener('resize',fitMobileHero,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitMobileHero();/* Avoid late font-load resizing that can cause layout shifts */});
+ function start(){
+  fitHeroHeadline();
+  if(document.fonts)document.fonts.ready.then(fitHeroHeadline);
+  if(window.ResizeObserver)new ResizeObserver(fitHeroHeadline).observe(document.querySelector('.hero-product-caption'));
+ }
+ window.addEventListener('resize',fitHeroHeadline,{passive:true});
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
 </script>
 </body>
