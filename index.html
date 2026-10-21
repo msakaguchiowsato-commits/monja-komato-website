@@ -8,6 +8,9 @@
 <meta content="もんじゃ駒と。中目黒・東五反田・西五反田で、定番から変わり種まで全29種類のもんじゃと豊富なドリンクを楽しめます。" name="description"/>
 <link rel="canonical" href="https://monja-komato.jp/">
 <meta name="robots" content="index,follow">
+<link rel="alternate" hreflang="ja" href="https://monja-komato.jp/">
+<link rel="alternate" hreflang="ko" href="https://monja-komato.jp/ko/">
+<link rel="alternate" hreflang="x-default" href="https://monja-komato.jp/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ja_JP">
 <meta property="og:site_name" content="もんじゃ駒と">
@@ -37,11 +40,11 @@ header{position:sticky;top:0;z-index:100;background:rgba(246,240,230,.94);backdr
 .brand{font-weight:900;letter-spacing:.09em;font-size:20px;white-space:nowrap}
 .brand small{display:block;font-size:9px;letter-spacing:.22em;color:var(--sub);margin-top:-5px}
 .navlinks{margin-left:auto;display:flex;align-items:center;gap:21px;font-size:13px;font-weight:700}
-.reserve{padding:11px 18px;background:var(--terracotta);color:white;border-radius:999px;box-shadow:0 8px 24px rgba(182,83,57,.18)}
+.lang-switch{padding:9px 13px;border:1px solid rgba(182,83,57,.28);border-radius:999px;color:var(--terracotta);background:#fff;font-weight:900}.reserve{padding:11px 18px;background:var(--terracotta);color:white;border-radius:999px;box-shadow:0 8px 24px rgba(182,83,57,.18)}
 .menu-btn{display:none;margin-left:auto;border:0;background:#fff;border-radius:12px;width:44px;height:44px;font-size:20px}
 .mobile-nav{display:none;padding:8px 20px 18px;background:var(--paper);border-top:1px solid var(--line)}
 .mobile-nav.open{display:grid}
-.mobile-nav a{padding:11px 3px;border-bottom:1px solid var(--line);font-weight:800}
+.mobile-nav a{padding:11px 3px;border-bottom:1px solid var(--line);font-weight:800}.mobile-lang-switch{color:var(--terracotta);font-weight:900!important}
 
 .hero{min-height:720px;display:grid;grid-template-columns:minmax(390px,44%) 1fr;background:var(--paper)}
 .hero-copy{display:flex;align-items:center;padding:72px clamp(34px,5.4vw,86px);position:relative;z-index:2}
@@ -2294,12 +2297,12 @@ footer .brand{
 <div class="wrap nav">
 <a class="brand" href="#"><img alt="もんじゃ駒と" class="brand-logo-header" src="assets/6d7f3ca368181aa7.png"/></a>
 <nav class="navlinks">
-<a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a>
+<a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a><a class="lang-switch" href="ko/" lang="ko">한국어</a>
 <a class="reserve" href="#shop-information">予約する</a>
 </nav>
 <button class="menu-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">☰</button>
 </div>
-<nav class="mobile-nav"><a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a><a class="mobile-reserve-btn" href="#shop-information">予約する</a></nav>
+<nav class="mobile-nav"><a href="#">ページTOP</a><a href="monja_komato_menu_final.html#monja-menu">もんじゃ</a><a href="monja_komato_menu_final.html#food-menu">お料理・ドリンク</a><a href="#shop-information">店舗</a><a class="mobile-lang-switch" href="ko/" lang="ko">한국어 안내</a><a class="mobile-reserve-btn" href="#shop-information">予約する</a></nav>
 </header>
 <main>
 <section class="hero"><div class="hero-product"><img alt="もんじゃ駒との人気メニュー" src="assets/c50ce797d4578aec.jpg"/><div class="hero-product-logo"><img alt="もんじゃ駒と" src="assets/6d7f3ca368181aa7.png"/></div><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>鉄板を囲んで、<br/>もんじゃを食べる。</strong></div></div>
