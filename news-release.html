@@ -41,7 +41,15 @@ footer{padding:30px 0 46px;border-top:1px solid rgba(182,151,91,.18);color:#111;
   .company-dl dd{margin-bottom:8px}
   footer{padding:24px 0 34px}
 }
-</style></head>
+</style><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KZVZY5K0P8');
+</script>
+</head>
 <body><header><div class="wrap nav"><a href="./"><img class="logo" src="assets/6d7f3ca368181aa7.png" alt="もんじゃ駒と"></a><a class="back" href="./">TOPへ戻る</a></div></header>
 <main><section class="hero wrap"><div class="kicker">NEWS RELEASE</div><h1>ニュースリリース</h1><p>もんじゃ駒とからのお知らせを掲載します。</p></section>
 <section class="content wrap"><div class="card"><h2>ニュースリリースは順次公開予定です。</h2><p>新店舗、サービス、キャンペーンなどのお知らせを今後こちらでご案内します。</p></div></section></main>
@@ -61,4 +69,34 @@ footer{padding:30px 0 46px;border-top:1px solid rgba(182,151,91,.18);color:#111;
     lastY = window.scrollY;
   }, { passive: true });
 })();
-</script></body></html>
+</script><script>
+/* GA4 conversion click tracking */
+(() => {
+  const destinationStore = (href) => {
+    if (href.includes('13286293') || href.includes('0364522345') || href.includes('03-6452-2345')) return '中目黒';
+    if (href.includes('13302209') || href.includes('0362773390') || href.includes('03-6277-3390')) return '東五反田';
+    if (href.includes('13318684') || href.includes('0364173302') || href.includes('03-6417-3302')) return '西五反田';
+    return '';
+  };
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (!a || typeof gtag !== 'function') return;
+
+    const href = a.getAttribute('href') || '';
+    const absoluteHref = a.href || href;
+    const params = {
+      link_url: absoluteHref,
+      link_text: (a.textContent || '').trim().slice(0, 100),
+      destination_store: destinationStore(href)
+    };
+
+    if (href.startsWith('tel:')) {
+      gtag('event', 'phone_click', params);
+    } else if (href.includes('yoyaku.tabelog.com')) {
+      gtag('event', 'reservation_click', params);
+    }
+  });
+})();
+</script>
+</body></html>
