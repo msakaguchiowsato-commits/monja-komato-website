@@ -2905,6 +2905,37 @@ header .brand-locations{
     line-height:.88!important;
   }
 }
+
+/* === gold outlined hero headline + patterned PC panel 2026-10-22i === */
+.hero-product-caption strong{
+  color:#fff!important;
+  -webkit-text-stroke:2.6px #c6a66b!important;
+  paint-order:stroke fill!important;
+  font-size:clamp(54px,4.8vw,76px)!important;
+  line-height:1.12!important;
+  font-weight:700!important;
+  text-shadow:
+    -1px -1px 0 #c6a66b,
+     1px -1px 0 #c6a66b,
+    -1px  1px 0 #c6a66b,
+     1px  1px 0 #c6a66b,
+     0  3px 6px rgba(0,0,0,.20)!important;
+}
+@media(min-width:901px){
+  .hero-product{
+    background:#f7f0e4 url("assets/stores/pattern.png") center center/cover repeat!important;
+  }
+  .hero-product:after{
+    background:linear-gradient(180deg,rgba(18,12,8,0) 44%,rgba(18,12,8,.10) 100%)!important;
+  }
+}
+@media(max-width:900px){
+  .hero-product-caption strong{
+    font-size:clamp(46px,12vw,62px)!important;
+    line-height:1.1!important;
+    -webkit-text-stroke:2.2px #c6a66b!important;
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
