@@ -3250,7 +3250,7 @@ header .brand-locations{
   headline.style.setProperty('--hero-fit-size',Math.floor(lo)+'px');
  };
  window.addEventListener('resize',fitHeroHeadline,{passive:true});
- document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();if(document.fonts)document.fonts.ready.then(fitHeroHeadline)});
+ document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();/* Avoid late font-load resizing that can cause layout shifts */});
 })();
 </script>
 
