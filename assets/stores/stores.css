@@ -138,3 +138,7 @@
     letter-spacing:-.02em;
   }
 }
+
+/* language switch */
+.nav nav>a.language-switch{display:inline-flex;align-items:center;justify-content:center;padding:8px 11px;border:1px solid rgba(189,98,69,.28);border-radius:999px;color:var(--terracotta);background:#fff;text-decoration:none;font-weight:900;white-space:nowrap}
+@media(max-width:700px){.nav nav>a.language-switch{display:inline-flex!important;font-size:11px;padding:8px 10px;min-height:40px}}
