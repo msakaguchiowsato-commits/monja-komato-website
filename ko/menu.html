@@ -456,6 +456,29 @@ footer{padding:38px 0 50px;border-top:1px solid rgba(185,154,95,.15);font-size:1
   .logo img{height:50px!important;max-height:50px!important}
   .nav-right a{padding:6px 6px!important;font-size:9px!important}
 }
+
+/* compact Korean menu logo crop 2026-10-22 */
+.logo{
+  overflow:hidden!important;
+  height:72px!important;
+  display:flex!important;
+  align-items:flex-start!important;
+}
+.logo img{
+  width:250px!important;
+  max-width:none!important;
+  height:auto!important;
+  max-height:none!important;
+  transform:translateY(-22%)!important;
+  object-fit:contain!important;
+}
+@media(max-width:620px){
+  .logo{height:54px!important}
+  .logo img{
+    width:205px!important;
+    transform:translateY(-20%)!important;
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
