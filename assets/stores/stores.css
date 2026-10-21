@@ -540,3 +540,7 @@
   .store-brand.store-brand-ko .store-brand-mark{width:145px!important}
   .store-brand.store-brand-ko .logo{width:145px!important;max-width:145px!important}
 }
+
+/* Direct reservation choices on all store hero sections */
+.hero-reservation-actions{display:flex;flex-direction:column;gap:10px;margin:20px 0 12px}
+.hero-reservation-actions .button{display:block;box-sizing:border-box;width:100%;margin:0;padding:14px 18px;min-height:54px;text-align:center;font-weight:800;text-decoration:none}
