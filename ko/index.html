@@ -2434,6 +2434,73 @@ footer .brand{
   }
   .hero-product-logo{display:none!important}
 }
+
+/* === compact cropped header logo + uncropped mobile hero 2026-10-22 === */
+header .nav .brand{
+  overflow:hidden!important;
+  flex:0 0 auto!important;
+  width:min(360px,34vw)!important;
+  height:76px!important;
+  display:flex!important;
+  align-items:flex-start!important;
+  justify-content:center!important;
+  padding:0!important;
+}
+header .nav .brand-logo-header{
+  width:100%!important;
+  max-width:none!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  transform:translateY(-25%)!important;
+  filter:none!important;
+}
+@media(max-width:900px){
+  header .nav{
+    padding-top:0!important;
+  }
+  header .nav .brand{
+    flex:0 0 100%!important;
+    width:100%!important;
+    height:58px!important;
+    padding:0!important;
+  }
+  header .nav .brand-logo-header{
+    width:min(235px,68vw)!important;
+    height:auto!important;
+    transform:translateY(-23%)!important;
+  }
+  .hero-product{
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    overflow:hidden!important;
+    background:#fffdf9!important;
+  }
+  .hero-product>img{
+    display:block!important;
+    width:100%!important;
+    height:auto!important;
+    min-height:0!important;
+    max-height:none!important;
+    aspect-ratio:auto!important;
+    object-fit:contain!important;
+    object-position:center center!important;
+    transform:none!important;
+  }
+}
+@media(max-width:420px){
+  header .nav .brand{height:54px!important}
+  header .nav .brand-logo-header{
+    width:min(225px,72vw)!important;
+    transform:translateY(-22%)!important;
+  }
+  .hero-product>img{
+    width:100%!important;
+    height:auto!important;
+    aspect-ratio:auto!important;
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -2456,7 +2523,7 @@ footer .brand{
 </div>
 </header>
 <main>
-<section class="hero"><div class="hero-product"><img alt="몬자駒との人気메뉴" src="../assets/c50ce797d4578aec.jpg"/><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>철판을 둘러앉아,<br/>몬자야키를 즐기다.</strong></div></div>
+<section class="hero"><div class="hero-product"><img alt="몬자駒との人気메뉴" src="../assets/c50ce797d4578aec.jpg" style="display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center center;"/><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>철판을 둘러앉아,<br/>몬자야키를 즐기다.</strong></div></div>
 <div class="hero-copy">
 <div class="hero-inner">
 <div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
