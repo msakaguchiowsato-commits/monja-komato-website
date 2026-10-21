@@ -55,6 +55,40 @@ jobs:
                   n += 1
           print(f'Updated {n} HTML files')
           PY
+      - name: Optimize externally hosted menu photos
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          from PIL import Image, ImageOps
+          from urllib.request import urlopen
+          from io import BytesIO
+          import re
+          urls=set()
+          for page in Path('.').rglob('*.html'):
+              if '.git' in page.parts: continue
+              urls.update(re.findall(r'https://static[.]wixstatic[.]com/media/[A-Za-z0-9_~.%-]+',page.read_text(encoding='utf-8')))
+          changes={}
+          for url in sorted(urls):
+              try:
+                  raw=urlopen(url,timeout=45).read()
+                  with Image.open(BytesIO(raw)) as im:
+                      im=ImageOps.exif_transpose(im)
+                      im.thumbnail((1100,1100),Image.Resampling.LANCZOS)
+                      if im.mode not in ('RGB','RGBA'): im=im.convert('RGB')
+                      dest=Path('assets')/('wix_'+url.rsplit('/',1)[-1].split('~')[0]+'.webp')
+                      im.save(dest,'WEBP',quality=82,method=6)
+                      changes[url]=(dest.as_posix(),im.width,im.height)
+                  print('Converted',dest,len(raw),dest.stat().st_size)
+              except Exception as e:
+                  print('Skipped',url,repr(e))
+          for page in Path('.').rglob('*.html'):
+              if '.git' in page.parts: continue
+              old=page.read_text(encoding='utf-8')
+              new=old
+              for url,(dest,w,h) in changes.items():
+                  new=re.sub(r'src="'+re.escape(url)+r'"(?: width="[0-9]+" height="[0-9]+")?',f'src="{dest}" width="{w}" height="{h}"',new)
+              if old!=new: page.write_text(new,encoding='utf-8')
+          PY
       - name: Commit optimized assets and references
         run: |
           git config user.name "github-actions[bot]"
