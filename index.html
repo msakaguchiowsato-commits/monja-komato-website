@@ -22,6 +22,9 @@
 <meta name="twitter:title" content="もんじゃ駒と｜豊富なメニュー。選ぶ時間まで、楽しい。">
 <meta name="twitter:description" content="もんじゃ駒と。中目黒・東五反田・西五反田で、定番から変わり種まで全29種類のもんじゃと豊富なドリンクを楽しめます。">
 <meta name="twitter:image" content="https://monja-komato.jp/assets/c50ce797d4578aec.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Yuji+Syuku&display=swap" rel="stylesheet"/>
 <style>
 :root {
   --ivory:#f6f0e6; --paper:#fffdf9; --ink:#2d2823; --sub:#756c63;
@@ -3149,16 +3152,23 @@ header .brand-locations{
  .hero-menu-title-main{font-size:clamp(16px,4.2vw,20px)!important;line-height:1.45!important;}
 }
 
-/* === Unified hero headline styling (PC/mobile) === */
+/* === Hero headline: consistent brush font, filled white with black outline === */
+html,body{max-width:100%;overflow-x:clip;}
+.hero-product-caption{min-width:0;box-sizing:border-box;}
 .hero-product-caption strong{
   display:block!important;
-  font-family:"HG行書体","HGP行書体","Yu Mincho","Hiragino Mincho ProN",serif!important;
-  font-weight:700!important;
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  font-family:"Yuji Syuku","HG行書体","HGP行書体","Yu Mincho",serif!important;
+  font-weight:400!important;
   color:#fff!important;
-  -webkit-text-stroke:2px #111!important;
+  -webkit-text-fill-color:#fff!important;
+  -webkit-text-stroke:2.6px #111!important;
   paint-order:stroke fill!important;
-  text-shadow:-1px -1px 0 #111,1px -1px 0 #111,-1px 1px 0 #111,1px 1px 0 #111!important;
-  line-height:1.08!important;
+  text-shadow:1px 1px 0 #111,-1px 1px 0 #111,1px -1px 0 #111,-1px -1px 0 #111!important;
+  line-height:1.13!important;
+  letter-spacing:0!important;
   white-space:nowrap!important;
 }
 .hero-product-caption .hero-headline-line{display:block!important;white-space:nowrap!important;}
@@ -3167,7 +3177,7 @@ header .brand-locations{
   .hero-product-caption strong{font-size:var(--hero-fit-size,48px)!important;text-align:left!important;}
 }
 @media(max-width:900px){
-  .hero-product-caption strong{font-size:var(--hero-mobile-fit,36px)!important;line-height:1.12!important;}
+  .hero-product-caption strong{font-size:var(--hero-mobile-fit,36px)!important;line-height:1.13!important;}
 }
 </style>
 <!-- Google tag (gtag.js) -->
