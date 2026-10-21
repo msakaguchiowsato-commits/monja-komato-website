@@ -2528,6 +2528,104 @@ header .brand-locations{
   header .brand-logo-header{width:min(198px,55vw)!important;transform:translateY(-20%)!important}
   header .brand-locations{font-size:11px!important;padding-left:7px!important}
 }
+
+/* === final header logo alignment 2026-10-22 === */
+header .nav .brand{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:14px!important;
+  width:auto!important;
+  height:68px!important;
+  overflow:visible!important;
+  flex:0 0 auto!important;
+  padding:0!important;
+}
+header .brand-mark{
+  width:300px!important;
+  height:60px!important;
+  overflow:hidden!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  flex:0 0 auto!important;
+}
+header .brand-logo-header{
+  width:300px!important;
+  max-width:none!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:translateY(-18%)!important;
+  filter:none!important;
+}
+header .brand.brand-ko .brand-mark{
+  height:72px!important;
+}
+header .brand.brand-ko .brand-logo-header{
+  transform:translateY(-11%)!important;
+}
+header .brand-locations{
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  gap:1px!important;
+  padding-left:13px!important;
+  border-left:1px solid rgba(0,0,0,.20)!important;
+  color:#000!important;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif!important;
+  font-size:16px!important;
+  line-height:1.35!important;
+  letter-spacing:.08em!important;
+  font-weight:900!important;
+  white-space:nowrap!important;
+}
+@media(max-width:900px){
+  header .nav .brand{
+    flex:0 0 100%!important;
+    width:100%!important;
+    height:54px!important;
+    gap:9px!important;
+    justify-content:center!important;
+  }
+  header .brand-mark{
+    width:min(220px,58vw)!important;
+    height:46px!important;
+  }
+  header .brand-logo-header{
+    width:min(220px,58vw)!important;
+    transform:translateY(-17%)!important;
+  }
+  header .brand.brand-ko{
+    height:62px!important;
+  }
+  header .brand.brand-ko .brand-mark{
+    height:56px!important;
+    width:min(220px,58vw)!important;
+  }
+  header .brand.brand-ko .brand-logo-header{
+    width:min(220px,58vw)!important;
+    transform:translateY(-8%)!important;
+  }
+  header .brand-locations{
+    color:#000!important;
+    font-weight:900!important;
+    font-size:12px!important;
+    line-height:1.25!important;
+    padding-left:8px!important;
+    letter-spacing:.04em!important;
+  }
+}
+@media(max-width:390px){
+  header .nav .brand{height:50px!important;gap:7px!important}
+  header .brand-mark{width:min(198px,55vw)!important;height:42px!important}
+  header .brand-logo-header{width:min(198px,55vw)!important;transform:translateY(-16%)!important}
+  header .brand.brand-ko{height:58px!important}
+  header .brand.brand-ko .brand-mark{width:min(198px,55vw)!important;height:52px!important}
+  header .brand.brand-ko .brand-logo-header{width:min(198px,55vw)!important;transform:translateY(-7%)!important}
+  header .brand-locations{font-size:11px!important;padding-left:7px!important}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
