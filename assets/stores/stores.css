@@ -409,3 +409,38 @@
     padding-left:5px;
   }
 }
+
+/* store logo final alignment 2026-10-22 */
+.store-brand-mark{
+  align-items:center!important;
+}
+.store-brand .logo{
+  transform:translateY(-10%)!important;
+}
+.store-brand.store-brand-ko .store-brand-mark{
+  height:72px!important;
+  align-items:center!important;
+}
+.store-brand.store-brand-ko .logo{
+  transform:translateY(-3%)!important;
+}
+.store-brand-locations{
+  color:#000!important;
+  font-weight:900!important;
+}
+@media(max-width:700px){
+  .store-brand .logo{
+    transform:translateY(-8%)!important;
+  }
+  .store-brand.store-brand-ko .logo{
+    transform:translateY(-1%)!important;
+  }
+}
+@media(max-width:390px){
+  .store-brand .logo{
+    transform:translateY(-7%)!important;
+  }
+  .store-brand.store-brand-ko .logo{
+    transform:translateY(0)!important;
+  }
+}
