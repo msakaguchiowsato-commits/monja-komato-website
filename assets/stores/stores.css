@@ -303,30 +303,109 @@
   }
 }
 
-/* compact wide header logo crop 2026-10-22 */
-.nav>a:first-child{
-  overflow:hidden;
-  height:72px;
+
+/* store header brand alignment 2026-10-22 */
+.nav > a.store-brand{
   display:flex;
-  align-items:flex-start;
-  justify-content:center;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  height:68px;
+  overflow:visible;
+  text-decoration:none;
+  flex:0 0 auto;
 }
-.nav>a:first-child .logo{
+.store-brand-mark{
   width:250px;
-  max-width:none;
-  height:auto;
-  max-height:none;
-  transform:translateY(-22%);
-  object-fit:contain;
+  height:60px;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+}
+.store-brand .logo{
+  width:250px!important;
+  max-width:none!important;
+  height:auto!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:translateY(-18%)!important;
+  filter:none!important;
+}
+.store-brand.store-brand-ko .store-brand-mark{
+  height:72px;
+}
+.store-brand.store-brand-ko .logo{
+  transform:translateY(-11%)!important;
+}
+.store-brand-locations{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:1px;
+  padding-left:10px;
+  border-left:1px solid rgba(0,0,0,.20);
+  color:#000;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:14px;
+  line-height:1.3;
+  letter-spacing:.06em;
+  font-weight:900;
+  white-space:nowrap;
 }
 @media(max-width:700px){
-  .nav>a:first-child{
-    height:54px;
+  .nav > a.store-brand{
+    height:52px;
+    gap:6px;
+    min-width:0;
   }
-  .nav>a:first-child .logo{
-    width:205px;
-    height:auto;
-    max-height:none;
-    transform:translateY(-20%);
+  .store-brand-mark{
+    width:145px;
+    height:44px;
+  }
+  .store-brand .logo{
+    width:145px!important;
+    transform:translateY(-16%)!important;
+  }
+  .store-brand.store-brand-ko{
+    height:58px;
+  }
+  .store-brand.store-brand-ko .store-brand-mark{
+    width:145px;
+    height:52px;
+  }
+  .store-brand.store-brand-ko .logo{
+    width:145px!important;
+    transform:translateY(-7%)!important;
+  }
+  .store-brand-locations{
+    font-size:10px;
+    line-height:1.2;
+    padding-left:6px;
+    letter-spacing:.02em;
+  }
+}
+@media(max-width:390px){
+  .store-brand-mark{
+    width:126px;
+    height:40px;
+  }
+  .store-brand .logo{
+    width:126px!important;
+    transform:translateY(-15%)!important;
+  }
+  .store-brand.store-brand-ko .store-brand-mark{
+    width:126px;
+    height:48px;
+  }
+  .store-brand.store-brand-ko .logo{
+    width:126px!important;
+    transform:translateY(-6%)!important;
+  }
+  .store-brand-locations{
+    font-size:9px;
+    padding-left:5px;
   }
 }
