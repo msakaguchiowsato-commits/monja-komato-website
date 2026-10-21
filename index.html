@@ -3122,6 +3122,12 @@ header .brand-locations{
   .hero-product-caption strong{font-size:clamp(44px,3.7vw,60px)!important;}
   .hero-product-caption strong br{display:block!important;}
 }
+
+/* Responsive desktop headline: fixed two-line layout with measured fit */
+@media(min-width:901px){
+ .hero-product-caption strong{display:block!important;width:100%!important;max-width:100%!important;white-space:nowrap!important;overflow:visible!important;box-sizing:border-box!important;font-size:var(--hero-fit-size,48px)!important;line-height:1.12!important;}
+ .hero-product-caption strong br{display:block!important;}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -3287,6 +3293,35 @@ header .brand-locations{
       gtag('event', 'reservation_click', params);
     }
   });
+})();
+</script>
+
+<script>
+(function(){
+ const fitHeroHeadline=()=>{
+  if(window.innerWidth<=900)return;
+  const caption=document.querySelector('.hero-product-caption');
+  const headline=caption&&caption.querySelector('strong');
+  if(!headline)return;
+  const available=caption.clientWidth-parseFloat(getComputedStyle(caption).paddingLeft)-parseFloat(getComputedStyle(caption).paddingRight);
+  if(available<=0)return;
+  const lines=headline.innerHTML.split(/<br\\s*\\/?\\s*>/i).map(t=>t.replace(/<[^>]*>/g,''));
+  if(lines.length!==2)return;
+  const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');
+  if(!ctx)return;
+  const style=getComputedStyle(headline);
+  const fontFamily=style.fontFamily;const weight=style.fontWeight;
+  const letterSpacing=parseFloat(style.letterSpacing)||0;
+  let lo=12,hi=110;
+  for(let i=0;i<18;i++){
+   const mid=(lo+hi)/2;ctx.font=weight+' '+mid+'px '+fontFamily;
+   const widest=Math.max(...lines.map(t=>ctx.measureText(t).width+Math.max(0,t.length-1)*letterSpacing));
+   if(widest<=available-4)lo=mid;else hi=mid;
+  }
+  headline.style.setProperty('--hero-fit-size',Math.floor(lo)+'px');
+ };
+ window.addEventListener('resize',fitHeroHeadline,{passive:true});
+ document.addEventListener('DOMContentLoaded',()=>{fitHeroHeadline();if(document.fonts)document.fonts.ready.then(fitHeroHeadline)});
 })();
 </script>
 </body>
