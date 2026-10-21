@@ -1,34 +1,2454 @@
-<!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <title>몬자 코마토｜나카메구로·고탄다 몬자야키·철판요리</title>
-<meta name="description" content="도쿄 나카메구로·고탄다의 몬자야키 전문점 몬자 코마토. 직원이 테이블 앞 철판에서 직접 구워드립니다. 나카메구로, 히가시고탄다, 니시고탄다 3개 매장 안내.">
+<meta content="몬자 코마토. 나카메구로·히가시고탄다·니시고탄다에서 29종의 몬자야키와 철판요리, 다양한 음료를 즐겨보세요. 직원이 몬자야키를 직접 구워드립니다." name="description"/>
 <link rel="canonical" href="https://monja-komato.jp/ko/">
+<meta name="robots" content="index,follow">
 <link rel="alternate" hreflang="ja" href="https://monja-komato.jp/">
 <link rel="alternate" hreflang="ko" href="https://monja-komato.jp/ko/">
 <link rel="alternate" hreflang="x-default" href="https://monja-komato.jp/">
-<meta name="robots" content="index,follow">
-<meta property="og:type" content="website"><meta property="og:locale" content="ko_KR">
-<meta property="og:site_name" content="몬자 코마토"><meta property="og:title" content="몬자 코마토｜나카메구로·고탄다 몬자야키">
-<meta property="og:description" content="직원이 직접 구워드리는 몬자야키·철판요리. 나카메구로·히가시고탄다·니시고탄다 3개 매장.">
-<meta property="og:url" content="https://monja-komato.jp/ko/"><meta property="og:image" content="https://monja-komato.jp/assets/c50ce797d4578aec.jpg">
-<link rel="stylesheet" href="../assets/stores/stores.css?v=20261021-ko1">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="몬자 코마토">
+<meta property="og:title" content="몬자 코마토｜29종 몬자야키·철판요리">
+<meta property="og:description" content="나카메구로·고탄다에서 29종의 몬자야키와 철판요리, 다양한 음료를 즐겨보세요.">
+<meta property="og:url" content="https://monja-komato.jp/ko/">
+<meta property="og:image" content="https://monja-komato.jp/assets/c50ce797d4578aec.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="몬자 코마토｜29종 몬자야키·철판요리">
+<meta name="twitter:description" content="나카메구로·고탄다에서 29종의 몬자야키와 철판요리, 다양한 음료를 즐겨보세요.">
+<meta name="twitter:image" content="https://monja-komato.jp/assets/c50ce797d4578aec.jpg">
 <style>
-.ko-hero{display:grid;gap:24px;padding:42px 0 30px}.ko-hero img{border-radius:24px;box-shadow:var(--shadow);aspect-ratio:16/10;object-fit:cover}.ko-lead{font-size:16px;line-height:1.9}.ko-grid{display:grid;gap:18px}.ko-card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:var(--shadow)}.ko-card h3{margin-top:0}.ko-card .button{margin:6px 8px 0 0}.ko-note{font-size:12px;color:var(--sub)}
-@media(min-width:850px){.ko-hero{grid-template-columns:1fr 1fr;align-items:center}.ko-grid{grid-template-columns:repeat(3,1fr)}}
+:root {
+  --ivory:#f6f0e6; --paper:#fffdf9; --ink:#2d2823; --sub:#756c63;
+  --terracotta:#b65339; --gold:#c6a66b; --line:#e3d8ca; --soft:#fbf7f1;
+  --shadow:0 18px 50px rgba(64,46,32,.10); --round:28px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;line-height:1.8;letter-spacing:.025em}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:auto}
+.wrap{width:min(1160px,calc(100% - 40px));margin:0 auto}
+
+header{position:sticky;top:0;z-index:100;background:rgba(246,240,230,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(93,72,55,.08)}
+.nav{min-height:76px;display:flex;align-items:center;gap:24px;padding:12px 0}
+.brand{font-weight:900;letter-spacing:.09em;font-size:20px;white-space:nowrap}
+.brand small{display:block;font-size:9px;letter-spacing:.22em;color:var(--sub);margin-top:-5px}
+.navlinks{margin-left:auto;display:flex;align-items:center;gap:21px;font-size:13px;font-weight:700}
+.lang-switch{padding:9px 13px;border:1px solid rgba(182,83,57,.28);border-radius:999px;color:var(--terracotta);background:#fff;font-weight:900}.reserve{padding:11px 18px;background:var(--terracotta);color:white;border-radius:999px;box-shadow:0 8px 24px rgba(182,83,57,.18)}
+.menu-btn{display:none;margin-left:auto;border:0;background:#fff;border-radius:12px;width:44px;height:44px;font-size:20px}
+.mobile-nav{display:none;padding:8px 20px 18px;background:var(--paper);border-top:1px solid var(--line)}
+.mobile-nav.open{display:grid}
+.mobile-nav a{padding:11px 3px;border-bottom:1px solid var(--line);font-weight:800}.mobile-lang-switch{color:var(--terracotta);font-weight:900!important}
+
+.hero{min-height:720px;display:grid;grid-template-columns:minmax(390px,44%) 1fr;background:var(--paper)}
+.hero-copy{display:flex;align-items:center;padding:72px clamp(34px,5.4vw,86px);position:relative;z-index:2}
+.hero-copy:before{content:"";position:absolute;width:230px;height:230px;border-radius:50%;background:rgba(198,166,107,.10);left:-80px;top:50px;z-index:-1}
+.hero-inner{max-width:510px}
+.kicker{font-size:11px;letter-spacing:.22em;font-weight:900;color:var(--terracotta);margin-bottom:13px}
+.hero h1{margin:0 0 24px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:700;font-size:clamp(46px,5vw,72px);line-height:1.18;letter-spacing:.01em}
+.focus{display:inline-block;position:relative;color:#2d2823;padding:0 .05em;text-shadow:0 2px 0 rgba(255,255,255,.9)}
+.focus:before{content:"";position:absolute;z-index:-1;left:-4%;right:-4%;bottom:.08em;height:.33em;background:linear-gradient(90deg,#e8bd83,#dd9169);border-radius:2px;transform:rotate(-1deg)}
+.hero-lead{font-size:16px;color:var(--sub);margin:0 0 26px;max-width:450px}
+.stat-line{display:flex;align-items:baseline;gap:9px;margin:0 0 26px}
+.stat-line strong{font-size:68px;line-height:1;color:var(--terracotta);font-weight:900;letter-spacing:-.04em}
+.stat-line span{font-size:15px;font-weight:900;color:#6b4933}
+.hero-actions{display:flex;gap:10px;flex-wrap:wrap}
+.btn{min-height:54px;padding:0 21px;display:inline-flex;align-items:center;justify-content:center;border-radius:13px;font-weight:900;font-size:14px}
+.btn-main{background:var(--terracotta);color:white;box-shadow:0 11px 26px rgba(182,83,57,.22)}
+.btn-sub{background:#efe6d9;color:var(--ink)}
+.hero-photo{position:relative;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:54% center}
+.hero-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,253,249,.18),transparent 24%),linear-gradient(0deg,rgba(31,22,16,.15),transparent 35%)}
+.hero-caption{position:absolute;z-index:2;right:24px;bottom:24px;background:rgba(255,253,249,.88);backdrop-filter:blur(10px);border-radius:16px;padding:11px 15px;font-size:12px;font-weight:800;color:#50473e}
+
+section{padding:96px 0}
+.section-head{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:end;margin-bottom:35px}
+.section-head h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-weight:700;font-size:clamp(34px,4vw,50px);line-height:1.3;margin:0 0 10px}
+.section-head p{margin:0;color:var(--sub);max-width:680px}
+.more{font-weight:900;font-size:13px;color:var(--terracotta);padding-bottom:6px}
+
+.monja-sec{background:var(--soft)}
+.category{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 28px}
+.chip{background:#fff;border:1px solid var(--line);padding:8px 13px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}
+.monja-grid{display:grid;grid-template-columns:1.25fr .9fr .9fr;grid-template-rows:1fr 1fr;gap:16px;height:620px}
+.monja-card{position:relative;border-radius:26px;overflow:hidden;background:#ddd;box-shadow:var(--shadow)}
+.monja-card:first-child{grid-row:1/3}
+.monja-card img{height:100%;object-fit:cover;filter:brightness(1.12) saturate(.95) contrast(.93)}
+.monja-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(30,20,12,.58) 0%,rgba(30,20,12,.03) 58%)}
+.monja-info{position:absolute;z-index:2;left:22px;right:22px;bottom:19px;color:white}
+.monja-info small{display:block;font-size:10px;letter-spacing:.16em;font-weight:900;color:#f3d6ac;margin-bottom:4px}
+.monja-info strong{font-size:18px;line-height:1.45}
+.monja-card:first-child .monja-info strong{font-size:26px}
+.monja-bottom{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:22px}
+.monja-bottom p{margin:0;color:var(--sub);font-size:14px}
+
+.story-sec{background:#fffdf9}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.story + .story{margin-top:110px}
+.story.reverse .story-image{order:2}
+.story-image{position:relative}
+.story-image img.main{border-radius:30px;aspect-ratio:1.28/1;object-fit:cover;box-shadow:var(--shadow);filter:brightness(1.07) contrast(.96)}
+.story-image .mini{position:absolute;width:36%;right:-22px;bottom:-32px;border:7px solid #fffdf9;border-radius:24px;box-shadow:var(--shadow)}
+.story-copy .num{font-size:12px;letter-spacing:.18em;color:var(--terracotta);font-weight:900}
+.story-copy h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:36px;line-height:1.4;margin:8px 0 15px}
+.story-copy p{color:var(--sub);margin:0 0 18px}
+.story-points{display:flex;flex-wrap:wrap;gap:8px}
+.story-points span{font-size:12px;font-weight:800;background:#f0e7db;padding:7px 11px;border-radius:999px}
+.equal-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.equal-gallery img{border-radius:28px;aspect-ratio:1.1/1;object-fit:cover;box-shadow:var(--shadow);filter:brightness(1.1) contrast(.94)}
+
+.drink-sec{padding:0}
+.drink-wrap{display:grid;grid-template-columns:1fr 1fr;min-height:520px;background:#2e251f;color:white}
+.drink-photo img{width:100%;height:100%;object-fit:cover;filter:brightness(1.04) saturate(.92) contrast(.96)}
+.drink-copy{padding:75px clamp(40px,7vw,95px);display:flex;align-items:center}
+.drink-copy h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:45px;line-height:1.35;margin:0 0 18px}
+.drink-copy p{color:#d7cec5;margin:0 0 20px}
+.drink-tags{display:flex;gap:8px;flex-wrap:wrap}
+.drink-tags span{border:1px solid rgba(255,255,255,.20);border-radius:999px;padding:7px 11px;font-size:11px;font-weight:800}
+
+.stores-sec{background:#efe7dc}
+.stores{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}
+.store{background:#fffdf9;border-radius:24px;padding:26px;border:1px solid rgba(95,72,55,.08);box-shadow:0 9px 30px rgba(67,49,34,.06)}
+.store small{letter-spacing:.06em;color:var(--terracotta);font-weight:900;font-size:13px}
+.store h3{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:28px;margin:4px 0 8px}
+.store p{color:var(--sub);font-size:13px;margin:0 0 18px}
+.store .hours{background:#f5eee5;border-radius:13px;padding:10px 12px;font-size:12px;margin-bottom:14px;color:#5f554c}
+.store-actions{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.store-actions a{text-align:center;padding:10px;border-radius:11px;background:#eee4d7;font-size:12px;font-weight:900}
+.store-actions a:last-child{background:var(--terracotta);color:white}
+
+.cta{background:var(--terracotta);color:white;text-align:center}
+.cta .kicker{color:#f8d8c8}
+.cta h2{font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:46px;margin:0 0 12px}
+.cta p{margin:0 0 24px;color:#ffece3}
+.cta-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap}
+.cta-actions a{background:white;color:var(--terracotta);padding:14px 22px;border-radius:13px;font-weight:900}
+
+footer{background:#1f1a16;color:#cfc6bb;padding:48px 0 90px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:28px}
+footer .brand{color:white;margin-bottom:13px}
+.footer-links{display:grid;gap:6px;font-size:12px}
+.footer-title{color:white;font-weight:900;margin-bottom:8px}
+.footer-note{font-size:11px;color:#81776f;margin-top:18px}
+.footer-recruit{
+  grid-column:1/-1;
+  display:grid;
+  grid-template-columns:1fr auto;
+  align-items:center;
+  gap:28px;
+  padding:30px 32px;
+  margin-bottom:10px;
+  border:4px solid #111;
+  border-radius:22px;
+  background:#f8f4ec;
+  box-shadow:0 10px 28px rgba(0,0,0,.10);
+}
+.footer-recruit .recruit-kicker{font-size:11px;letter-spacing:.18em;font-weight:900;color:#d7b77e;margin-bottom:4px}
+.footer-recruit h3{margin:0 0 6px;color:#111;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(25px,3vw,36px);line-height:1.35}
+.footer-recruit p{margin:0;color:#111;font-size:13px}
+.footer-recruit a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:190px;
+  min-height:54px;
+  padding:12px 22px;
+  border-radius:14px;
+  background:#26384a;
+  color:#fff;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 10px 24px rgba(0,0,0,.16);
+}
+
+
+.mobile-sticky{display:none}
+
+@media(max-width:900px){
+  .navlinks{display:none} .menu-btn{display:block}
+  .hero{grid-template-columns:1fr;min-height:auto}
+  .hero-photo{height:54svh;order:1}
+  .hero-copy{order:2;padding:52px 26px 58px}
+  .hero-inner{max-width:none}
+  .hero h1{font-size:54px}
+  .monja-grid{height:auto;grid-template-columns:1fr 1fr;grid-template-rows:auto}
+  .monja-card{aspect-ratio:1.15/1}
+  .monja-card:first-child{grid-row:auto;grid-column:1/3;aspect-ratio:1.9/1}
+  .story{grid-template-columns:1fr;gap:34px}
+  .story.reverse .story-image{order:0}
+  .story + .story{margin-top:80px}
+  .drink-wrap{grid-template-columns:1fr} .drink-photo{height:380px}
+  .stores{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-recruit{grid-template-columns:1fr;align-items:start}
+  .footer-recruit a{width:100%;min-width:0}
+}
+@media(max-width:620px){
+  .wrap{width:min(100% - 26px,1160px)} .nav{min-height:68px;padding:10px 0}
+  .brand{font-size:18px}
+  .hero-photo{height:46svh;min-height:360px}
+  .hero-copy{padding:42px 22px 50px}
+  .hero h1{font-size:44px;line-height:1.2}
+  .hero-lead{font-size:14px}
+  .stat-line strong{font-size:58px}
+  .hero-actions{display:grid;grid-template-columns:1fr 1fr}
+  .btn{padding:0 10px;font-size:13px}
+  section{padding:72px 0}
+  .section-head{grid-template-columns:1fr;gap:9px;margin-bottom:26px}
+  .section-head h2{font-size:34px}
+  .category{overflow-x:auto;flex-wrap:nowrap;padding-bottom:5px}
+  .monja-grid{display:flex;overflow-x:auto;gap:11px;margin-right:-13px;padding-right:13px;scroll-snap-type:x mandatory}
+  .monja-card,.monja-card:first-child{min-width:78vw;aspect-ratio:.95/1;grid-column:auto;scroll-snap-align:start}
+  .monja-card:first-child .monja-info strong{font-size:21px}
+  .monja-bottom{display:block} .monja-bottom .btn{margin-top:13px}
+  .story-copy h3{font-size:31px}
+  .story-image .mini{right:-6px;bottom:-18px;width:34%}
+  .equal-gallery{grid-template-columns:1fr 1fr;gap:10px}
+  .drink-photo{height:290px} .drink-copy{padding:52px 24px}
+  .drink-copy h2{font-size:36px}
+  .stores{gap:12px} .store{padding:21px}
+  .cta h2{font-size:36px}
+  .cta-actions{display:grid}
+  .mobile-sticky{display:grid;position:fixed;z-index:120;left:10px;right:10px;bottom:10px;grid-template-columns:.9fr 1.2fr;gap:7px;padding:7px;background:rgba(31,26,22,.91);backdrop-filter:blur(12px);border-radius:17px;box-shadow:0 16px 40px rgba(0,0,0,.24)}
+  .mobile-sticky a{min-height:48px;border-radius:11px;background:white;display:grid;place-items:center;font-size:12px;font-weight:900}
+  .mobile-sticky a:last-child{background:var(--terracotta);color:white}
+}
+
+.menu-link-stack{display:grid;gap:9px;min-width:260px}
+.menu-link-stack .btn{width:100%}
+.menu-secondary{border:1px solid #d7cbbb;background:#fff;color:var(--ink)}
+@media(max-width:620px){
+  .menu-link-stack{margin-top:14px;min-width:0;width:100%}
+}
+
+
+/* --- v7 refinement: subtle luxury background --- */
+body{
+  background:
+    radial-gradient(circle at 12% 9%, rgba(198,166,107,.10), transparent 24%),
+    radial-gradient(circle at 88% 38%, rgba(182,83,57,.055), transparent 22%),
+    #f6f0e6;
+}
+.monja-sec,.story-sec,.stores-sec{
+  position:relative;
+  overflow:hidden;
+}
+.monja-sec:before,.story-sec:before,.stores-sec:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.22;
+  background-image:
+    linear-gradient(30deg, rgba(198,166,107,.18) 1px, transparent 1px),
+    linear-gradient(150deg, rgba(198,166,107,.13) 1px, transparent 1px);
+  background-size:56px 56px;
+  mask-image:linear-gradient(to bottom,transparent,black 14%,black 86%,transparent);
+}
+.monja-sec>.wrap,.story-sec>.wrap,.stores-sec>.wrap{position:relative;z-index:1}
+.section-head h2,.story-copy h3,.drink-copy h2,.store h3{
+  text-shadow:0 1px 0 rgba(255,255,255,.65);
+}
+.dish-gallery{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+.dish-gallery figure{
+  margin:0;
+  position:relative;
+  overflow:hidden;
+  border-radius:22px;
+  background:#fff;
+  box-shadow:0 10px 30px rgba(64,46,32,.08);
+  border:1px solid rgba(198,166,107,.22);
+}
+.dish-gallery img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  filter:brightness(1.09) saturate(.95) contrast(.94);
+}
+.dish-gallery figcaption{
+  position:absolute;
+  left:9px;
+  right:9px;
+  bottom:9px;
+  padding:7px 9px;
+  border-radius:10px;
+  background:rgba(255,253,249,.90);
+  backdrop-filter:blur(7px);
+  font-size:11px;
+  font-weight:900;
+  color:#4d433b;
+  text-align:center;
+}
+.drink-sec{
+  padding:96px 0;
+  background:
+    linear-gradient(135deg,rgba(255,253,249,.96),rgba(239,231,220,.96)),
+    repeating-linear-gradient(90deg,rgba(198,166,107,.07) 0 1px,transparent 1px 60px);
+}
+.drink-balanced{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,.9fr);
+  gap:64px;
+  align-items:center;
+}
+.drink-image-card{
+  position:relative;
+  max-width:540px;
+  justify-self:end;
+  padding:12px;
+  border-radius:30px;
+  background:#fffdf9;
+  border:1px solid rgba(198,166,107,.28);
+  box-shadow:0 18px 50px rgba(64,46,32,.10);
+}
+.drink-image-card img{
+  width:100%;
+  aspect-ratio:1.18/1;
+  object-fit:cover;
+  border-radius:21px;
+  filter:brightness(1.05) saturate(.94) contrast(.96);
+}
+.image-label{
+  position:absolute;
+  right:26px;
+  bottom:26px;
+  padding:8px 11px;
+  border-radius:999px;
+  background:rgba(38,29,23,.78);
+  color:#f2dbc0;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.13em;
+}
+.drink-balanced .drink-copy{
+  padding:0;
+  color:var(--ink);
+}
+.drink-balanced .drink-copy .kicker{color:var(--terracotta)!important}
+.drink-balanced .drink-copy p{color:var(--sub)}
+.drink-balanced .drink-tags span{
+  color:#5b4d42;
+  border:1px solid rgba(182,83,57,.18);
+  background:#fffaf3;
+}
+.story.reverse{
+  align-items:center;
+}
+@media(max-width:900px){
+  .dish-gallery{grid-template-columns:repeat(3,1fr)}
+  .drink-balanced{grid-template-columns:1fr;gap:32px}
+  .drink-image-card{justify-self:stretch;max-width:none}
+}
+@media(max-width:620px){
+  .dish-gallery{grid-template-columns:repeat(2,1fr);gap:9px}
+  .dish-gallery figcaption{font-size:10px;padding:6px}
+  .drink-sec{padding:72px 0}
+  .drink-image-card{padding:8px;border-radius:23px}
+  .drink-image-card img{border-radius:17px;aspect-ratio:1.25/1}
+  .drink-balanced{gap:27px}
+}
+
+
+/* v10: requested changes only */
+body {
+  background-image:
+    linear-gradient(rgba(246,240,230,.76), rgba(246,240,230,.76)),
+    url("../assets/770c28cf4a63e8d5.png");
+  background-repeat: repeat;
+  background-size: auto, 220px 65px;
+}
+.monja-sec,
+.story-sec,
+.stores-sec {
+  background-image:
+    linear-gradient(rgba(255,253,249,.78), rgba(255,253,249,.78)),
+    url("../assets/770c28cf4a63e8d5.png") !important;
+  background-repeat: repeat !important;
+  background-size: auto, 220px 65px !important;
+}
+.menu-link-stack {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+  width:min(860px,100%);
+  min-width:0;
+}
+.menu-link-stack .btn { width:100%; text-align:center; }
+.drink-monja-promo {
+  display:grid;
+  grid-template-columns:1fr;
+  gap:14px;
+  align-items:start;
+  margin-top:24px;
+  padding:18px;
+  border-radius:18px;
+  background:rgba(255,253,249,.86);
+  border:1px solid rgba(182,83,57,.16);
+}
+.drink-monja-promo > div{
+  order:1;
+}
+.drink-monja-promo img {
+  order:2;
+  width:min(100%, 320px);
+  height:auto;
+  aspect-ratio: 1.5 / 1;
+  object-fit:cover;
+  border-radius:13px;
+  justify-self:center;
+}
+.drink-monja-promo h4 {
+  margin:0 0 6px;
+  font-size:15px;
+  line-height:1.45;
+  color:var(--ink);
+}
+.drink-monja-promo p {
+  margin:0 !important;
+  font-size:12px;
+  line-height:1.65;
+  color:var(--sub) !important;
+}
+@media(max-width:700px) {
+  .menu-link-stack {grid-template-columns:1fr;}
+  .drink-monja-promo {grid-template-columns:1fr;}
+  .drink-monja-promo img {width:100%;max-width:320px;height:auto;aspect-ratio:1.5/1;justify-self:center;}
+}
+
+/* === v12 requested-only adjustments === */
+
+/* business-card background motif */
+body {
+  background-image:
+    linear-gradient(rgba(246,240,230,.72), rgba(246,240,230,.72)),
+    url("../assets/770c28cf4a63e8d5.png");
+  background-repeat: repeat;
+  background-size: auto, 240px 70px;
+}
+
+.hero,
+.monja-sec,
+.story-sec,
+.drink-sec,
+.stores-sec,
+.cta {
+  background-image:
+    linear-gradient(rgba(255,253,249,.82), rgba(255,253,249,.82)),
+    url("../assets/770c28cf4a63e8d5.png");
+  background-repeat: repeat;
+  background-size: auto, 240px 70px;
+}
+
+/* keep top 2-column layout, place promo card below in arrow position */
+.drink-balanced {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, .95fr);
+  gap: 64px;
+  align-items: start;
+}
+
+.drink-monja-promo {
+  grid-column: 1 / -1;
+  width: min(980px, 100%);
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 20px;
+  align-items: center;
+  margin-top: 6px;
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255,253,249,.92);
+  border: 1px solid rgba(182,83,57,.16);
+}
+
+.drink-monja-promo img {
+  width: 230px;
+  height: 145px;
+  object-fit: cover;
+  border-radius: 15px;
+  display: block;
+}
+
+.drink-monja-promo h4 {
+  margin: 0 0 7px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.drink-monja-promo p {
+  margin: 0 !important;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media(max-width:900px) {
+  .drink-balanced {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .drink-monja-promo {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  .drink-monja-promo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.55 / 1;
+  }
+}
+
+/* === v13: place attached images in the green-marked area only === */
+.drink-monja-promo{
+  grid-column: 1 / -1;
+  width: min(1500px, 100%);
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1.45fr;
+  gap: 28px;
+  align-items: center;
+  margin-top: 6px;
+  padding: 20px 30px;
+  border-radius: 22px;
+  background: rgba(255,253,249,.92);
+  border: 1px solid rgba(182,83,57,.16);
+}
+.drink-monja-promo > div:first-child{
+  max-width: 380px;
+}
+.drink-monja-gallery{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: center;
+}
+.drink-monja-gallery .gallery-shot{
+  margin: 0;
+}
+.drink-monja-gallery img{
+  width: 100%;
+  aspect-ratio: 1.18 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  box-shadow: 0 10px 24px rgba(64,46,32,.08);
+}
+@media(max-width:1000px){
+  .drink-monja-promo{
+    grid-template-columns: 1fr;
+  }
+  .drink-monja-promo > div:first-child{
+    max-width: none;
+  }
+}
+@media(max-width:720px){
+  .drink-monja-gallery{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === v14 shop information: added only at page bottom === */
+.shop-info-section{
+  padding:88px 0;
+  background-image:
+    linear-gradient(rgba(255,253,249,.78), rgba(255,253,249,.78)),
+    var(--card-pattern, none);
+  background-repeat:repeat;
+  background-size:auto,180px 180px;
+  border-top:1px solid rgba(198,166,107,.18);
+}
+.shop-info-head{
+  margin-bottom:30px;
+}
+.shop-info-head h2{
+  margin:4px 0 8px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(34px,4vw,48px);
+  line-height:1.25;
+}
+.shop-info-head p{
+  margin:0;
+  color:var(--sub);
+}
+.shop-info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:16px;
+}
+.shop-info-card{
+  background:rgba(255,253,249,.94);
+  border:4px solid #111;
+  border-radius:24px;
+  padding:24px;
+  box-shadow:0 12px 34px rgba(64,46,32,.07);
+}
+.shop-info-card h3{
+  margin:0 0 17px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:23px;
+  line-height:1.4;
+}
+.shop-info-card dl{
+  display:grid;
+  grid-template-columns:74px 1fr;
+  gap:9px 12px;
+  margin:0 0 20px;
+  font-size:12px;
+}
+.shop-info-card dt{
+  color:#9d6e55;
+  font-weight:900;
+}
+.shop-info-card dd{
+  margin:0;
+  color:#554b43;
+}
+.shop-info-card dd a{
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.shop-info-actions{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:7px;
+}
+.shop-info-actions a{
+  display:grid;
+  place-items:center;
+  min-height:44px;
+  padding:8px 7px;
+  border-radius:11px;
+  background:#eee4d7;
+  font-size:11px;
+  font-weight:900;
+  text-align:center;
+}
+.shop-info-actions a:first-child{
+  background:var(--terracotta);
+  color:#fff;
+}
+@media(max-width:900px){
+  .shop-info-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .shop-info-section{padding:64px 0 84px}
+  .shop-info-card{padding:20px}
+  .shop-info-card dl{grid-template-columns:65px 1fr}
+}
+
+/* === v15 requested-only changes === */
+.shop-info-actions{
+  grid-template-columns:repeat(4,1fr);
+}
+.shop-info-actions a:first-child{
+  background:var(--terracotta);
+  color:#fff;
+}
+.shop-info-actions a:nth-child(2){
+  background:#6d3328;
+  color:#fff;
+}
+@media(max-width:620px){
+  .shop-info-actions{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+/* === v16 reservation conversion path === */
+.mid-reservation{
+  padding:42px 0;
+  background:transparent;
+}
+.mid-reservation-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+  padding:28px 34px;
+  border-radius:24px;
+  background:rgba(255,253,249,.92);
+  border:1px solid rgba(182,83,57,.18);
+  box-shadow:0 12px 34px rgba(64,46,32,.07);
+}
+.mid-reservation-copy h2{
+  margin:4px 0 5px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:28px;
+  line-height:1.35;
+}
+.mid-reservation-copy p{
+  margin:0;
+  color:var(--sub);
+  font-size:13px;
+}
+.mid-reservation-btn{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:54px;
+  padding:0 24px;
+  border-radius:14px;
+  background:var(--terracotta);
+  color:#fff;
+  font-weight:900;
+  font-size:14px;
+  box-shadow:0 10px 24px rgba(182,83,57,.18);
+}
+@media(max-width:700px){
+  .mid-reservation-box{
+    display:block;
+    padding:24px 20px;
+  }
+  .mid-reservation-btn{
+    width:100%;
+    margin-top:17px;
+  }
+  .mid-reservation-copy h2{
+    font-size:24px;
+  }
+}
+
+/* === v17 subtle background pattern only === */
+body {
+  background-color:#f7f3e8;
+  background-image:
+    linear-gradient(rgba(247,243,232,.90), rgba(247,243,232,.90)),
+    url("../assets/82b18c77d62a9ae2.png");
+  background-repeat: repeat;
+  background-size: auto, 600px 396px;
+}
+
+.hero,
+.monja-sec,
+.story-sec,
+.drink-sec,
+.shop-info-section,
+footer {
+  background-image:
+    linear-gradient(rgba(255,253,249,.84), rgba(255,253,249,.84)),
+    url("../assets/82b18c77d62a9ae2.png");
+  background-repeat: repeat;
+  background-size: auto, 600px 396px;
+}
+
+.mid-reservation,
+#shop-information {
+  background-color: transparent;
+}
+
+@media(max-width:700px){
+  body,
+  .hero,
+  .monja-sec,
+  .story-sec,
+  .drink-sec,
+  .shop-info-section,
+  footer {
+    background-size:auto, 420px 277px;
+  }
+}
+
+/* === v18: apply subtle pattern to white areas too, keeping readability === */
+:root {
+  --komato-pattern: url("../assets/82b18c77d62a9ae2.png");
+  --komato-pattern-size: 600px 396px;
+  --komato-panel-overlay-strong: rgba(255,253,249,.94);
+  --komato-panel-overlay-mid: rgba(255,253,249,.90);
+  --komato-panel-overlay-soft: rgba(255,253,249,.86);
+}
+
+.hero,
+.monja-sec,
+.story-sec,
+.drink-sec,
+.shop-info-section,
+footer,
+.mid-reservation {
+  background-image:
+    linear-gradient(var(--komato-panel-overlay-mid), var(--komato-panel-overlay-mid)),
+    var(--komato-pattern) !important;
+  background-repeat: repeat !important;
+  background-size: auto, var(--komato-pattern-size) !important;
+}
+
+/* white / paper areas -> same motif, very light so text stays readable */
+header,
+.mobile-nav,
+.hero,
+.monja-sec,
+.story-sec,
+.drink-image-card,
+.drink-monja-promo,
+.mid-reservation-box,
+.shop-info-card,
+.shop-info-section,
+footer,
+footer .brand,
+.menu-teaser,
+.store,
+.store .hours,
+.hero-caption,
+.mobile-sticky {
+  background-image:
+    linear-gradient(var(--komato-panel-overlay-strong), var(--komato-panel-overlay-strong)),
+    var(--komato-pattern) !important;
+  background-repeat: repeat !important;
+  background-size: auto, var(--komato-pattern-size) !important;
+}
+
+/* keep CTA / action buttons readable */
+.btn-main,
+.reserve,
+.shop-info-actions a:first-child,
+.shop-info-actions a:nth-child(2),
+.mid-reservation-btn {
+  background-image:none !important;
+}
+
+.btn-sub,
+.store-actions a,
+.shop-info-actions a:not(:first-child):not(:nth-child(2)) {
+  background-image:
+    linear-gradient(rgba(255,250,243,.96), rgba(255,250,243,.96)),
+    var(--komato-pattern) !important;
+  background-repeat: repeat !important;
+  background-size: auto, var(--komato-pattern-size) !important;
+}
+
+/* cards that were very flat white */
+.drink-monja-promo,
+.shop-info-card,
+.menu-teaser,
+.store,
+.mid-reservation-box {
+  border-color: rgba(198,166,107,.28) !important;
+  box-shadow: 0 10px 28px rgba(64,46,32,.06);
+}
+
+.hero-caption {
+  border: 1px solid rgba(198,166,107,.18);
+}
+
+@media(max-width:700px){
+  :root {
+    --komato-pattern-size: 420px 277px;
+  }
+}
+
+/* === v19 subtle luxury details only: no layout changes === */
+:root{
+  --lux-gold:#b99a5f;
+  --lux-gold-soft:rgba(185,154,95,.28);
+  --lux-gold-faint:rgba(185,154,95,.12);
+}
+
+/* thin decorative rule on section kickers */
+.kicker{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.kicker::after{
+  content:"";
+  width:34px;
+  height:1px;
+  background:linear-gradient(90deg,var(--lux-gold),transparent);
+  opacity:.9;
+}
+
+/* slightly richer headings without changing size */
+.section-head h2,
+.story-copy h3,
+.drink-copy h2,
+.shop-info-head h2{
+  letter-spacing:.018em;
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.7),
+    0 8px 24px rgba(87,61,40,.035);
+}
+
+/* fine gold inner line around photos */
+.hero-photo,
+.monja-card,
+.story-image img,
+.dish-gallery figure,
+.drink-image-card,
+.drink-monja-gallery .gallery-shot{
+  position:relative;
+}
+.hero-photo::before,
+.monja-card::before,
+.dish-gallery figure::before,
+.drink-image-card::before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border:1px solid rgba(205,174,111,.28);
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:3;
+}
+
+/* elegant card edge / shadow */
+.menu-teaser,
+.drink-monja-promo,
+.mid-reservation-box,
+.shop-info-card{
+  border-color:rgba(185,154,95,.30)!important;
+  box-shadow:
+    0 14px 34px rgba(64,46,32,.055),
+    0 1px 0 rgba(255,255,255,.9) inset;
+}
+
+/* tiny gold corner accent */
+.menu-teaser,
+.shop-info-card,
+.drink-monja-promo{
+  position:relative;
+  overflow:hidden;
+}
+.menu-teaser::after,
+.shop-info-card::after,
+.drink-monja-promo::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0;
+  width:42px;
+  height:42px;
+  background:linear-gradient(135deg,transparent 49%,rgba(185,154,95,.18) 50%,rgba(185,154,95,.18) 54%,transparent 55%);
+  pointer-events:none;
+}
+
+/* premium button treatment */
+.btn-main,
+.reserve,
+.mid-reservation-btn,
+.shop-info-actions a:first-child{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.09),rgba(255,255,255,0)),
+    linear-gradient(135deg,#bd6245,#a84b34)!important;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:
+    0 10px 22px rgba(145,65,43,.18),
+    0 1px 0 rgba(255,255,255,.20) inset;
+  transition:transform .18s ease,box-shadow .18s ease,filter .18s ease;
+}
+.btn-main:hover,
+.reserve:hover,
+.mid-reservation-btn:hover,
+.shop-info-actions a:first-child:hover{
+  transform:translateY(-1px);
+  box-shadow:
+    0 13px 28px rgba(145,65,43,.23),
+    0 1px 0 rgba(255,255,255,.22) inset;
+  filter:saturate(1.04);
+}
+
+/* menu gold buttons: subdued, not flashy */
+.cta-mini{
+  background:
+    linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,0)),
+    linear-gradient(135deg,#aa850f,#947100)!important;
+  box-shadow:0 8px 18px rgba(116,86,0,.13);
+  border:1px solid rgba(255,255,255,.12);
+}
+
+/* fine separators to give sections a finished feel */
+.monja-sec,
+.story-sec,
+.drink-sec,
+.mid-reservation,
+.shop-info-section{
+  border-top:1px solid rgba(185,154,95,.15);
+}
+.shop-info-section{
+  border-bottom:1px solid rgba(185,154,95,.12);
+}
+
+/* more polished pill chips */
+.chip,
+.drink-tags span{
+  box-shadow:0 1px 0 rgba(255,255,255,.9) inset;
+  border-color:rgba(185,154,95,.24)!important;
+}
+
+/* subtle photo lift */
+.monja-card img,
+.dish-gallery img,
+.drink-image-card img,
+.drink-monja-gallery img{
+  transition:transform .35s ease,filter .35s ease;
+}
+@media (hover:hover){
+  .monja-card:hover img,
+  .dish-gallery figure:hover img,
+  .drink-monja-gallery .gallery-shot:hover img{
+    transform:scale(1.015);
+  }
+}
+
+/* very subtle section ornament */
+.section-head{
+  position:relative;
+}
+.section-head::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-16px;
+  width:68px;
+  height:1px;
+  background:linear-gradient(90deg,var(--lux-gold),rgba(185,154,95,0));
+  opacity:.55;
+}
+
+@media(max-width:620px){
+  .hero-photo::before,
+  .monja-card::before,
+  .dish-gallery figure::before,
+  .drink-image-card::before{
+    inset:5px;
+  }
+}
+
+/* === v20: upgrade white areas only, no layout changes === */
+:root{
+  --panel-white: rgba(255,253,249,.955);
+  --panel-white-2: rgba(252,248,241,.94);
+  --gold-line: rgba(185,154,95,.22);
+  --gold-line-soft: rgba(185,154,95,.12);
+  --gold-sheen: rgba(255,245,218,.45);
+}
+
+/* richer paper feeling on white areas */
+header,
+.drink-image-card,
+.drink-monja-promo,
+.mid-reservation-box,
+.shop-info-card,
+.menu-teaser{
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.32) 0%, rgba(255,255,255,0) 22%),
+    linear-gradient(135deg, var(--panel-white), var(--panel-white-2)) !important;
+  border:1px solid var(--gold-line) !important;
+  box-shadow:
+    0 16px 38px rgba(64,46,32,.065),
+    0 1px 0 rgba(255,255,255,.96) inset,
+    0 0 0 1px rgba(255,248,231,.55) inset;
+}
+
+/* inner frame to avoid flat white blocks */
+.drink-image-card::after,
+.drink-monja-promo::before,
+.mid-reservation-box::before,
+.shop-info-card::before,
+.menu-teaser::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:1px solid var(--gold-line-soft);
+  border-radius:inherit;
+  pointer-events:none;
+  z-index:0;
+}
+
+/* keep existing content above pseudo-elements */
+.drink-image-card > *,
+.drink-monja-promo > *,
+.mid-reservation-box > *,
+.shop-info-card > *,
+.menu-teaser > *{
+  position:relative;
+  z-index:1;
+}
+
+/* faint luxury glow band on white cards */
+.drink-monja-promo,
+.shop-info-card,
+.menu-teaser,
+.mid-reservation-box{
+  overflow:hidden;
+}
+.drink-monja-promo .drink-monja-gallery::before,
+.shop-info-card h3::after,
+.menu-teaser h4::after,
+.mid-reservation-copy h2::after{
+  content:"";
+  display:block;
+  width:54px;
+  height:1px;
+  margin-top:10px;
+  background:linear-gradient(90deg, rgba(185,154,95,.65), rgba(185,154,95,0));
+}
+
+.drink-monja-promo::after,
+.shop-info-card::after,
+.menu-teaser::after,
+.mid-reservation-box::after{
+  content:"";
+  position:absolute;
+  top:-30%;
+  right:-10%;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(255,245,218,.22) 0%, rgba(255,245,218,0) 70%);
+  pointer-events:none;
+}
+
+/* premium top edge accent */
+header{
+  position:sticky;
+}
+header::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:1px;
+  background:linear-gradient(90deg,
+    rgba(185,154,95,0),
+    rgba(185,154,95,.55) 12%,
+    rgba(185,154,95,.18) 50%,
+    rgba(185,154,95,.55) 88%,
+    rgba(185,154,95,0));
+}
+
+/* make info grids feel more finished */
+.shop-info-card dl{
+  position:relative;
+}
+.shop-info-card dl::before{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:-2px;
+  height:1px;
+  background:linear-gradient(90deg, rgba(185,154,95,.18), rgba(185,154,95,0));
+}
+.shop-info-card dt,
+.shop-info-card dd{
+  padding-top:2px;
+}
+
+/* softer styled secondary buttons on white background */
+.btn-sub,
+.store-actions a,
+.shop-info-actions a:not(:first-child):not(:nth-child(2)){
+  border:1px solid rgba(185,154,95,.18) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.95) inset,
+    0 6px 16px rgba(64,46,32,.035);
+}
+
+/* subtle patterned strip under some cards */
+.shop-info-card,
+.menu-teaser,
+.mid-reservation-box{
+  background-image:
+    linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,0) 22%),
+    linear-gradient(135deg, var(--panel-white), var(--panel-white-2)),
+    linear-gradient(90deg, rgba(185,154,95,.035) 0, rgba(185,154,95,.035) 1px, transparent 1px, transparent 18px);
+  background-size:auto, auto, 18px 18px !important;
+}
+
+/* mobile: reduce visual density slightly */
+@media(max-width:620px){
+  .drink-image-card::after,
+  .drink-monja-promo::before,
+  .mid-reservation-box::before,
+  .shop-info-card::before,
+  .menu-teaser::before{
+    inset:7px;
+  }
+  .drink-monja-promo::after,
+  .shop-info-card::after,
+  .menu-teaser::after,
+  .mid-reservation-box::after{
+    width:120px;
+    height:120px;
+  }
+}
+
+/* === v21: add supplied pattern to header area only === */
+header {
+  background-color:#fbf8f0 !important;
+  background-image:
+    linear-gradient(rgba(255,253,249,.92), rgba(255,253,249,.92)),
+    url("../assets/82b18c77d62a9ae2.png") !important;
+  background-repeat: repeat !important;
+  background-size: auto, 600px 396px !important;
+  border-bottom:1px solid rgba(185,154,95,.16) !important;
+}
+
+header .nav,
+header .brand,
+header .brand-wrap,
+header .header-inner {
+  background: transparent !important;
+}
+
+@media(max-width:700px){
+  header {
+    background-size:auto, 420px 277px !important;
+  }
+}
+
+/* === v22: refine only the promo block under DRINK section === */
+
+/* card itself: less empty space, slightly richer finish */
+.drink-monja-promo{
+  width: 100% !important;
+  max-width: none !important;
+  display: grid !important;
+  grid-template-columns: minmax(290px, .78fr) minmax(0, 1.22fr) !important;
+  gap: 26px !important;
+  align-items: center !important;
+  padding: 22px 26px !important;
+  margin-top: 10px !important;
+  border-radius: 24px !important;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.34), rgba(255,255,255,0) 22%),
+    linear-gradient(135deg, rgba(255,253,249,.97), rgba(249,245,238,.94)) !important;
+  border: 1px solid rgba(185,154,95,.24) !important;
+  box-shadow:
+    0 14px 34px rgba(64,46,32,.055),
+    0 1px 0 rgba(255,255,255,.96) inset,
+    0 0 0 1px rgba(255,248,231,.5) inset !important;
+  overflow: hidden;
+  position: relative;
+}
+
+/* subtle faint design so the white space does not feel flat */
+.drink-monja-promo::before{
+  content:"";
+  position:absolute;
+  inset:10px;
+  border:1px solid rgba(185,154,95,.11);
+  border-radius:18px;
+  pointer-events:none;
+}
+.drink-monja-promo::after{
+  content:"";
+  position:absolute;
+  right:-40px;
+  top:-40px;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background: radial-gradient(circle, rgba(255,244,214,.16) 0%, rgba(255,244,214,0) 70%);
+  pointer-events:none;
+}
+
+/* text side */
+.drink-monja-promo > div:first-child{
+  max-width: none !important;
+  width: 100%;
+}
+.drink-monja-promo h4{
+  margin: 0 0 10px !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  letter-spacing: .01em;
+}
+.drink-monja-promo h4::after{
+  content:"";
+  display:block;
+  width:56px;
+  height:1px;
+  margin-top:10px;
+  background: linear-gradient(90deg, rgba(185,154,95,.62), rgba(185,154,95,0));
+}
+.drink-monja-promo p{
+  margin:0 !important;
+  font-size: 13px !important;
+  line-height: 1.95 !important;
+}
+
+/* image side: force 3 images in one row */
+.drink-monja-gallery{
+  width:100%;
+  display:grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+  align-items: stretch !important;
+}
+.drink-monja-gallery .gallery-shot{
+  margin:0 !important;
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  background: rgba(255,255,255,.7);
+  box-shadow: 0 10px 22px rgba(64,46,32,.05);
+}
+.drink-monja-gallery .gallery-shot::before{
+  content:"";
+  position:absolute;
+  inset:6px;
+  border:1px solid rgba(205,174,111,.22);
+  border-radius:14px;
+  pointer-events:none;
+  z-index:1;
+}
+.drink-monja-gallery img{
+  width:100% !important;
+  aspect-ratio: 1.16 / 1 !important;
+  object-fit: cover !important;
+  display:block;
+  border-radius:18px;
+}
+
+/* make the whole DRINK block slightly tighter and more premium */
+.drink-balanced{
+  gap: 42px !important;
+  align-items: start !important;
+}
+.drink-copy{
+  padding-top: 8px;
+}
+
+/* mobile/tablet */
+@media(max-width:1000px){
+  .drink-monja-promo{
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
+    padding: 20px !important;
+  }
+}
+@media(max-width:720px){
+  .drink-monja-gallery{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* === v24: big logo in the blank top area === */
+.top-logo-hero {
+  width: 100%;
+  padding: 26px 0 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-logo-hero-inner {
+  width: min(100%, 820px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-logo-hero-img {
+  width: min(320px, 42vw);
+  max-width: 320px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 18px rgba(64,46,32,.08));
+  opacity: .98;
+}
+
+/* ヒーロー上部にロゴが入る分、既存余白を少し整える */
+.hero {
+  padding-top: 18px !important;
+}
+
+@media(max-width: 900px) {
+  .top-logo-hero {
+    padding: 20px 0 4px;
+  }
+  .top-logo-hero-img {
+    width: min(230px, 58vw);
+    max-width: 230px;
+  }
+}
+
+@media(max-width: 620px) {
+  .top-logo-hero {
+    padding: 16px 0 0;
+  }
+  .top-logo-hero-img {
+    width: min(180px, 52vw);
+    max-width: 180px;
+  }
+}
+
+/* === v25b: text placed ONLY in the blank area beside the staff photo === */
+.hero-live-copy{
+  grid-column:2;
+  grid-row:2;
+  align-self:center;
+  padding:58px clamp(42px,5vw,82px);
+  max-width:760px;
+}
+.hero-live-copy .kicker{
+  margin-bottom:14px;
+}
+.hero-live-copy h2{
+  margin:0 0 22px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(38px,4.2vw,60px);
+  line-height:1.34;
+  letter-spacing:.025em;
+  color:var(--ink);
+}
+.hero-live-copy p{
+  margin:0 0 12px;
+  max-width:610px;
+  color:var(--sub);
+  font-size:16px;
+  line-height:2;
+}
+.hero-live-copy .hero-live-note{
+  font-size:13px;
+  color:#8a7869;
+}
+
+/* keep the photo in the left cell of the same row */
+.hero-photo{
+  grid-column:1;
+  grid-row:2;
+}
+
+/* preserve the logo/copy row above */
+.top-logo-hero{
+  grid-column:1;
+  grid-row:1;
+}
+.hero-copy{
+  grid-column:2;
+  grid-row:1;
+}
+
+@media(max-width:900px){
+  .hero{
+    display:flex !important;
+    flex-direction:column;
+  }
+  .top-logo-hero{order:1}
+  .hero-copy{order:2}
+  .hero-photo{order:3}
+  .hero-live-copy{
+    order:4;
+    padding:42px 26px 54px;
+  }
+  .hero-live-copy h2{
+    font-size:clamp(30px,7vw,42px);
+  }
+}
+
+
+/* === v26: swap logo/text, enlarge logo, improve readability === */
+.hero{
+  grid-template-columns:minmax(430px,48%) 1fr !important;
+}
+.hero-copy{
+  grid-column:1 !important;
+  grid-row:1 !important;
+  padding:72px clamp(34px,5vw,82px) 54px !important;
+}
+.top-logo-hero{
+  grid-column:2 !important;
+  grid-row:1 !important;
+  padding:24px 0 8px !important;
+  justify-content:center !important;
+}
+.top-logo-hero-inner{
+  width:min(100%, 920px) !important;
+}
+.top-logo-hero-img{
+  width:min(420px, 48vw) !important;
+  max-width:420px !important;
+  filter:drop-shadow(0 12px 24px rgba(64,46,32,.08)) !important;
+}
+
+.hero-inner{
+  max-width:560px !important;
+}
+.hero h1{
+  font-size:clamp(44px,4.8vw,70px) !important;
+  line-height:1.20 !important;
+  letter-spacing:.01em !important;
+  text-wrap:balance;
+}
+.hero h1 .line{
+  display:block;
+}
+.hero-lead{
+  max-width:500px !important;
+  line-height:2 !important;
+  word-break:keep-all;
+  line-break:strict;
+}
+.stat-line{
+  margin-top:4px !important;
+}
+
+.story-copy{
+  max-width:560px;
+}
+.story-copy .num{
+  margin-bottom:10px;
+}
+.story-copy h3{
+  font-size:clamp(34px,3.8vw,54px) !important;
+  line-height:1.38 !important;
+  margin:10px 0 18px !important;
+  text-wrap:balance;
+  word-break:keep-all;
+}
+.story-copy h3 .line{
+  display:block;
+}
+.story-copy p{
+  max-width:520px;
+  font-size:16px;
+  line-height:2.05 !important;
+  word-break:keep-all;
+  line-break:strict;
+}
+.story-points{
+  margin-top:6px;
+}
+
+/* Keep the live-copy area easy to read as well */
+.hero-live-copy h2{
+  text-wrap:balance;
+}
+.hero-live-copy p{
+  word-break:keep-all;
+  line-break:strict;
+}
+
+/* Mobile behavior */
+@media(max-width:900px){
+  .hero{
+    display:flex !important;
+    flex-direction:column;
+  }
+  .top-logo-hero{
+    order:1;
+    padding:18px 0 0 !important;
+  }
+  .hero-copy{
+    order:2;
+    padding:42px 24px 36px !important;
+  }
+  .top-logo-hero-img{
+    width:min(260px, 60vw) !important;
+    max-width:260px !important;
+  }
+}
+
+/* === v28: fix paragraph breaks in hero copy === */
+.hero-lead{
+  line-height: 2.0 !important;
+}
+.hero-lead br{
+  display: block;
+  content: "";
+  margin-top: 10px;
+}
+
+/* === v30: punctuation-based heading breaks === */
+
+/* 豊富な메뉴。 */
+.hero h1{
+  font-size: clamp(36px, 4.2vw, 58px) !important;
+  line-height: 1.22 !important;
+  letter-spacing: .01em !important;
+}
+.hero h1 .sentence-fixed{
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+/* 目の前で焼きあがる、몬자のライブ感。 */
+.hero-live-copy h2{
+  font-size: clamp(30px, 3.4vw, 48px) !important;
+  line-height: 1.42 !important;
+  letter-spacing: .015em !important;
+}
+.hero-live-copy h2 .line-fixed{
+  display: block;
+  white-space: nowrap;
+}
+
+@media(max-width: 900px){
+  .hero h1{
+    font-size: clamp(32px, 8vw, 44px) !important;
+  }
+  .hero-live-copy h2{
+    font-size: clamp(24px, 6.4vw, 36px) !important;
+  }
+}
+
+@media(max-width: 620px){
+  .hero-copy{
+    padding-right: 18px !important;
+  }
+  .hero-live-copy{
+    padding-right: 18px !important;
+  }
+}
+
+/* === v31: replace logo with high-resolution asset === */
+header .brand{
+  display:flex;
+  align-items:center;
+  min-width:0;
+}
+.brand-logo-header{
+  width:auto;
+  height:74px;
+  max-height:74px;
+  display:block;
+  object-fit:contain;
+}
+
+.top-logo-hero{
+  padding-top:24px !important;
+}
+.top-logo-hero-inner{
+  width:min(100%, 980px) !important;
+}
+.top-logo-hero-img{
+  width:min(430px, 46vw) !important;
+  max-width:430px !important;
+  height:auto !important;
+  display:block;
+  object-fit:contain;
+  image-rendering:auto;
+  filter:drop-shadow(0 10px 20px rgba(64,46,32,.06));
+}
+
+footer .brand{
+  display:flex;
+  align-items:center;
+}
+.brand-logo-footer{
+  width:130px;
+  height:auto;
+  display:block;
+  object-fit:contain;
+  filter:brightness(1.01);
+}
+
+/* overall photo finish */
+.hero-photo img,
+.story-image img.main,
+.story-image .mini,
+.dish-gallery img,
+.drink-image-card img,
+.drink-monja-gallery img{
+  filter: brightness(1.03) contrast(1.05) saturate(1.08);
+  transform: translateZ(0);
+  backface-visibility:hidden;
+}
+
+.hero-photo img{
+  object-position:54% center;
+}
+
+.story-image img.main,
+.dish-gallery img,
+.drink-image-card img,
+.drink-monja-gallery img{
+  box-shadow:
+    0 14px 32px rgba(53,38,27,.08),
+    0 1px 0 rgba(255,255,255,.55) inset;
+}
+
+/* slightly cleaner figure framing */
+.hero-photo,
+.story-image img.main,
+.story-image .mini,
+.dish-gallery figure,
+.drink-image-card,
+.drink-monja-gallery .gallery-shot{
+  background:#fffdf9;
+}
+
+/* mobile logo sizing */
+@media(max-width:900px){
+  .brand-logo-header{
+    width:auto;
+    height:62px;
+    max-height:62px;
+  }
+  .top-logo-hero-img{
+    width:min(250px, 58vw) !important;
+    max-width:250px !important;
+  }
+  .brand-logo-footer{
+    width:112px;
+  }
+}
+
+/* === v32: stronger logo shadow + floating photo treatment === */
+
+/* Logo shadow */
+.brand-logo-header{
+  filter:
+    drop-shadow(0 3px 6px rgba(35,24,16,.08))
+    drop-shadow(0 7px 12px rgba(35,24,16,.08))
+    drop-shadow(0 1px 0 rgba(255,255,255,.50)) !important;
+}
+
+.top-logo-hero-img{
+  filter:
+    drop-shadow(0 10px 18px rgba(48,33,22,.10))
+    drop-shadow(0 22px 36px rgba(48,33,22,.12))
+    drop-shadow(0 1px 0 rgba(255,255,255,.5)) !important;
+}
+
+.brand-logo-footer{
+  filter:
+    drop-shadow(0 6px 12px rgba(255,255,255,.06))
+    drop-shadow(0 10px 18px rgba(0,0,0,.16)) !important;
+}
+
+/* Photo blocks feel lifted */
+.hero-photo,
+.story-image img.main,
+.story-image .mini,
+.dish-gallery figure,
+.drink-image-card,
+.drink-monja-gallery .gallery-shot{
+  box-shadow:
+    0 18px 36px rgba(53,38,27,.10),
+    0 6px 14px rgba(53,38,27,.06),
+    0 1px 0 rgba(255,255,255,.9) inset,
+    0 0 0 1px rgba(214,190,152,.18) !important;
+  transform: translateY(-1px);
+}
+
+/* slightly more presence for actual images */
+.hero-photo img,
+.story-image img.main,
+.story-image .mini,
+.dish-gallery img,
+.drink-image-card img,
+.drink-monja-gallery img{
+  filter: brightness(1.04) contrast(1.06) saturate(1.10);
+}
+
+/* subtle shine so photos look framed, not flat */
+.hero-photo::after,
+.dish-gallery figure::after,
+.drink-monja-gallery .gallery-shot::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,0) 26%),
+    linear-gradient(90deg, rgba(255,255,255,.06), rgba(255,255,255,0) 24%);
+  pointer-events:none;
+  z-index:2;
+}
+
+/* Story images need positioned context for shine */
+.story-image .mini{
+  position:absolute;
+}
+.story-image{
+  position:relative;
+}
+.story-image::after{
+  content:"";
+  position:absolute;
+  inset:10px 14px 10px 10px;
+  border-radius:32px;
+  pointer-events:none;
+  background: radial-gradient(circle at 20% 10%, rgba(255,255,255,.10), rgba(255,255,255,0) 30%);
+}
+
+/* Hover polish for desktop only */
+@media (hover:hover){
+  .hero-photo,
+  .story-image img.main,
+  .story-image .mini,
+  .dish-gallery figure,
+  .drink-image-card,
+  .drink-monja-gallery .gallery-shot{
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  .hero-photo:hover,
+  .story-image img.main:hover,
+  .story-image .mini:hover,
+  .dish-gallery figure:hover,
+  .drink-image-card:hover,
+  .drink-monja-gallery .gallery-shot:hover{
+    transform: translateY(-4px);
+    box-shadow:
+      0 24px 44px rgba(53,38,27,.14),
+      0 8px 18px rgba(53,38,27,.08),
+      0 1px 0 rgba(255,255,255,.92) inset,
+      0 0 0 1px rgba(214,190,152,.22) !important;
+  }
+}
+
+/* Mobile: keep effect but slightly softer */
+@media(max-width:900px){
+  .hero-photo,
+  .story-image img.main,
+  .story-image .mini,
+  .dish-gallery figure,
+  .drink-image-card,
+  .drink-monja-gallery .gallery-shot{
+    box-shadow:
+      0 14px 28px rgba(53,38,27,.09),
+      0 4px 10px rgba(53,38,27,.05),
+      0 1px 0 rgba(255,255,255,.88) inset,
+      0 0 0 1px rgba(214,190,152,.16) !important;
+  }
+}
+
+/* === v33: rebalance long hero menu headline === */
+.hero-copy{
+  min-width:0 !important;
+  padding:58px clamp(30px,4vw,64px) 48px !important;
+}
+.hero-inner{
+  width:100%;
+  max-width:540px !important;
+}
+.hero-menu-title{
+  margin:0 0 22px !important;
+  max-width:540px;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  letter-spacing:.01em !important;
+}
+.hero-menu-title-main{
+  display:block;
+  font-size:clamp(44px,4vw,60px);
+  line-height:1.28;
+  font-weight:700;
+  white-space:normal;
+}
+.hero-menu-title-sub{
+  display:block;
+  margin-top:16px;
+  font-size:clamp(22px,1.9vw,29px);
+  line-height:1.55;
+  font-weight:600;
+  color:#5b5149;
+  white-space:normal;
+}
+@media(max-width:1100px) and (min-width:901px){
+  .hero-menu-title-main{font-size:clamp(40px,4vw,50px)}
+  .hero-menu-title-sub{font-size:clamp(19px,2vw,24px)}
+  .hero-copy{padding-left:30px !important;padding-right:30px !important}
+}
+@media(max-width:900px){
+  .hero-menu-title{max-width:640px}
+  .hero-menu-title-main{
+    font-size:clamp(38px,7.8vw,48px);
+    line-height:1.3;
+  }
+  .hero-menu-title-sub{
+    margin-top:14px;
+    font-size:clamp(20px,4.8vw,27px);
+    line-height:1.55;
+  }
+}
+@media(max-width:620px){
+  .hero-menu-title-main{font-size:clamp(36px,9.5vw,44px)}
+  .hero-menu-title-sub{font-size:clamp(18px,5.5vw,23px)}
+}
+
+/* === v34: light footer with black text === */
+footer{
+  background:#f8f4ec !important;
+  color:#111 !important;
+  border-top:1px solid rgba(182,151,91,.18);
+}
+footer .footer-title,
+footer .footer-links a,
+footer .footer-note,
+footer p{
+  color:#111 !important;
+}
+
+/* === v35: interactive store-name links === */
+.shop-info-card h3{
+  margin:0 0 17px;
+}
+.shop-info-card h3 a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+  width:100%;
+  min-height:58px;
+  padding:14px 16px;
+  border:1px solid rgba(168,79,61,.34);
+  border-radius:14px;
+  background:rgba(168,79,61,.06);
+  color:var(--ink);
+  text-decoration:none;
+  transition:transform .18s ease, background .18s ease, border-color .18s ease, box-shadow .18s ease;
+}
+.shop-info-card h3 a::after{
+  content:"→";
+  flex:0 0 auto;
+  font-family:inherit;
+  font-size:18px;
+  color:var(--terracotta);
+  transition:transform .18s ease;
+}
+@media (hover:hover){
+  .shop-info-card h3 a:hover{
+    transform:translateY(-2px);
+    background:rgba(168,79,61,.12);
+    border-color:rgba(168,79,61,.58);
+    box-shadow:0 8px 20px rgba(64,46,32,.10);
+  }
+  .shop-info-card h3 a:hover::after{
+    transform:translateX(4px);
+  }
+}
+.shop-info-card h3 a:focus-visible{
+  outline:3px solid rgba(168,79,61,.28);
+  outline-offset:3px;
+}
+.shop-info-card h3 a:active{
+  transform:scale(.985);
+  background:rgba(168,79,61,.16);
+  border-color:rgba(168,79,61,.66);
+}
+
+/* === v36: remove white footer brand block === */
+footer .brand{
+  background:transparent !important;
+  background-image:none !important;
+  width:fit-content;
+}
+
+/* === v37: comprehensive mobile optimization === */
+@media(max-width:900px){
+  html{scroll-padding-top:72px}
+  body{padding-bottom:74px}
+  .wrap{width:min(100% - 28px,1160px)}
+  header{position:sticky;top:0;z-index:150}
+  .nav{min-height:72px;padding:5px 0}
+  .brand-logo-header{height:62px;max-height:62px}
+  .menu-btn{display:grid;place-items:center;width:46px;height:46px;border-radius:12px;font-size:22px;background:#fffaf3;border:1px solid rgba(182,151,91,.20)}
+  .mobile-nav{padding:6px 18px 14px}
+  .mobile-nav a{min-height:48px;display:flex;align-items:center}
+  .hero{display:flex !important;flex-direction:column;min-height:0 !important}
+  .top-logo-hero{order:0;padding:14px 0 2px !important}
+  .top-logo-hero-inner{display:flex;justify-content:center}
+  .top-logo-hero-img{width:min(170px,44vw) !important;max-width:170px !important}
+  .hero-copy{order:1 !important;padding:22px 18px 30px !important}
+  .hero-inner{max-width:none !important}
+  .hero-menu-title{margin-bottom:16px !important}
+  .hero-menu-title-main{font-size:clamp(34px,9vw,42px) !important;line-height:1.22 !important}
+  .hero-menu-title-sub{margin-top:10px !important;font-size:clamp(18px,5vw,22px) !important;line-height:1.45 !important}
+  .hero-lead{font-size:14px;line-height:1.8;margin-bottom:16px}
+  .stat-line{margin:14px 0 18px}
+  .stat-line strong{font-size:52px}
+  .hero-actions{display:grid !important;grid-template-columns:1fr 1fr;gap:8px}
+  .hero-actions .btn{min-height:50px;padding:0 10px;font-size:12px;text-align:center}
+  .hero-photo{order:2 !important;height:auto !important;min-height:0 !important;margin:0 14px;border-radius:24px;overflow:hidden}
+  .hero-photo img{height:auto !important;aspect-ratio:4/3;object-fit:cover}
+  .hero-caption{font-size:11px;padding:8px 11px}
+  .hero-live-copy{order:3 !important;padding:30px 18px 42px !important}
+  .hero-live-copy h2{font-size:clamp(27px,7.2vw,34px) !important;line-height:1.4}
+  section{padding:58px 0}
+  .section-head{margin-bottom:24px}
+  .section-head h2{font-size:32px}
+  .section-head p{font-size:14px;line-height:1.8}
+  .story{gap:28px}
+  .story + .story{margin-top:58px}
+  .story-copy h3{font-size:29px}
+  .story-image .mini{right:-6px;bottom:-18px;border-width:5px}
+  .drink-sec{padding:58px 0}
+  .drink-balanced{gap:26px}
+  .shop-info-section{padding:58px 0 88px}
+  .shop-info-card{padding:18px;border-radius:20px}
+  .shop-info-card h3 a{min-height:54px;padding:12px 14px}
+  .shop-info-card dl{grid-template-columns:66px 1fr;gap:8px 10px}
+  .shop-info-actions{grid-template-columns:1fr 1fr !important;gap:8px}
+  .shop-info-actions a{min-height:48px}
+  .mid-reservation{padding:28px 0}
+  .mid-reservation-box{padding:22px 18px;gap:18px}
+  .mid-reservation-box h2{font-size:28px}
+  .footer-recruit{padding:22px 18px;border-width:3px}
+  .footer-recruit h3{font-size:28px}
+  footer{padding:34px 0 92px !important}
+  .footer-grid{gap:22px}
+  .brand-logo-footer{width:104px}
+  .mobile-sticky{left:8px;right:8px;bottom:8px;padding:6px;gap:6px;border-radius:15px}
+  .mobile-sticky a{min-height:50px}
+}
+@media(max-width:420px){
+  .hero-menu-title-main{font-size:34px !important}
+  .hero-menu-title-sub{font-size:18px !important}
+  .hero-actions{grid-template-columns:1fr}
+  .hero-actions .btn{font-size:13px}
+  .top-logo-hero-img{width:min(150px,42vw) !important}
+}
+
+/* === v38: reservation-focused hero with product photography === */
+@media(min-width:901px){
+  .hero{
+    min-height:0 !important;
+    display:grid !important;
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr) !important;
+    grid-template-areas:
+      "copy product"
+      "photo live" !important;
+    align-items:stretch;
+  }
+  .hero-copy{
+    grid-area:copy;
+    min-height:570px;
+    padding:72px clamp(40px,5vw,76px) !important;
+    display:flex;
+    align-items:center;
+  }
+  .hero-product{
+    grid-area:product;
+    position:relative;
+    min-height:570px;
+    overflow:hidden;
+    background:#2b211b;
+  }
+  .hero-product>img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    filter:brightness(1.04) contrast(1.05) saturate(1.05);
+  }
+  .hero-photo{grid-area:photo}
+  .hero-live-copy{grid-area:live}
+}
+.hero-product{
+  position:relative;
+  overflow:hidden;
+}
+.hero-product>img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+.hero-product:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(18,12,8,.02) 45%,rgba(18,12,8,.58) 100%);
+}
+.hero-product-logo{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  top:22px;
+  width:92px;
+  padding:8px;
+  border-radius:16px;
+  background:rgba(255,253,249,.92);
+  box-shadow:0 10px 28px rgba(35,24,16,.18);
+}
+.hero-product-logo img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+.hero-product-caption{
+  position:absolute;
+  z-index:2;
+  left:28px;
+  right:28px;
+  bottom:26px;
+  color:#fff;
+  text-shadow:0 2px 12px rgba(0,0,0,.38);
+}
+.hero-product-caption small{
+  display:block;
+  margin-bottom:5px;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.18em;
+  color:#f2d5a6;
+}
+.hero-product-caption strong{
+  display:block;
+  font-family:"Yu Mincho","Hiragino Mincho ProN",serif;
+  font-size:clamp(24px,2.6vw,38px);
+  line-height:1.35;
+}
+@media(max-width:900px){
+  .hero-product{
+    order:0 !important;
+    margin:0 14px;
+    border-radius:22px;
+    box-shadow:0 14px 28px rgba(53,38,27,.10);
+  }
+  .hero-product>img{
+    aspect-ratio:16/10;
+    height:auto;
+  }
+  .hero-product-logo{
+    left:12px;
+    top:12px;
+    width:66px;
+    padding:6px;
+    border-radius:12px;
+  }
+  .hero-product-caption{
+    left:16px;
+    right:16px;
+    bottom:14px;
+  }
+  .hero-product-caption strong{
+    font-size:clamp(20px,6vw,27px);
+  }
+  .hero-copy{order:1 !important}
+  .hero-photo{order:2 !important}
+  .hero-live-copy{order:3 !important}
+}
+@media(max-width:420px){
+  .hero-product{margin:0 10px;border-radius:18px}
+  .hero-product>img{aspect-ratio:4/3}
+  .hero-product-caption strong{font-size:21px}
+}
+
+/* === mobile sticky CTA single-line labels === */
+@media(max-width:620px){
+  .mobile-sticky{grid-template-columns:1.15fr 1fr}
+  .mobile-sticky a:first-child{
+    font-size:11px;
+    white-space:nowrap;
+    letter-spacing:-.02em;
+    padding:0 6px;
+  }
+}
+
+/* === keep store names on one line on mobile === */
+@media(max-width:620px){
+  .shop-info-card h3{
+    font-size:18px;
+    line-height:1.2;
+  }
+  .shop-info-card h3 a{
+    white-space:nowrap;
+    gap:8px;
+    padding:11px 12px;
+  }
+  .shop-info-card h3 a::after{
+    font-size:16px;
+  }
+}
+
+/* === recruit CTA serious color === */
+.footer-recruit a:hover{background:#1f2f3f}
+.footer-recruit a:active{background:#182633}
+
+/* === store names never wrap === */
+.shop-info-card h3 a{white-space:nowrap}
+@media(max-width:620px){
+  .shop-info-card h3{font-size:clamp(16px,4.6vw,18px)}
+  .shop-info-card h3 a{white-space:nowrap;letter-spacing:-.02em}
+}
+
+/* === mobile navigation reservation CTA === */
+@media(max-width:900px){
+  .mobile-nav .mobile-reserve-btn{
+    margin-top:10px;
+    min-height:54px;
+    padding:0 18px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:0;
+    border-radius:16px;
+    background:linear-gradient(135deg,#bd6245,#a84b34) !important;
+    color:#fff !important;
+    font-size:16px;
+    font-weight:900;
+    letter-spacing:.02em;
+    box-shadow:0 10px 24px rgba(145,65,43,.20);
+  }
+  .mobile-nav .mobile-reserve-btn:active{
+    transform:translateY(1px);
+    box-shadow:0 6px 16px rgba(145,65,43,.18);
+  }
+}
+
+/* === clickable monja category chips === */
+.category .chip{
+  text-decoration:none;
+  color:var(--ink);
+  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease,background .16s ease;
+}
+@media(hover:hover){
+  .category .chip:hover{
+    transform:translateY(-1px);
+    border-color:rgba(182,83,57,.32);
+    background:#fffaf5;
+    box-shadow:0 6px 14px rgba(64,46,32,.07);
+  }
+}
+.category .chip:active{transform:translateY(0)}
+
+/* === always-accessible mobile header + compact reserve === */
+@media(max-width:900px){
+  header{
+    position:fixed !important;
+    top:0;
+    left:0;
+    right:0;
+    width:100%;
+    z-index:180;
+  }
+  body{padding-top:72px !important}
+  .mobile-nav .mobile-reserve-btn{
+    width:max-content;
+    min-width:0;
+    min-height:48px;
+    margin:0;
+    padding:11px 18px;
+    justify-self:start;
+    border-radius:14px;
+    font-size:14px;
+    box-shadow:0 7px 16px rgba(145,65,43,.16);
+  }
+}
+
+/* === prevent mobile dish gallery overflow === */
+.story,
+.story > *,
+.dish-gallery,
+.dish-gallery figure{
+  min-width:0;
+  max-width:100%;
+}
+.dish-gallery img{
+  display:block;
+  max-width:100%;
+}
+@media(max-width:620px){
+  .dish-gallery{
+    width:100%;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:9px;
+  }
+  .dish-gallery figure{
+    width:100%;
+    min-width:0;
+  }
+  .dish-gallery figcaption{
+    left:7px;
+    right:7px;
+    max-width:calc(100% - 14px);
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+  }
+}
+/* Keep the cooking scene clear; use the upper wall for desktop copy. */
+@media(min-width:901px){
+  .hero .hero-photo{grid-area:photo;grid-column:1 / -1;grid-row:2;height:auto !important;min-height:0 !important;align-self:start}
+  .hero .hero-photo>img{display:block;width:100%;height:auto !important;aspect-ratio:1092 / 848;object-fit:contain;object-position:center}
+  .hero .hero-live-copy{grid-area:photo;grid-column:1 / -1;grid-row:2;align-self:start;justify-self:start;position:relative;z-index:3;width:min(76%,850px);padding:24px 4% !important;background:transparent}
+  .hero .hero-live-copy .kicker{margin-bottom:6px;color:#f2d5a6;text-shadow:0 1px 5px #281c14}
+  .hero .hero-live-copy h2{font-size:clamp(24px,2.4vw,34px) !important;line-height:1.3;color:#fffdf9;margin-bottom:8px;text-shadow:0 2px 8px rgba(30,20,12,.75)}
+  .hero .hero-live-copy h2 .line-fixed{display:inline}
+  .hero .hero-live-copy p{font-size:14px;line-height:1.6;color:#fffdf9;margin-bottom:6px;text-shadow:0 1px 6px rgba(30,20,12,.9)}
+  .hero .hero-live-copy .hero-live-note{font-size:12px;color:#fffdf9}
+}
+.hero .hero-caption{left:auto;right:18px;bottom:18px;max-width:calc(100% - 36px);z-index:2}
+@media(max-width:900px){
+  .hero .hero-photo{position:relative;height:auto !important;overflow:visible;border-radius:0}
+  .hero .hero-photo>img{width:100%;height:auto !important;aspect-ratio:1092 / 848;object-fit:contain;object-position:center}
+  .hero .hero-live-copy{position:relative;inset:auto;transform:none;order:3 !important}
+  .hero .hero-photo>img{border-radius:24px}
+  .hero .hero-caption{position:static;transform:none;width:fit-content;max-width:100%;margin:10px 0 0 auto;font-size:10px;padding:7px 10px}
+}
 </style>
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
-<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-KZVZY5K0P8');</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-KZVZY5K0P8');
+</script>
 </head>
-<body><a class="skip" href="#main">본문으로 이동</a>
-<header><div class="wrap nav"><a href="../"><img class="logo" src="../assets/6d7f3ca368181aa7.png" alt="몬자 코마토"></a><nav aria-label="메인"><a class="language-switch" href="../" lang="ja">日本語</a><a class="button" href="#stores">매장 선택</a></nav></div></header>
-<main id="main" class="wrap">
-<section class="ko-hero"><div><p class="kicker">MONJA KOMATO / KOREAN GUIDE</p><h1>몬자 코마토</h1><p class="ko-lead">도쿄에서 몬자야키와 철판요리를 즐겨보세요. 몬자 코마토에서는 직원이 테이블 앞 철판에서 몬자야키를 직접 구워드리므로 처음 드시는 분도 편하게 즐기실 수 있습니다.</p><a class="button" href="#stores">매장 선택하기</a></div><figure><img src="../assets/c50ce797d4578aec.jpg" alt="몬자 코마토 인기 몬자야키"><figcaption>명란 떡 치즈 몬자 등 다양한 메뉴를 준비하고 있습니다.</figcaption></figure></section>
-<section id="stores"><p class="kicker">3 LOCATIONS</p><h2>매장 안내</h2><div class="ko-grid">
-<article class="ko-card"><h3>나카메구로</h3><p>나카메구로역 도보 2분. 평일 17:00~23:00, 토·일·공휴일 12:00~23:00. 주말·공휴일 점심 이용 가능.</p><a class="button" href="stores/nakameguro/">한국어 상세 보기</a></article>
-<article class="ko-card"><h3>히가시고탄다</h3><p>고탄다역 도보 2분. 매일 17:00~다음 날 03:00. 저녁 식사, 술자리, 2차, 늦은 밤 식사에 추천합니다.</p><a class="button" href="../stores/higashi-gotanda/#korean-guide">한국어 안내 보기</a></article>
-<article class="ko-card"><h3>니시고탄다</h3><p>고탄다역 도보 5분. 평일 11:30~14:00 런치, 17:00~23:00 저녁. 토·일·공휴일 12:00~23:00.</p><a class="button" href="../stores/nishi-gotanda/#korean-guide">한국어 안내 보기</a></article>
-</div></section>
-<section><p class="kicker">FIRST TIME?</p><h2>몬자야키가 처음이어도 괜찮습니다</h2><div class="panel"><p>직원이 주문한 몬자야키를 테이블 앞 철판에서 직접 구워드립니다. 굽는 방법을 몰라도 걱정하지 않으셔도 됩니다. 인기 메뉴는 명란 떡 치즈 몬자, 다양한 오리지널 몬자, 굵은 면 야키소바와 철판요리입니다.</p><p class="ko-note">일부 메뉴 페이지와 예약 페이지는 일본어로 표시될 수 있습니다.</p></div></section>
+<body>
+<header>
+<div class="wrap nav">
+<a class="brand" href="#"><img alt="몬자駒と" class="brand-logo-header" src="../assets/6d7f3ca368181aa7.png"/></a>
+<nav class="navlinks">
+<a href="#">페이지 TOP</a><a href="menu.html#monja-menu">몬자</a><a href="menu.html#food-menu">요리·음료</a><a href="#shop-information">매장</a><a class="lang-switch" href="../" lang="ja">日本語</a>
+<a class="reserve" href="#shop-information">예약</a>
+</nav>
+<button class="menu-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">☰</button>
+</div>
+<nav class="mobile-nav"><a href="#">페이지 TOP</a><a href="menu.html#monja-menu">몬자</a><a href="menu.html#food-menu">요리·음료</a><a href="#shop-information">매장</a><a class="mobile-lang-switch" href="../" lang="ko">日本語 안내</a><a class="mobile-reserve-btn" href="#shop-information">예약</a></nav>
+</header>
+<main>
+<section class="hero"><div class="hero-product"><img alt="몬자駒との人気메뉴" src="../assets/c50ce797d4578aec.jpg"/><div class="hero-product-logo"><img alt="몬자駒と" src="../assets/6d7f3ca368181aa7.png"/></div><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>鉄板を囲んで、<br/>몬자を食べる。</strong></div></div>
+<div class="hero-copy">
+<div class="hero-inner">
+<div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
+<h1 class="hero-menu-title"><span class="hero-menu-title-main">豊富な<br/>몬자메뉴。</span><span class="hero-menu-title-sub">鉄板焼き、호일구이、<br/>一品まで多数ご用意。</span></h1>
+<p class="hero-lead">정통 명란 떡 치즈부터 색다른 오리지널 몬자까지. 메뉴를 고르는 순간부터 즐거운 몬자 코마토.</p>
+<div class="stat-line"><strong>29</strong><span>種類の몬자</span></div>
+<div class="hero-actions"><a class="btn btn-main" href="#shop-information">매장을 선택해 예약</a><a class="btn btn-sub" href="menu.html">메뉴 보기</a></div>
+</div>
+</div>
+<div class="hero-photo">
+<img alt="スタッフが目の前の鉄板で料理を仕上げる、몬자駒との店内" src="../assets/cc373d29bd159e4a.png"/>
+</div>
+<div class="hero-live-copy"><div class="kicker">LIVE MONJA EXPERIENCE</div><h2><span class="line-fixed">目の前で焼きあがる、</span><span class="line-fixed">몬자のライブ感。</span></h2><p>철판에서 피어오르는 김과 고소한 소리. 직원이 눈앞에서 직접 완성해 드려 굽는 시간까지 즐길 수 있습니다.</p><p class="hero-live-note">몬자야키가 처음이어도 굽는 방법을 걱정하지 않고 편하게 즐기실 수 있습니다.</p></div></section>
+<section class="monja-sec" id="monja">
+<div class="wrap">
+<div class="section-head">
+<div>
+<div class="kicker">29 KINDS OF MONJA</div>
+<h2>29種類から、<br/>今日の一皿を。</h2>
+<p>정통 명란 떡 치즈부터 색다른 오리지널 몬자까지. 방문할 때마다 새로운 몬자를 만나보세요.</p>
+</div>
+<a class="more" href="menu.html#monja-menu">29종 모두 보기 →</a>
+</div>
+<div class="category">
+<a class="chip" href="menu.html#classic">정통 몬자 11종</a>
+<a class="chip" href="menu.html#korean">한국풍 몬자 2종</a>
+<a class="chip" href="menu.html#chinese">중화풍 몬자 5종</a>
+<a class="chip" href="menu.html#italian">이탈리안 몬자 5종</a>
+<a class="chip" href="menu.html#mexican">멕시칸 몬자 2종</a>
+<a class="chip" href="menu.html#regional">일본 지역 몬자 4종</a>
+</div>
+<div class="monja-grid">
+<article class="monja-card"><img alt="명란 떡 치즈 몬자" src="../assets/c50ce797d4578aec.jpg"/><div class="monja-info"><small>THE CLASSIC</small><strong>명란 떡 치즈 몬자</strong></div></article>
+<article class="monja-card"><img alt="미소라멘 스페셜 몬자" src="../assets/ea75ca2b82fffedc.jpg"/><div class="monja-info"><small>CHINESE</small><strong>미소라멘 스페셜 몬자</strong></div></article>
+<article class="monja-card"><img alt="타코스 몬자" src="../assets/a9d28378b1579504.png"/><div class="monja-info"><small>MEXICAN</small><strong>타코스 몬자</strong></div></article>
+<article class="monja-card"><img alt="3종 치즈 몬자" src="../assets/94b10fda0212d597.jpg"/><div class="monja-info"><small>ITALIAN</small><strong>3종 치즈 몬자</strong></div></article>
+<article class="monja-card"><img alt="코마토 오리지널 몬자" src="../assets/2e6691c5ec8c234d.jpg"/><div class="monja-info"><small>ORIGINAL</small><strong>코마토 오리지널 몬자</strong></div></article>
+</div>
+<div class="monja-bottom"><p>“오늘은 뭘 먹을까?” 하고 고르는 순간부터 코마토의 즐거움이 시작됩니다.</p><div class="menu-link-stack"><a class="btn btn-main" href="menu.html#monja-menu">몬자 메뉴로</a><a class="btn btn-sub" href="menu.html#food-menu">요리·디저트 메뉴로</a><a class="btn btn-sub" href="menu.html#drink-menu">음료 메뉴로</a></div></div>
+</div>
+</section>
+<section class="story-sec" id="about">
+<div class="wrap">
+<div class="story">
+<div class="story-image">
+<img alt="店内に多くのお客様が集まり、鉄板を囲んで食事を楽しむ様子" class="main" src="../assets/d9f66b75c561bd12.png"/>
+</div>
+<div class="story-copy">
+<div class="num">01 / FOR EVERY GROUP</div>
+<h3><span class="line">소규모부터 단체까지.</span></h3>
+<p>2~3명의 가벼운 식사부터 가족·친구 모임까지. 편안한 좌석에서 철판을 둘러싼 활기찬 시간을 즐겨보세요.</p>
+<div class="story-points"><span>소규모도 편안하게</span><span>그룹 이용에도</span><span>가족과 함께</span></div>
+</div>
+</div>
+<div class="story reverse">
+<div class="dish-gallery">
+<figure><img alt="トマトスライス" src="https://static.wixstatic.com/media/320a3b_9c4b8b2007464ac2999022ad060840d6~mv2.jpg"/><figcaption>トマトスライス</figcaption></figure>
+<figure><img alt="牡蠣호일구이" src="https://static.wixstatic.com/media/320a3b_95d3e5893a184294b42f3fa2531226be~mv2.jpg"/><figcaption>牡蠣호일구이</figcaption></figure>
+<figure><img alt="ホタテ호일구이" src="https://static.wixstatic.com/media/858901_8cb01cbc58274e8a9d1a5e073feb4913~mv2.jpeg"/><figcaption>ホタテ호일구이</figcaption></figure>
+<figure><img alt="サラダ" src="https://static.wixstatic.com/media/320a3b_bd210f759796450d9278fdf8ffaf3ae7~mv2.jpg"/><figcaption>サラダ</figcaption></figure>
+<figure><img alt="丸ごと玉ねぎ호일구이" src="../assets/e56312430c6da569.jpg"/><figcaption>淡路産丸ごと玉ねぎ</figcaption></figure>
+<figure><img alt="もっちり굵은 면 야키소바" src="../assets/4619d7577e7c742f.jpg"/><figcaption>굵은 면 야키소바</figcaption></figure>
+</div>
+<div class="story-copy">
+<div class="num">02 / MORE THAN MONJA</div>
+<h3>몬자だけで、<br/>終わらない。</h3>
+<p>한입요리, 호일구이, 철판요리, 고기요리, 굵은 면 야키소바, 디저트까지. 가족 식사, 친구 모임, 이자카야 이용 모두에 어울리는 메뉴입니다.</p>
+<div class="story-points"><span>철판요리</span><span>호일구이</span><span>굵은 면 야키소바</span><span>디저트</span></div>
+</div>
+</div>
+</div>
+</section><section class="mid-reservation" id="mid-reservation"><div class="wrap"><div class="mid-reservation-box"><div class="mid-reservation-copy"><div class="kicker">RESERVATION</div><h2>방문할 매장을 정했다면 바로 예약하세요.</h2><p>나카메구로·히가시고탄다·니시고탄다 중 원하는 매장을 선택할 수 있습니다.</p></div><a class="mid-reservation-btn" href="#shop-information">매장을 선택해 예약</a></div></div></section>
+<section class="drink-sec" id="food">
+<div class="wrap drink-balanced">
+<div class="drink-image-card">
+<img alt="사케や쇼추など豊富なドリンク" src="../assets/a4f833fd75b7af7a.jpg"/>
+<div class="image-label">DRINK SELECTION</div>
+</div>
+<div class="drink-copy">
+<div>
+<div class="kicker">DRINK &amp; IZAKAYA</div>
+<h2>몬자、<br/>鉄板焼きと<br/>豊富なドリンク。</h2>
+<p>맥주, 하이볼, 사케, 쇼추, 사와, 칵테일. 소프트드링크와 무알코올 음료도 준비되어 있습니다. 몬자야키와 함께 편하게 건배하세요.</p>
+<div class="drink-tags"><span>맥주</span><span>하이볼</span><span>사케</span><span>쇼추</span><span>사와</span><span>칵테일</span><span>무알코올</span></div>
+</div>
+</div>
+<div class="drink-monja-promo"><div><h4>変わり種몬자が楽しめる！몬자専門店</h4><p>스페셜 몬자를 비롯해 사천식, 그라탱풍, 카레맛 등 개성 있는 몬자야키도 다양하게 준비되어 있습니다.</p></div><div class="drink-monja-gallery"><figure class="gallery-shot"><img alt="몬자調理シーン1" src="../assets/4f94e39a0e520e8e.jpg"/></figure><figure class="gallery-shot"><img alt="몬자調理シーン2" src="../assets/79ce642b8942b7b5.jpg"/></figure><figure class="gallery-shot"><img alt="몬자調理シーン3" src="../assets/75c92e7726687b32.jpg"/></figure></div></div></div>
+</section>
 </main>
-<footer class="wrap"><p>© MONJA KOMATO / SUMIKOMA Inc.</p></footer>
-</body></html>
+<section class="shop-info-section" id="shop-information"><div class="wrap"><div class="shop-info-head"><div class="kicker">SHOP INFORMATION</div><h2>매장 정보</h2><p>나카메구로·히가시고탄다·니시고탄다. 각 매장의 예약·문의·오시는 길을 확인하세요.</p></div><div class="shop-info-grid"><article class="shop-info-card"><h3><a href="stores/nakameguro/">몬자 코마토 나카메구로</a></h3><dl><dt>TEL</dt><dd><a href="tel:0364522345">03-6452-2345</a></dd><dt>住所</dt><dd>東京都目黒区上目黒2-6-3 K&amp;F中目黒 1F</dd><dt>アクセス</dt><dd>中目黒駅 徒歩2分</dd><dt>営業時間</dt><dd>平日 17:00–23:00（LO 22:00） / 土日祝 12:00–23:00（LO 22:00）</dd><dt>Instagram</dt><dd><a href="https://www.instagram.com/monja_komato/" rel="noopener" target="_blank">@monja_komato</a></dd></dl><div class="shop-info-actions"><a class="shop-reserve-btn" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13286293" target="_blank" rel="noopener">예약</a><a href="tel:0364522345">전화</a><a href="https://www.instagram.com/monja_komato/" rel="noopener" target="_blank">Instagram</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E4%B8%AD%E7%9B%AE%E9%BB%92%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8A%E7%9B%AE%E9%BB%922-6-3%20K%26F%E4%B8%AD%E7%9B%AE%E9%BB%92%201F" rel="noopener" target="_blank">Google 지도</a></div></article><article class="shop-info-card"><h3><a href="../stores/higashi-gotanda/#korean-guide">몬자 코마토 히가시고탄다</a></h3><dl><dt>TEL</dt><dd><a href="tel:0362773390">03-6277-3390</a></dd><dt>住所</dt><dd>東京都品川区東五反田1-16-3 EAST-1ビル 1F</dd><dt>アクセス</dt><dd>五反田駅 徒歩2分</dd><dt>営業時間</dt><dd>毎日 17:00–翌3:00（LO 翌2:00）</dd><dt>Instagram</dt><dd><a href="https://www.instagram.com/monja_komato_gotanda/" rel="noopener" target="_blank">@monja_komato_gotanda</a></dd></dl><div class="shop-info-actions"><a class="shop-reserve-btn" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13302209" target="_blank" rel="noopener">예약</a><a href="tel:0362773390">전화</a><a href="https://www.instagram.com/monja_komato_gotanda/" rel="noopener" target="_blank">Instagram</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E6%9D%B1%E4%BA%94%E5%8F%8D%E7%94%B01-16-3%20EAST-1%E3%83%93%E3%83%AB%201F" rel="noopener" target="_blank">Google 지도</a></div></article><article class="shop-info-card"><h3><a href="../stores/nishi-gotanda/#korean-guide">몬자 코마토 니시고탄다</a></h3><dl><dt>TEL</dt><dd><a href="tel:0364173302">03-6417-3302</a></dd><dt>住所</dt><dd>東京都品川区西五反田2-12-15 リーラハイタウン 1F</dd><dt>アクセス</dt><dd>五反田駅 徒歩5分</dd><dt>営業時間</dt><dd>平日 11:30–14:00（LO 13:00） / 17:00–23:00（LO 22:00） / 土日祝 12:00–23:00（LO 22:00）</dd><dt>Instagram</dt><dd><a href="https://www.instagram.com/monja_komato_nishigotanda/" rel="noopener" target="_blank">@monja_komato_nishigotanda</a></dd></dl><div class="shop-info-actions"><a class="shop-reserve-btn" href="https://yoyaku.tabelog.com/yoyaku/net_booking_form/index?rcd=13318684" target="_blank" rel="noopener">예약</a><a href="tel:0364173302">전화</a><a href="https://www.instagram.com/monja_komato_nishigotanda/" rel="noopener" target="_blank">Instagram</a><a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B0%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%93%81%E5%B7%9D%E5%8C%BA%E8%A5%BF%E4%BA%94%E5%8F%8D%E7%94%B02-12-15%20%E3%83%AA%E3%83%BC%E3%83%A9%E3%83%8F%E3%82%A4%E3%82%BF%E3%82%A6%E3%83%B3%201F" rel="noopener" target="_blank">Google 지도</a></div></article></div></div></section><footer>
+<div class="wrap footer-grid">
+<div class="footer-recruit"><div><div class="recruit-kicker">RECRUIT</div><h3>함께 일할 동료를 모집합니다.</h3><p>몬자 코마토에서 새로운 매장을 함께 만들어 보시겠어요?</p></div><a href="https://komato2026.com/LPPage?id=Pd2a4561" target="_blank" rel="noopener">채용 정보 보기</a></div>
+<div><div class="brand"><img alt="몬자駒と" class="brand-logo-footer" src="../assets/6d7f3ca368181aa7.png"/></div><p style="font-size:13px">29종의 몬자야키와 철판을 둘러싼 즐거운 시간.</p><div class="footer-note">© MONJA KOMATO / SUMIKOMA Inc.</div></div>
+<div><div class="footer-title">CONTENTS</div><div class="footer-links"><a href="#">페이지 TOP</a><a href="menu.html">메뉴</a><a href="#shop-information">매장</a></div></div>
+<div><div class="footer-title">INFORMATION</div><div class="footer-links"><a href="../news-release.html">뉴스</a><a href="../company.html">회사 소개</a><a href="../privacy.html">개인정보처리방침</a></div></div>
+</div>
+</footer>
+<div class="mobile-sticky"><a href="menu.html#monja-menu">몬자 29종 전체 메뉴</a><a href="#shop-information">매장을 선택해 예약</a></div>
+<script>
+/* close-mobile-menu-on-scroll */
+(() => {
+  let lastY = window.scrollY;
+  const closeMobileMenu = () => {
+    const nav = document.querySelector('.mobile-nav');
+    if (!nav || !nav.classList.contains('open')) return;
+    nav.classList.remove('open');
+    const btn = document.querySelector('.menu-btn');
+    if (btn) btn.setAttribute('aria-expanded','false');
+  };
+  window.addEventListener('scroll', () => {
+    if (Math.abs(window.scrollY - lastY) > 2) closeMobileMenu();
+    lastY = window.scrollY;
+  }, { passive: true });
+})();
+</script><script>
+/* GA4 conversion click tracking */
+(() => {
+  const destinationStore = (href) => {
+    if (href.includes('13286293') || href.includes('0364522345') || href.includes('03-6452-2345')) return '中目黒';
+    if (href.includes('13302209') || href.includes('0362773390') || href.includes('03-6277-3390')) return '東五反田';
+    if (href.includes('13318684') || href.includes('0364173302') || href.includes('03-6417-3302')) return '西五反田';
+    return '';
+  };
+
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('a');
+    if (!a || typeof gtag !== 'function') return;
+
+    const href = a.getAttribute('href') || '';
+    const absoluteHref = a.href || href;
+    const params = {
+      link_url: absoluteHref,
+      link_text: (a.textContent || '').trim().slice(0, 100),
+      destination_store: destinationStore(href),\n      page_language: 'ko'
+    };
+
+    if (href.startsWith('tel:')) {
+      gtag('event', 'phone_click', params);
+    } else if (href.includes('yoyaku.tabelog.com')) {
+      gtag('event', 'reservation_click', params);
+    }
+  });
+})();
+</script>
+</body>
+</html>
