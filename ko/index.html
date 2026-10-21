@@ -3234,7 +3234,7 @@ header .brand-locations{
   if(!headline)return;
   const available=caption.clientWidth-parseFloat(getComputedStyle(caption).paddingLeft)-parseFloat(getComputedStyle(caption).paddingRight);
   if(available<=0)return;
-  const lines=headline.innerHTML.split(/<br\\s*\\/?\\s*>/i).map(t=>t.replace(/<[^>]*>/g,''));
+  const lines=headline.innerHTML.split(/<br\s*\/?\s*>/i).map(t=>t.replace(/<[^>]*>/g,''));
   if(lines.length!==2)return;
   const canvas=document.createElement('canvas');const ctx=canvas.getContext('2d');
   if(!ctx)return;
