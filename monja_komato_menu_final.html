@@ -558,6 +558,97 @@ html[lang="ko"] header .logo img{
     max-width:145px!important;
   }
 }
+
+/* === menu logo clipping definitive fix 2026-10-22d === */
+header .nav{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:8px!important;
+  flex-wrap:nowrap!important;
+}
+header .logo{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  overflow:visible!important;
+  flex:0 0 auto!important;
+  width:auto!important;
+  height:auto!important;
+  min-width:0!important;
+}
+header .logo img{
+  display:block!important;
+  width:220px!important;
+  height:auto!important;
+  max-width:220px!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  transform:none!important;
+  flex:none!important;
+}
+header .nav-right{
+  margin-left:auto!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+}
+@media(max-width:650px){
+  header .nav{
+    width:min(100% - 16px,1160px)!important;
+    gap:5px!important;
+  }
+  header .logo{
+    overflow:visible!important;
+    flex:0 0 132px!important;
+    width:132px!important;
+    height:auto!important;
+  }
+  header .logo img{
+    width:132px!important;
+    max-width:132px!important;
+    height:auto!important;
+    max-height:none!important;
+    object-fit:contain!important;
+    object-position:left center!important;
+    transform:none!important;
+  }
+  header .nav-right{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    gap:3px!important;
+    flex:1 1 auto!important;
+    min-width:0!important;
+    font-size:9px!important;
+  }
+  header .nav-right a{
+    min-height:36px!important;
+    padding:5px 6px!important;
+    font-size:9px!important;
+    line-height:1.1!important;
+    white-space:nowrap!important;
+  }
+  header .nav-right .reserve{
+    padding-left:8px!important;
+    padding-right:8px!important;
+    font-size:9px!important;
+  }
+}
+@media(max-width:390px){
+  header .logo{
+    flex-basis:122px!important;
+    width:122px!important;
+  }
+  header .logo img{
+    width:122px!important;
+    max-width:122px!important;
+  }
+  header .nav-right a{
+    padding:4px 5px!important;
+    font-size:8.5px!important;
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
