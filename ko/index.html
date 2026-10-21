@@ -2282,6 +2282,61 @@ footer .brand{
   .hero .hero-photo>img{border-radius:24px}
   .hero .hero-caption{position:static;transform:none;width:fit-content;max-width:100%;margin:10px 0 0 auto;font-size:10px;padding:7px 10px}
 }
+
+/* === mobile direct header actions 2026-10-21 === */
+.mobile-direct-actions{display:none}
+@media(max-width:900px){
+  .mobile-direct-actions{
+    margin-left:auto;
+    display:flex;
+    align-items:center;
+    justify-content:flex-end;
+    gap:5px;
+    min-width:0;
+  }
+  .mobile-direct-actions a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    min-height:40px;
+    padding:8px 9px;
+    border-radius:11px;
+    white-space:nowrap;
+    font-size:11px;
+    font-weight:900;
+    line-height:1;
+    text-decoration:none;
+  }
+  .mobile-direct-lang{
+    order:1;
+    border:2px solid var(--terracotta);
+    background:#fff;
+    color:var(--terracotta);
+  }
+  .mobile-direct-menu{
+    order:2;
+    border:1px solid rgba(182,151,91,.28);
+    background:#fffaf3;
+    color:var(--ink);
+  }
+  .mobile-direct-reserve{
+    order:3;
+    border:1px solid transparent;
+    background:var(--terracotta);
+    color:#fff;
+  }
+  .menu-btn,.mobile-nav{display:none!important}
+}
+@media(max-width:390px){
+  .nav{gap:7px}
+  .brand-logo-header{height:52px!important;max-height:52px!important}
+  .mobile-direct-actions{gap:3px}
+  .mobile-direct-actions a{
+    min-height:38px;
+    padding:7px 7px;
+    font-size:10px;
+  }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -2300,9 +2355,8 @@ footer .brand{
 <a href="#">페이지 TOP</a><a href="menu.html#monja-menu">몬자</a><a href="menu.html#food-menu">요리·음료</a><a href="#shop-information">매장</a><a class="lang-switch" href="../" lang="ja">日本語</a>
 <a class="reserve" href="#shop-information">예약</a>
 </nav>
-<button class="menu-btn" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">☰</button>
+<div class="mobile-direct-actions"><a class="mobile-direct-lang" href="../" lang="ja">日本語</a><a class="mobile-direct-menu" href="menu.html">메뉴</a><a class="mobile-direct-reserve" href="#shop-information">예약</a></div>
 </div>
-<nav class="mobile-nav"><a href="#">페이지 TOP</a><a href="menu.html#monja-menu">몬자</a><a href="menu.html#food-menu">요리·음료</a><a href="#shop-information">매장</a><a class="mobile-lang-switch" href="../" lang="ja">日本語</a><a class="mobile-reserve-btn" href="#shop-information">예약</a></nav>
 </header>
 <main>
 <section class="hero"><div class="hero-product"><img alt="몬자駒との人気메뉴" src="../assets/c50ce797d4578aec.jpg"/><div class="hero-product-logo"><img alt="몬자 코마토" src="../assets/6d7f3ca368181aa7.png"/></div><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><strong>철판을 둘러앉아,<br/>몬자야키를 즐기다.</strong></div></div>
