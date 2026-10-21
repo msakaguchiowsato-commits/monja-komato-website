@@ -2674,6 +2674,51 @@ header .brand.brand-ko .brand-logo-header{
     transform:translateY(-1%)!important;
   }
 }
+
+/* === centered logo definitive fix 2026-10-22b === */
+header .brand-mark{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  overflow:hidden!important;
+}
+header .brand-logo-header{
+  transform:none!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+}
+header .brand:not(.brand-ko) .brand-logo-header{
+  width:300px!important;
+  height:auto!important;
+}
+header .brand.brand-ko .brand-mark{
+  height:68px!important;
+  overflow:visible!important;
+}
+header .brand.brand-ko .brand-logo-header{
+  width:auto!important;
+  height:64px!important;
+  max-width:280px!important;
+  transform:none!important;
+}
+header .brand-locations{
+  color:#000!important;
+  font-weight:900!important;
+}
+@media(max-width:900px){
+  header .brand:not(.brand-ko) .brand-mark{height:50px!important}
+  header .brand:not(.brand-ko) .brand-logo-header{width:220px!important;transform:none!important}
+  header .brand.brand-ko{height:60px!important}
+  header .brand.brand-ko .brand-mark{height:56px!important;width:205px!important;overflow:visible!important}
+  header .brand.brand-ko .brand-logo-header{height:54px!important;width:auto!important;max-width:205px!important;transform:none!important}
+}
+@media(max-width:390px){
+  header .brand:not(.brand-ko) .brand-mark{height:46px!important}
+  header .brand:not(.brand-ko) .brand-logo-header{width:198px!important;transform:none!important}
+  header .brand.brand-ko{height:58px!important}
+  header .brand.brand-ko .brand-mark{height:54px!important;width:190px!important}
+  header .brand.brand-ko .brand-logo-header{height:52px!important;max-width:190px!important;transform:none!important}
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
