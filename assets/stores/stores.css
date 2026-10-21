@@ -484,3 +484,59 @@
  .store-brand.store-brand-ko .store-brand-mark{height:50px!important;width:126px!important}
  .store-brand.store-brand-ko .logo{height:48px!important;width:auto!important;max-width:126px!important;transform:none!important}
 }
+
+/* === final left-aligned store header brand 2026-10-22c === */
+.nav{justify-content:flex-start!important}
+.nav > a.store-brand{
+  justify-content:flex-start!important;
+  margin-left:0!important;
+  margin-right:auto!important;
+}
+.store-brand-mark{justify-content:flex-start!important}
+.store-brand-locations{
+  color:#000!important;
+  font-weight:900!important;
+  text-align:left!important;
+}
+.store-brand .logo{
+  object-position:left center!important;
+  transform:none!important;
+}
+.store-brand.store-brand-ko .store-brand-mark{
+  overflow:visible!important;
+}
+.store-brand.store-brand-ko .logo{
+  width:210px!important;
+  height:auto!important;
+  max-width:210px!important;
+  max-height:none!important;
+  object-fit:contain!important;
+  object-position:left center!important;
+  transform:none!important;
+}
+@media(max-width:700px){
+  .nav{justify-content:flex-start!important}
+  .nav > a.store-brand{
+    justify-content:flex-start!important;
+    margin-left:0!important;
+    margin-right:auto!important;
+  }
+  .store-brand-mark{justify-content:flex-start!important}
+  .store-brand.store-brand-ko .store-brand-mark{
+    width:155px!important;
+    height:auto!important;
+    min-height:0!important;
+    overflow:visible!important;
+  }
+  .store-brand.store-brand-ko .logo{
+    width:155px!important;
+    height:auto!important;
+    max-width:155px!important;
+    max-height:none!important;
+    transform:none!important;
+  }
+}
+@media(max-width:390px){
+  .store-brand.store-brand-ko .store-brand-mark{width:145px!important}
+  .store-brand.store-brand-ko .logo{width:145px!important;max-width:145px!important}
+}
