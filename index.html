@@ -3207,6 +3207,14 @@ html,body{max-width:100%;overflow-x:clip;}
 }
 /* Match the supplied reference screenshot: warm gold caption, dark brush lettering */
 .hero-product-caption small{color:#cda35f!important;text-shadow:none!important;}
+
+/* Mobile Japanese headline: remove white image background and outline ink in white. */
+@media(max-width:900px){
+ .hero-product-caption .hero-headline-graphic{
+  background:transparent!important;
+  filter:url(#komato-mobile-ink-alpha) drop-shadow(1px 0 0 #fff) drop-shadow(-1px 0 0 #fff) drop-shadow(0 1px 0 #fff) drop-shadow(0 -1px 0 #fff) drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff)!important;
+ }
+}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -3229,7 +3237,7 @@ html,body{max-width:100%;overflow-x:clip;}
 </div>
 </header>
 <main>
-<section class="hero"><div class="hero-product"><img alt="もんじゃ駒との人気メニュー" src="assets/c50ce797d4578aec.webp" loading="eager" fetchpriority="high" decoding="async" width="3200" height="2401"/><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><img class="hero-headline-graphic" src="assets/image(20261022-040930).png" alt="うまいもんじゃ、あります。" loading="eager" decoding="async" width="582" height="253"/></div></div>
+<section class="hero"><div class="hero-product"><img alt="もんじゃ駒との人気メニュー" src="assets/c50ce797d4578aec.webp" loading="eager" fetchpriority="high" decoding="async" width="3200" height="2401"/><div class="hero-product-caption"><small>MONJA KOMATO / POPULAR MENU</small><svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden"><defs><filter id="komato-mobile-ink-alpha" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  -0.333333 -0.333333 -0.333334 0 1"/></filter></defs></svg><img class="hero-headline-graphic" src="assets/image(20261022-040930).png" alt="うまいもんじゃ、あります。" loading="eager" decoding="async" width="582" height="253"/></div></div>
 <div class="hero-copy">
 <div class="hero-inner">
 <div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
