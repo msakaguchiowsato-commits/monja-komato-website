@@ -983,7 +983,8 @@ header .nav-right{
     const params = {
       link_url: absoluteHref,
       link_text: (a.textContent || '').trim().slice(0, 100),
-      destination_store: destinationStore(href)
+      destination_store: destinationStore(href),
+      page_language: 'ja'
     };
 
     if (href.startsWith('tel:')) {
