@@ -75,7 +75,8 @@
       link_url: absoluteHref,
       link_text: (a.textContent || '').trim().slice(0, 100),
       destination_store: destinationStore(href),
-      page_language: 'ja'
+      page_language: 'ja',
+      booking_route: 'direct'
     };
 
     if (href.startsWith('tel:')) {
