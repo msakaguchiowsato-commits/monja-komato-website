@@ -87,4 +87,32 @@
   });
 })();
 </script>
+
+<script>
+/* Desktop phone buttons scroll to the visible phone number; mobile keeps click-to-call. */
+(() => {
+  document.addEventListener('click', (event) => {
+    const link = event.target.closest('a[href^="tel:"]');
+    if (!link || !window.matchMedia('(min-width: 768px) and (pointer: fine)').matches) return;
+    const card = link.closest('.shop-info-card');
+    if (!card && !link.classList.contains('button')) return;
+    if (card && !link.closest('.shop-info-actions')) return;
+    let number;
+    if (card) {
+      number = card.querySelector('dl dd a[href^="tel:"]');
+    } else {
+      const details = document.querySelector('#access');
+      const label = details && Array.from(details.querySelectorAll('dt')).find((dt) => /電話番号|전화번호/.test(dt.textContent));
+      number = label && label.nextElementSibling;
+    }
+    if (!number) return;
+    event.preventDefault();
+    number.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    if (number.animate) number.animate([
+      { backgroundColor: 'rgba(184, 88, 56, .25)' },
+      { backgroundColor: 'rgba(184, 88, 56, 0)' }
+    ], { duration: 1800, easing: 'ease-out' });
+  });
+})();
+</script>
 </body></html>
