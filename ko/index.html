@@ -3249,7 +3249,10 @@ html,body{max-width:100%;overflow-x:clip;}
       link_url: absoluteHref,
       link_text: (a.textContent || '').trim().slice(0, 100),
       destination_store: destinationStore(href),
-      page_language: 'ko'
+      page_language: 'ko',
+      store_name: destinationStore(href),
+      reservation_provider: 'tabelog',
+      booking_route: 'direct'
     };
 
     if (href.startsWith('tel:')) {
