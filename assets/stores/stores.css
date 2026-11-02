@@ -581,3 +581,26 @@
   .reservation-pilot .mobile-reservation-reviews{background:#fff;border:1px solid #cabca6;color:#3e372d}
   .reservation-pilot .mobile-reservation-bar a:focus-visible{outline:3px solid #3274c6;outline-offset:2px}
 }
+
+/* Price and direct booking visible together in the store introduction. */
+.reservation-pilot .reservation-price{margin:12px 0;color:var(--ink);font-size:15px;line-height:1.55}
+.reservation-price strong{white-space:nowrap;font-size:1.12em}
+.reservation-price small{display:block;font-size:11px;font-weight:400;color:#62594d}
+@media(max-width:700px){
+ .reservation-pilot .hero{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;padding-top:12px}
+ .reservation-pilot .hero>div{display:contents}
+ .reservation-pilot .hero>div>.kicker{display:none}
+ .reservation-pilot .hero h1{grid-row:1;margin:0;font-size:clamp(22px,6.1vw,29px)}
+ .reservation-pilot .hero>figure{grid-row:2;order:initial}
+ .reservation-pilot .hero>figure img{height:clamp(120px,36vw,168px);aspect-ratio:auto;object-fit:cover}
+ .reservation-pilot .hero>figure figcaption{margin-top:2px;font-size:11px}
+ .reservation-pilot .reservation-lead{grid-row:3;margin:2px 0;font-size:clamp(16px,4.5vw,20px)}
+ .reservation-pilot .reservation-highlights{grid-row:4;margin:0;gap:4px}
+ .reservation-pilot .reservation-highlights span{font-size:10px;padding:4px 7px}
+ .reservation-pilot .reservation-price{grid-row:5;margin:2px 0;font-size:14px}
+ .reservation-pilot .hero-reservation-actions{grid-row:6;margin:2px 0;gap:6px}
+ .reservation-pilot .hero-reservation-actions .button{min-height:44px;padding:10px 12px}
+ .reservation-pilot .hero>div>.text-link{grid-row:7;margin:4px 0}
+ .reservation-pilot .hero-description{grid-row:8;margin:10px 0 0}
+ .reservation-pilot .hero-reservation-actions .text-link{margin:2px 0;font-size:12px}
+}
