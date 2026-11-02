@@ -544,3 +544,28 @@
 /* Direct reservation choices on all store hero sections */
 .hero-reservation-actions{display:flex;flex-direction:column;gap:10px;margin:20px 0 12px}
 .hero-reservation-actions .button{display:block;box-sizing:border-box;width:100%;margin:0;padding:14px 18px;min-height:54px;text-align:center;font-weight:800;text-decoration:none}
+
+
+/* Nakameguro booking-first mobile pilot. Scoped to this page only. */
+.mobile-reservation-bar{display:none}
+.reservation-pilot .reservation-lead{font-weight:800;font-size:clamp(1.2rem,2.7vw,1.7rem);line-height:1.5;margin:12px 0 8px}
+.reservation-pilot .reservation-highlights{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.reservation-pilot .reservation-highlights span{display:inline-block;border:1px solid #cabba2;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:700;line-height:1.35;background:#f8f4ec;color:#403527}
+@media(max-width:700px){
+  body.reservation-pilot{padding-bottom:calc(82px + env(safe-area-inset-bottom,0px))}
+  .reservation-pilot .hero{display:flex;flex-direction:column;gap:14px}
+  .reservation-pilot .hero>figure{order:-1;margin:0}
+  .reservation-pilot .hero>figure img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:12px}
+  .reservation-pilot .hero>figure figcaption{font-size:12px;margin-top:4px}
+  .reservation-pilot .hero h1{margin-bottom:4px}
+  .reservation-pilot .reservation-lead{font-size:clamp(1.18rem,5vw,1.42rem);line-height:1.45;margin:10px 0}
+  .reservation-pilot .reservation-highlights{gap:6px;margin:10px 0}
+  .reservation-pilot .reservation-highlights span{font-size:11px;padding:6px 9px}
+  .reservation-pilot .hero-reservation-actions{gap:8px;margin:14px 0 10px}
+  .reservation-pilot .hero-reservation-actions .button:first-child{background:#91392c;color:#fff;border-color:#91392c}
+  .reservation-pilot .mobile-reservation-bar{position:fixed;z-index:1100;bottom:0;left:0;right:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);align-items:stretch;gap:9px;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:rgba(255,255,255,.97);border-top:1px solid #dcd3c5;box-shadow:0 -4px 18px rgba(0,0,0,.10)}
+  .reservation-pilot .mobile-reservation-bar a{display:flex;align-items:center;justify-content:center;min-height:48px;border-radius:8px;text-align:center;text-decoration:none;font-size:14px;font-weight:800;line-height:1.3;box-sizing:border-box}
+  .reservation-pilot .mobile-reservation-call{background:#f3eee6;color:#332d26;border:1px solid #d8cbb9}
+  .reservation-pilot .mobile-reservation-book{background:#91392c;color:#fff;border:1px solid #91392c}
+  .reservation-pilot .mobile-reservation-bar a:focus-visible{outline:3px solid #3274c6;outline-offset:2px}
+}
