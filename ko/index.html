@@ -3089,6 +3089,22 @@ html,body{max-width:100%;overflow-x:clip;}
 
 /* Keep POPULAR MENU label black across desktop and mobile. */
 .hero-product-caption small{color:#111!important;-webkit-text-fill-color:#111!important;text-shadow:none!important;}
+.hero-desktop-break{display:none}
+@media(min-width:901px){.hero-desktop-break{display:initial}}
+.store-mobile-break{display:none}
+@media(max-width:900px){.store-mobile-break{display:initial}}
+.quick-store-section{padding:42px 20px 48px;background:#fffdf9;border-bottom:1px solid #e3d8ca}
+.quick-store-inner{max-width:1160px;margin:0 auto}
+.quick-store-section h2{margin:0 0 8px;font-family:"Yu Mincho","Hiragino Mincho ProN",serif;font-size:clamp(25px,3.1vw,39px);line-height:1.35}
+.quick-store-intro{margin:0 0 22px;color:#756c63;font-size:14px}
+.quick-store-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.quick-store-card{display:flex;flex-direction:column;gap:9px;padding:21px 20px;background:#f6f0e6;border:1px solid #e3d8ca;border-radius:17px;text-decoration:none;color:#2d2823;transition:border-color .2s,transform .2s,box-shadow .2s}
+.quick-store-card:hover,.quick-store-card:focus-visible{border-color:#b65339;transform:translateY(-2px);box-shadow:0 8px 22px rgba(64,46,32,.08)}
+.quick-store-card strong{font-size:19px}
+.quick-store-card .quick-store-feature{font-size:14px;font-weight:800;color:#b65339}
+.quick-store-card .quick-store-hours{font-size:12px;color:#756c63}
+.quick-store-card .quick-store-link{margin-top:auto;padding-top:4px;font-weight:800;font-size:13px}
+@media(max-width:680px){.quick-store-section{padding:30px 20px 34px}.quick-store-grid{grid-template-columns:1fr;gap:9px}.quick-store-card{padding:14px 16px;gap:5px}.quick-store-card strong{font-size:17px}.quick-store-intro{margin-bottom:15px}}
 </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZVZY5K0P8"></script>
@@ -3118,8 +3134,8 @@ html,body{max-width:100%;overflow-x:clip;}
 <div class="hero-copy">
 <div class="hero-inner">
 <div class="kicker">MONJA × TEPPAN × GOOD TIME</div>
-<h1 class="hero-menu-title"><span class="hero-menu-title-main">다양한 몬자,<br/>철판요리 메뉴.</span><span class="hero-menu-title-sub">철판요리, 호일구이,<br/>한입요리까지 다양하게 준비했습니다.</span></h1>
-<p class="hero-lead">정통 명란 떡 치즈부터 색다른 오리지널 몬자까지. 메뉴를 고르는 순간부터 즐거운 몬자 코마토.</p>
+<h1 class="hero-menu-title"><span class="hero-menu-title-main">몬자도, 철판요리도.<br/>고르는 즐거움,<br class="hero-desktop-break"/>맛보는 만족.</span><span class="hero-menu-title-sub">철판요리, 호일구이,<br/>한입요리까지 다양하게 준비했습니다.</span></h1>
+<p class="hero-lead">총 29종의 몬자야키부터 철판요리, 호일구이, 일품요리까지. 기본 메뉴부터 색다른 메뉴까지 다양하게 준비했습니다.</p>
 <div class="stat-line"><strong>29</strong><span>종의 몬자</span></div>
 <div class="hero-actions"><a class="btn btn-main" href="#shop-information">매장을 선택해 예약</a><a class="btn btn-sub" href="menu.html">메뉴 보기</a></div>
 </div>
@@ -3128,6 +3144,7 @@ html,body{max-width:100%;overflow-x:clip;}
 <img alt="スタッフが目の前の鉄板で料理を仕上げる、몬자駒との店内" src="../assets/cc373d29bd159e4a.webp" loading="lazy" decoding="async" width="1092" height="848"/>
 </div>
 <div class="hero-live-copy"><div class="kicker">LIVE MONJA EXPERIENCE</div><h2><span class="line-fixed">눈앞에서 완성되는,</span><span class="line-fixed">몬자야키의 생생함.</span></h2><p>철판에서 피어오르는 김과 고소한 소리. 직원이 눈앞에서 직접 완성해 드려 굽는 시간까지 즐길 수 있습니다.</p><p class="hero-live-note">몬자야키가 처음이어도 굽는 방법을 걱정하지 않고 편하게 즐기실 수 있습니다.</p></div></section>
+<section class="quick-store-section" aria-labelledby="quick-store-title"><div class="quick-store-inner"><div class="kicker">CHOOSE YOUR KOMATO</div><h2 id="quick-store-title">오늘은 어느 <br class="store-mobile-break"/>『몬자 코마토』로?</h2><p class="quick-store-intro">지역과 방문 시간에 맞춰 매장을 선택해 주세요.</p><div class="quick-store-grid"><a class="quick-store-card" href="stores/nakameguro/"><strong>나카메구로</strong><span class="quick-store-feature">토·일·공휴일은 낮 12시부터</span><span class="quick-store-hours">나카메구로역 도보 2분｜평일 17:00~23:00</span><span class="quick-store-link">매장 정보·좌석 예약 →</span></a><a class="quick-store-card" href="stores/higashi-gotanda/"><strong>히가시고탄다</strong><span class="quick-store-feature">매일 새벽 3시까지 영업</span><span class="quick-store-hours">고탄다역 도보 2분｜매일 17:00~다음 날 03:00</span><span class="quick-store-link">매장 정보·좌석 예약 →</span></a><a class="quick-store-card" href="stores/nishi-gotanda/"><strong>니시고탄다</strong><span class="quick-store-feature">평일 런치는 11시 30분부터</span><span class="quick-store-hours">고탄다역 도보 5분｜토·일·공휴일 12:00~23:00</span><span class="quick-store-link">매장 정보·좌석 예약 →</span></a></div></div></section>
 <section class="monja-sec" id="monja">
 <div class="wrap">
 <div class="section-head">
