@@ -1,0 +1,17 @@
+/* Shared alignment for Japanese and Korean content pages. */
+main h1,main h2,main h3,main h4,main .kicker,
+main .reservation-lead,main .reservation-price,main figcaption,
+main .button,main .btn,main .text-link,main .store-links,
+main .reservation-highlights,main .price-note,
+.menu-section-sticky-title,.store-name-sticky-title,.store-name-sticky-kicker,
+.category-title,.reserve-card h2,.reserve-card .btn{ text-align:center!important; }
+main p,main li,main dl,main dt,main dd,main td,main th,
+main summary,main .menu-row>span,main .menu-desc{ text-align:left; }
+main .kicker{justify-content:center!important;}
+main .reservation-highlights,main .quick-chips{justify-content:center!important;}
+.category-title h3{flex:1;text-align:center!important;}
+main .reservation-lead,main .reservation-price,main p.kicker,main .price-note{ text-align:center!important; }
+main .hero-description,main .panel>p,main .booking-steps,main .booking-steps li{ text-align:left!important; }
+main .button,main .btn{justify-content:center!important;}
+/* Preserve price-column alignment and the existing header/navigation layout. */
+main .menu-row>b{text-align:right;}
