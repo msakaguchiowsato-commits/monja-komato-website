@@ -604,3 +604,6 @@
  .reservation-pilot .hero-description{grid-row:8;margin:10px 0 0}
  .reservation-pilot .hero-reservation-actions .text-link{margin:2px 0;font-size:12px}
 }
+
+/* Center the three-line map/reviews label without changing its destination. */
+.mobile-reservation-reviews .reviews-button-label{display:block;text-align:center;line-height:1.1;white-space:nowrap}
