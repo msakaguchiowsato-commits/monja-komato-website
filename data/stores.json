@@ -15,7 +15,7 @@
       ],
       "address": "東京都目黒区上目黒2-6-3 K&F中目黒 1F",
       "telephone": "03-6452-2345",
-      "hours": "月〜金 17:00–翌1:00 / 土日祝 14:00–翌1:00",
+      "hours": "月〜金 17:00–翌1:00（LO 24:00） / 土日祝 14:00–翌1:00（LO 24:00）",
       "access": "中目黒駅 徒歩2分",
       "map_url": "https://www.google.com/maps/search/?api=1&query=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E4%B8%AD%E7%9B%AE%E9%BB%92%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8A%E7%9B%AE%E9%BB%922-6-3%20K%26F%E4%B8%AD%E7%9B%AE%E9%BB%92%201F",
       "map_embed_url": "https://maps.google.com/maps?q=%E3%82%82%E3%82%93%E3%81%98%E3%82%83%E9%A7%92%E3%81%A8%20%E4%B8%AD%E7%9B%AE%E9%BB%92%20%E6%9D%B1%E4%BA%AC%E9%83%BD%E7%9B%AE%E9%BB%92%E5%8C%BA%E4%B8%8A%E7%9B%AE%E9%BB%922-6-3%20K%26F%E4%B8%AD%E7%9B%AE%E9%BB%92%201F&output=embed",
@@ -37,7 +37,7 @@
       ],
       "popular_menu": [],
       "closed_days": "なし",
-      "last_order": null,
+      "last_order": "24:00",
       "source": "アップロードZIP内 monja_komato_home_final.html / #shop-information",
       "faq": [
         {
